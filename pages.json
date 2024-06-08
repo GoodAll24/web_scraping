@@ -1,0 +1,6 @@
+{
+  "1": {
+    "div": ["col-sm-12.col-md-8.big-item-text", "listado-big"],
+    "li": ["col-12.item-media.small-card-media.col-md-4"]
+  }
+}
