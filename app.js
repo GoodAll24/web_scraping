@@ -4,7 +4,8 @@ const puppeteer = require("puppeteer-extra");
 const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 const $ = require("cheerio");
 const { executablePath } = require("puppeteer");
-const { timeout } = require("puppeteer");
+
+const { sdpnoticias } = require("./helpers/scrapers");
 
 // url
 const url = [
@@ -57,7 +58,7 @@ const main = async () => {
   await page1.setViewport({ width: 1920, height: 6000 });
 
 
-  const expresion2 = 'div#fusion-app > div.content-main > div.feed-thirds-container';
+  const expresion2 = 'div#fusion-app > div.content-main > div.feed-thirds-container > div.feed-thirds';
 
   // para que cargue completa
   // await page1.waitForNavigation({ waitUntil: 'networkidle0', timeout: 60000 });
@@ -79,35 +80,19 @@ const main = async () => {
   const data = $.load(content);
 
 
-  // -----Esta es la parte de arriba----- //
-  // data('li.small-card-media').each((i, bigNews) => {
-  //   console.log(data(bigNews).html());
-  //   let link = data(bigNews).find('a.media').attr("href");
-  //   let title = data(bigNews).find('h2.card-title').text();
-  //   let image = data(bigNews).find('img').attr("src");
-  //   let description = data(bigNews).find('span.card-text').text();
-  //   console.log(`Noticia ${i + 1} ...`);
-  //   console.log("link --> ", link, "\n");
-  //   console.log("title --> ", title, "\n");
-  //   console.log("image --> ", image, "\n");
-  //   console.log("description --> ", description, "\n");
-  // });
-
   // -----Artículos pequeños----- //
-  const datos = [];
-  data(expresion2)
-    .each((i, element) => {
-      data(element).find('div.feed-thirds').each((j, maas) => {
-        datos.push({});
-        datos[i + j].pos = `i --> ${i}, j --> ${j}`;
-        datos[i + j].title = data(maas).find('article > a > h2').text();
-        datos[i + j].link = `${url[1]}${data(maas).find('article > a').attr("href")}`;
-        datos[i + j].description = data(maas).find('article > a > span').text();
-        datos[i + j].image = data(maas).find('article > a > img').attr("src");
-        // console.log(i + 1, data(maas).html());
-      });
-      // console.log(i + 1, data(element).html());
-    });
+  // // const datos = [];
+  // // data(expresion2)
+  // //   .each((i, element) => {
+  // //     data(element).find('article').each((j, articulo) => {
+  // //       datos.push({});
+  // //       let long = datos.length - 1;
+  // //       datos[long].title = data(articulo).find('a > h2').text();
+  // //       datos[long].link = `${url[1]}${data(articulo).find('a').attr("href")}`;
+  // //       datos[long].description = data(articulo).find('a > span').text();
+  // //       datos[long].image = data(articulo).find('a > img').attr("src");
+  // //     });
+  // //   });
 
 
   // datos.push({});
@@ -116,9 +101,8 @@ const main = async () => {
   // datos[i].description = data(element).find('div > article > a > span').text();
   // datos[i].image = data(element).find('div > article > a > img').attr("src");
 
-
-  console.log(datos);
-
+  const datosFinales = sdpnoticias(data, url[1]);
+  console.log(datosFinales);
 
 
   // console.log("contenido --> ", cont);
