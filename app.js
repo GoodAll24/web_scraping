@@ -11,9 +11,9 @@ const { sdpnoticias } = require("./helpers/scrapers");
 const url = [
   "https://www.excelsior.com.mx/musica", // Esta pagina da problemas, (problemas de carga)
   "https://www.sdpnoticias.com/espectaculos/musica/",
-  "https://heraldodemexico.com.mx/espectaculos/",
-  "https://www.eluniversal.com.mx/espectaculos/",
-  "https://www.milenio.com/espectaculos/musica ",
+  "https://heraldodemexico.com.mx/espectaculos/", // Revision (problemas de contenido)
+  "https://www.eluniversal.com.mx/espectaculos/", // Ver después
+  "https://www.milenio.com/espectaculos/musica",
   "https://www.milenio.com/cultura",
   "https://www.cronica.com.mx/escenario",
   "https://www.proceso.com.mx/cultura/",
@@ -51,14 +51,14 @@ const main = async () => {
   console.log("pagina abierta");
   // const html = '<h1 class="titulo">Hola Mundo</h1>';
   // go to url using the page
-  console.log(`iendo a la pagina \n ${url[1]}`);
+  console.log(`iendo a la pagina \n ${url[4]}`);
   await page1.goto(url[1]);
 
   // Set screen size
   await page1.setViewport({ width: 1920, height: 6000 });
 
 
-  const expresion2 = 'div#fusion-app > div.content-main > div.feed-thirds-container > div.feed-thirds';
+  const expresion2 = 'main'; // > div.content > div.content - board - wrapper > section.ctr - modules - base > div.card - group > section.ctr - modules - list > div > section > ul > li';
 
   // para que cargue completa
   // await page1.waitForNavigation({ waitUntil: 'networkidle0', timeout: 60000 });
@@ -81,28 +81,22 @@ const main = async () => {
 
 
   // -----Artículos pequeños----- //
-  // // const datos = [];
-  // // data(expresion2)
-  // //   .each((i, element) => {
-  // //     data(element).find('article').each((j, articulo) => {
-  // //       datos.push({});
-  // //       let long = datos.length - 1;
-  // //       datos[long].title = data(articulo).find('a > h2').text();
-  // //       datos[long].link = `${url[1]}${data(articulo).find('a').attr("href")}`;
-  // //       datos[long].description = data(articulo).find('a > span').text();
-  // //       datos[long].image = data(articulo).find('a > img').attr("src");
-  // //     });
-  // //   });
+  const datos = [];
+  data(expresion2)
+    .each((i, element) => {
+      console.log(i, element);
+    });
 
 
   // datos.push({});
+  // let long = datos.length - 1;
   // datos[i].title = data(element).find('div > article > a > h2').text();
   // datos[i].link = `${url[1]}${data(element).find('div > article > a').attr("href")}`;
   // datos[i].description = data(element).find('div > article > a > span').text();
   // datos[i].image = data(element).find('div > article > a > img').attr("src");
 
-  const datosFinales = sdpnoticias(data, url[1]);
-  console.log(datosFinales);
+  // const datosFinales = sdpnoticias(data, url[1]);
+  // console.log(datosFinales);
 
 
   // console.log("contenido --> ", cont);
