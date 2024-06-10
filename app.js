@@ -9,36 +9,16 @@ const { sdpnoticias } = require("./helpers/scrapers");
 
 // url
 const url = [
-  "https://www.excelsior.com.mx/musica", // Esta pagina da problemas, (problemas de carga)
-  "https://www.sdpnoticias.com/espectaculos/musica/",
-  "https://heraldodemexico.com.mx/espectaculos/", // Revision (problemas de contenido)
-  "https://www.eluniversal.com.mx/espectaculos/", // Ver después
-  "https://www.milenio.com/espectaculos/musica",
-  "https://www.milenio.com/cultura",
+  "https://www.excelsior.com.mx/musica", // error de caarga
+  "https://www.sdpnoticias.com/espectaculos/musica/", // done
+  "https://www.milenio.com/espectaculos/musica", // done
+  "https://www.elimparcial.com/tags/musica/", // done
+  "https://www.informador.mx/musica-t32",
+  "https://es.rollingstone.com/mex/",
   "https://www.cronica.com.mx/escenario",
-  "https://www.proceso.com.mx/cultura/",
-  "https://www.jornada.com.mx/categoria/espectaculos ",
-  "https://www.jornada.com.mx/categoria/espectaculos",
-  "https://www.capitalmexico.com.mx/category/show/",
-  "https://www.publimetro.com.mx/entretenimiento/",
-  "https://www.elpuntocritico.com/vida-y-estilo/8-cultura",
-  "https://www.diariodemexico.com/escena",
-  "https://lasillarota.com/gente-vida/",
-  "https://www.infobae.com/tag/mexico-entretenimiento/",
-  "https://www.publimetro.com.mx/entretenimiento/",
   "https://radiobox.com.mx/category/espectaculos/",
   "https://desdepuebla.com/noticias/desde-el-show/",
-  "https://www.noroeste.com.mx/entretenimiento/espectaculos",
-  "https://www.tvazteca.com/aztecanoticias/espectaculos",
-  "https://www.aztecaqueretaro.com/espectaculos/",
-  "https://www.elfinanciero.com.mx/tags/musica",
-  "https://www.marca.com/mx/trending/musica.html",
-  "https://www.elsiglodetorreon.com.mx/seccion/espectaculos/",
-  "https://es.rollingstone.com/mex/ ",
-  "https://www.elimparcial.com/tags/musica/",
-  "https://www.fusionradio.mx/musica.cfm",
-  "https://laoferta.com/category/entertainment/entertainment-news/",
-  "https://www.diariodemexico.com/escena",
+  "https://www.elsiglodetorreon.com.mx/seccion/espectaculos",
 ];
 const tester = "https://bot.sannysoft.com";
 puppeteer.use(StealthPlugin());
@@ -52,13 +32,14 @@ const main = async () => {
   // const html = '<h1 class="titulo">Hola Mundo</h1>';
   // go to url using the page
   console.log(`iendo a la pagina \n ${url[4]}`);
-  await page1.goto(url[1]);
+  await page1.goto(url[4]);
 
   // Set screen size
   await page1.setViewport({ width: 1920, height: 6000 });
 
 
-  const expresion2 = 'main'; // > div.content > div.content - board - wrapper > section.ctr - modules - base > div.card - group > section.ctr - modules - list > div > section > ul > li';
+  const expresion2 = 'section > div.section-content > div.row > div > div[class="mod-content clearfix"] > div.col-main > article';
+  const datos = [];
 
   // para que cargue completa
   // await page1.waitForNavigation({ waitUntil: 'networkidle0', timeout: 60000 });
@@ -67,7 +48,7 @@ const main = async () => {
   // await page1.waitForSelector(expresion, { visible: true });
 
   // Screenshot
-  // await page1.screenshot({ path: 'test.jpg' })
+  await page1.screenshot({ path: 'test.jpg' })
 
   // expresion
 
@@ -81,23 +62,31 @@ const main = async () => {
 
 
   // -----Artículos pequeños----- //
-  const datos = [];
   data(expresion2)
     .each((i, element) => {
-      console.log(i, element);
+      console.log(data(element).html());
+      datos.push({});
+      let long = datos.length - 1;
+      datos[long].title = data(element).find('div > h2').text();
+      datos[long].link = `${url[4]}${data(element).find('figure > a').attr("href")}`;
+      datos[long].image = `${url}${data(element).find('figure > a > img').attr("src")}`;
+      datos[long].time = data(element).find('div > p > time').attr("datetime");
     });
 
+  // const cont = data(expresion2).html();
 
   // datos.push({});
   // let long = datos.length - 1;
-  // datos[i].title = data(element).find('div > article > a > h2').text();
-  // datos[i].link = `${url[1]}${data(element).find('div > article > a').attr("href")}`;
-  // datos[i].description = data(element).find('div > article > a > span').text();
-  // datos[i].image = data(element).find('div > article > a > img').attr("src");
+  // datos[long].title = data(element).find('h2').attr("title");
+  // datos[long].link = `${url[4]}${data(element).find('a').attr("href")}`;
+  // datos[long].description = data(element).find('div > article > a > span').text();
+  // datos[long].image = data(element).find('img').attr("src");
+  // datos[long].time = data(element).find('time').attr("datetime");
 
-  // const datosFinales = sdpnoticias(data, url[1]);
+  // const datosFinales = sdpnoticias(data, url[1], datos);
   // console.log(datosFinales);
 
+  console.log(datos);
 
   // console.log("contenido --> ", cont);
 
