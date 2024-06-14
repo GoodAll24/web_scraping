@@ -125,10 +125,107 @@ const informador = async (data, url, datos) => {
     console.log(error);
   }
 };
+const cronica = () => {
+  const art1 = 'div > div > div > div > div > div > div > div > div > ul > li';
+  try {
+    // -----Artículos pequeños----- //
+    data(art1)
+      .each((i, element) => {
+        // console.log(i, data(element).html());
+        datos.push({});
+        let long = datos.length - 1;
+        datos[long].title = data(element).find('article > div > h2 > a').text();
+        datos[long].link = `${'https://www.cronica.com.mx'}${data(element).find('article > div > a').attr("href")}`;
+        datos[long].image = `${data(element).find('article > div > a > img').attr("src")}`;
+        datos[long].time = null;// data(element).find('div > p > time').attr("datetime");
+      });
+  } catch (error) {
+    console.log(error);
+  }
+};
+const desdepuebla = async () => {
+  const art1 = 'div > div > div > main > article';
+  try {
+    // -----Artículos pequeños----- //
+    data(art1)
+      .each((i, element) => {
+        //console.log(i, data(element).html());
+        datos.push({});
+        let long = datos.length - 1;
+        datos[long].title = data(element).find('div > header > div > div > h2 > a').text();
+        datos[long].link = `${data(element).find('div > header > div > div > h2 > a').attr("href")}`;
+        datos[long].description = data(element).find('div > header > div > div > div > p').text();
+        datos[long].image = `${data(element).find('div > header > div > a > img').attr("src")}`;
+        datos[long].time = null;// data(element).find('div > p > time').attr("datetime");
+      });
+  } catch (error) {
+    console.log(error);
+  }
+};
+const latimes = () => {
+  const art1 = 'div > main > div > div > div > ps-list-loadmore > ul > li';
+  try {
+    // -----Artículos pequeños----- //
+    data(art1)
+      .each((i, element) => {
+        // console.log(i, data(element).html());
 
+        datos.push({});
+        let long = datos.length - 1;
+        datos[long].title = data(element).find('ps-promo > div > div > div > h2 > a').text();
+        datos[long].link = `${data(element).find('ps-promo > div > div > div > h2 > a').attr("href")}`;
+        datos[long].description = null;//data(element).find('p').text();
+        datos[long].image = `${data(element).find('ps-promo > div > div > a > picture > img').attr("src")}`;
+        datos[long].time = null;// data(element).find('div > p > time').attr("datetime");
+      });
+  } catch (error) {
+
+  }
+};
+const somoslarevistausa = () => {
+  const art1 = 'div > div > div > div > div > div > article';
+  try {
+    data(art1)
+      .each((i, element) => {
+        // console.log(i, data(element).html());
+
+        datos.push({});
+        let long = datos.length - 1;
+        datos[long].title = data(element).find('div > header > h2 > a').text();
+        datos[long].link = `${data(element).find('div > a').attr("href")}`;
+        datos[long].description = data(element).find('div > div > p').text();
+        datos[long].image = `${data(element).find('div > a > img').attr("src")}`;
+        datos[long].time = null;// data(element).find('div > p > time').attr("datetime");
+      });
+  } catch (error) {
+    console.log(error);
+  }
+};
+const lakw = () => {
+  const art1 = 'div > div > div > div > div > div > div > div > div > div > ul > li';
+  const url = 'https://lakw.us/category/musica/';
+  try {
+    data(art1)
+    .each((i, element) => {
+      // console.log(i, data(element).html());
+
+      datos.push({});
+      let long = datos.length - 1;
+      datos[long].title = data(element).find('a > div > div > div > h2').text();
+      datos[long].link = `${data(element).find('a').attr("href")}`;
+      datos[long].description = data(element).find('a > div > div > div > p').text();
+      datos[long].image = `${data(element).find('a > div > div > img').attr("data-src")}`;
+      datos[long].time = null;// data(element).find('div > p > time').attr("datetime");
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 module.exports = {
   sdpnoticias,
   milenio,
   imparcial,
   informador,
+  cronica,
+  lakw,
 };
