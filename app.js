@@ -43,7 +43,7 @@ const usa = [
 ];
 const españa = [
   'http://noticiasclave.net', // done
-  'https://www.elconfidencial.com/tags/temas/musica-5272/',
+  'https://www.elconfidencial.com/tags/temas/musica-5272/', // done, con falta de datos
   'https://www.larazon.es/cultura/musica/',
   'https://www.elespanol.com/el-cultural/escenarios/musica/',
   'https://www.elperiodico.com/es/temas/musica-6584',
@@ -83,8 +83,8 @@ const main = async () => {
   console.log("pagina abierta");
   // const html = '<h1 class="titulo">Hola Mundo</h1>';
 
-  const url = 'http://noticiasclave.net';
-  const art1 = 'div > section > div > div > section';
+  const url = 'https://www.larazon.es/cultura/musica/';
+  const art1 = 'div > main > div > div > section';
 
 
   // go to url using the page
@@ -127,10 +127,10 @@ const main = async () => {
 
       datos.push({});
       let long = datos.length - 1;
-      datos[long].title = data(element).find('div > ul > li > h4 > a').text();
-      datos[long].link = `${url}${data(element).find('div > ul > li > h4 > a').attr("href")}`;
-      datos[long].content = data(element).find('div > ul > li > p').text();
-      datos[long].image = `${url}${data(element).find('div > a > span > img').attr("src")}`;
+      datos[long].title = data(element).find('article > div > div > header > h2 > a').text();
+      datos[long].link = `${data(element).find('article > a').attr("href")}`;
+      datos[long].content = data(element).find('article > div > div > div > p').text();
+      datos[long].image = `${data(element).find('article > a > picture > img').attr("src")}`;
       datos[long].publishedAt = new Date();
     });
 

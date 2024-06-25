@@ -341,6 +341,91 @@ const noticiasclave = async (browser, datos) => {
     console.log(error);
   }
 };
+
+const elconfidencial = async (browser, datos) => {
+  const url = 'https://www.elconfidencial.com/tags/temas/musica-5272/';
+  const art1 = 'div > div > div > div';
+  try {
+    const page = await browser.newPage();
+    await page.goto(url, { timeout: 60000 });
+    const content = await page.evaluate(() => document.body.innerHTML);
+    const data = $.load(content);
+    // -----Artículos pequeños----- //
+
+    data(art1)
+      .each((i, element) => {
+        // console.log(i, data(element).html());
+
+        datos.push({});
+        let long = datos.length - 1;
+        datos[long].title = data(element).find('article > div > a > h3').text();
+        datos[long].link = `${data(element).find('article > div > a').attr("href")}`;
+        datos[long].content = data(element).find('article > p').text();
+        datos[long].image = `${data(element).find('article > figure > img.bigPhoto__img').attr("src")}`; // da problemas
+        datos[long].publishedAt = new Date();
+        datos[long].scrape = searchData(url);
+        datos[long].likes = 0;
+        datos[long].dislikes = 0;
+        datos[long].state = "pendiente";
+      });
+
+    await page.close();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const larazon = async (browser, datos) => {
+  const url = 'https://www.larazon.es/cultura/musica/';
+  const art1 = 'div > main > div > div > section';
+  const mayn = 'div > main > div > div > section > div > article';
+  try {
+    const page = await browser.newPage();
+    await page.goto(url, { timeout: 60000 });
+    const content = await page.evaluate(() => document.body.innerHTML);
+    const data = $.load(content);
+
+
+    // -----Artículo principal----- //
+    datos.push({});
+    let long = datos.length - 1;
+    datos[long].title = data(`${mayn} > div > div > header > h2 > a`).text();
+    datos[long].link = `${data(`${mayn} > a`).attr("href")}`;
+    datos[long].content = data(`${mayn} > div > div > p`).text();
+    datos[long].image = `${data(`${mayn} > a > picture > img`).attr("srcset")}`; // da problemas
+    datos[long].publishedAt = new Date();
+    datos[long].scrape = searchData(url);
+    datos[long].likes = 0;
+    datos[long].dislikes = 0;
+    datos[long].state = "pendiente";
+
+
+    // -----Artículos pequeños----- //
+    data(art1)
+      .each((i, element) => {
+        // console.log(i, data(element).html());
+
+        datos.push({});
+        let long = datos.length - 1;
+        datos[long].title = data(element).find('article > div > div > header > h2 > a').text();
+        datos[long].link = `${data(element).find('article > a').attr("href")}`;
+        datos[long].content = data(element).find('article > div > div > div > p').text();
+        datos[long].image = `${data(element).find('article > a > picture > img').attr("src")}`;
+        datos[long].publishedAt = new Date();
+        datos[long].scrape = searchData(url);
+        datos[long].likes = 0;
+        datos[long].dislikes = 0;
+        datos[long].state = "pendiente";
+      });
+
+    await page.close();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
+
 module.exports = {
   sdpnoticias,
   milenio,
