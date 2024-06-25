@@ -195,7 +195,6 @@ const somoslarevistausa = () => {
         datos[long].link = `${data(element).find('div > a').attr("href")}`;
         datos[long].description = data(element).find('div > div > p').text();
         datos[long].image = `${data(element).find('div > a > img').attr("src")}`;
-        datos[long].time = null;// data(element).find('div > p > time').attr("datetime");
       });
   } catch (error) {
     console.log(error);
@@ -206,17 +205,138 @@ const lakw = () => {
   const url = 'https://lakw.us/category/musica/';
   try {
     data(art1)
-    .each((i, element) => {
-      // console.log(i, data(element).html());
+      .each((i, element) => {
+        // console.log(i, data(element).html());
 
-      datos.push({});
-      let long = datos.length - 1;
-      datos[long].title = data(element).find('a > div > div > div > h2').text();
-      datos[long].link = `${data(element).find('a').attr("href")}`;
-      datos[long].description = data(element).find('a > div > div > div > p').text();
-      datos[long].image = `${data(element).find('a > div > div > img').attr("data-src")}`;
-      datos[long].time = null;// data(element).find('div > p > time').attr("datetime");
-    });
+        datos.push({});
+        let long = datos.length - 1;
+        datos[long].title = data(element).find('a > div > div > div > h2').text();
+        datos[long].link = `${data(element).find('a').attr("href")}`;
+        datos[long].description = data(element).find('a > div > div > div > p').text();
+        datos[long].image = `${data(element).find('a > div > div > img').attr("data-src")}`;
+      });
+  } catch (error) {
+    console.log(error);
+  }
+};
+const telemundoamarillo = () => {
+  const url = 'https://www.telemundoamarillo.com/entretenimiento/';
+  const art1 = 'div > div > div > div > div > section > div > div > div';
+  try {
+    data(expresion2)
+      .each((i, element) => {
+        // console.log(i, data(element).html());
+
+        datos.push({});
+        let long = datos.length - 1;
+        datos[long].title = data(element).find('div > div > h4 > a > span').text();
+        datos[long].link = `${"https://www.telemundoamarillo.com"}${data(element).find('div > div > h4 > a').attr("href")}`;
+        datos[long].content = data(element).find('div > div > div').text();
+        datos[long].image = `${data(element).find('div > div > figure > div > a > img').attr("src")}`;
+        datos[long].publishedAt = new Date();
+      });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const mundodeportivo = () => {
+  const url = 'https://www.mundodeportivo.com/us/estrellas-latinas';
+  const art1 = 'main > div > div > div > div > div > div > div > div > div > ul > li';
+  try {
+
+    data(art1)
+      .each((i, element) => {
+        // console.log(i, data(element).html());
+
+        datos.push({});
+        let long = datos.length - 1;
+        datos[long].title = data(element).find('article > div > div > h2 > a').text();
+        datos[long].link = `${"https://www.mundodeportivo.com"}${data(element).find('article > div > div > h2 > a').attr("href")}`;
+        datos[long].content = data(element).find('div > div > div').text();
+        datos[long].image = `${data(element).find('div > div > a > picture > img').attr("src")}`;
+        datos[long].publishedAt = new Date();
+      });
+
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+//-----15 de junio----// (no están en altavoz)
+const noticiany = () => {
+  const url = 'https://www.noticiany.com/category/entretenimiento/';
+  const art1 = 'div > div > div > div > div > div > div > main > article';
+
+  try {
+
+    data(art1)
+      .each((i, element) => {
+        // console.log(i, data(element).html());
+        datos.push({});
+        let long = datos.length - 1;
+        datos[long].title = data(element).find('div > a').attr("title");
+        datos[long].link = `${data(element).find('div > a').attr("href")}`;
+        datos[long].content = data(element).find('div > div > div').text();
+        datos[long].image = `${data(element).find('div > a > img').attr("src")}`;
+        datos[long].publishedAt = new Date();
+      });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const musicaislife = () => {
+  const url = 'https://musicaislife.com/musica-news/';
+  const art1 = 'div > div > div > div > div > div > div > div > div > div > div > div > div > article';
+  try {
+    data(art1)
+      .each((i, element) => {
+        // console.log(i, data(element).html());
+
+        datos.push({});
+        let long = datos.length - 1;
+        datos[long].title = data(element).find('div > h3 > a').text();
+        datos[long].link = `${data(element).find('div > h3 > a').attr("href")}`;
+        datos[long].content = data(element).find('div > div > p').text();
+        datos[long].image = `${data(element).find('div > a > div > img').attr("src")}`;
+        datos[long].publishedAt = new Date();
+      });
+
+  } catch (error) {
+    console.log(error);
+  }
+};
+// España
+
+const noticiasclave = async (browser, datos) => {
+  const url = 'http://noticiasclave.net';
+  const art1 = 'div > section > div > div > section';
+  try {
+    const page = await browser.newPage();
+    await page.goto(url, { timeout: 60000 });
+    const content = await page.evaluate(() => document.body.innerHTML);
+    const data = $.load(content);
+    // -----Artículos pequeños----- //
+
+    data(art1)
+      .each((i, element) => {
+        // console.log(i, data(element).html());
+
+        datos.push({});
+        let long = datos.length - 1;
+        datos[long].title = data(element).find('div > ul > li > h4 > a').text();
+        datos[long].link = `${url}${data(element).find('div > ul > li > h4 > a').attr("href")}`;
+        datos[long].content = data(element).find('div > ul > li > p').text();
+        datos[long].image = `${url}${data(element).find('div > a > span > img').attr("src")}`;
+        datos[long].publishedAt = new Date();
+        datos[long].scrape = searchData(url);
+        datos[long].likes = 0;
+        datos[long].dislikes = 0;
+        datos[long].state = "pendiente";
+      });
+
+    await page.close();
   } catch (error) {
     console.log(error);
   }
