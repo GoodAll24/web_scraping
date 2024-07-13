@@ -434,3 +434,20 @@ module.exports = {
   cronica,
   lakw,
 };
+
+/*
+[
+  {
+    "main":"",
+    "title":"",
+    "content":"",
+    "link":"",
+    "image":"",
+    "ext":false,
+    "extImg":false
+  }
+]
+*/
+
+
+
