@@ -10,7 +10,7 @@ const { timeout } = require("puppeteer");
 
 // url
 const mexico = [
-  "https://www.excelsior.com.mx/musica", // error de caarga
+  "https://www.excelsior.com.mx/musica", // done
   "https://radiobox.com.mx/category/espectaculos/", //  error de carga (posible necesidad de vpn)
   "https://es.rollingstone.com/categoria/musica/", // error de carga (posible necesidad de vpn)
   "https://www.sdpnoticias.com/espectaculos/musica/", // done
@@ -22,14 +22,13 @@ const mexico = [
   "https://www.elsiglodetorreon.com.mx/seccion/espectaculos",
 ];
 const usa = [
-  'https://www.billboard.com/c/espanol/noticias/', // problemas de carga
-  'https://www.billboard.com/c/espanol/musica/', // problemas de carga
-  'https://impactolatino.com/musica-entretenimiento/', // problemas de carga 
-  'https://musicaislife.com/musica-news/', // tiempo de carga
-  'https://prensadehouston.com/category/entretenimiento/', // no me muestra el codigo
+  'https://www.billboard.com/c/espanol/noticias/', // problemas de carga (revisar en server)
+  'https://www.billboard.com/c/espanol/musica/', // problemas de carga (revisar en server)
+  'https://musicaislife.com/musica-news/', // done (tema imagen)
+  'https://prensadehouston.com/category/entretenimiento/', // done (imagen en source ("srcset"))
   'https://wowlarevista.com/category/musica/', // security issues
-  'https://www.telemundo.com/entretenimiento', //* (aquí hay que revisar si las noticias con video se pueden integrar directamente a la Tele Revista) '
-  'https://cnnespanol.cnn.com/category/musica/', // *(aquí hay que revisar si las noticias con video se pueden integrar directamente a la Tele Revista)
+  'https://www.telemundo.com/entretenimiento', // done * (aquí hay que revisar si las noticias con video se pueden integrar directamente a la Tele Revista) 
+  'https://cnnespanol.cnn.com/category/musica/', // done *(aquí hay que revisar si las noticias con video se pueden integrar directamente a la Tele Revista)
   'https://www.latimes.com/espanol/etiqueta/musica', // done
   'https://www.hispanicpost.com/category/entretenimiento/musica-tv-y-cine/', // error 404
   'https://somoslarevistausa.com/category/musica/', // done
@@ -70,9 +69,12 @@ const españa = [
   'https://www.20minutos.es/minuteca/musica-trap/', // done
   'https://www.laverdad.es/culturas/musica/', // done
   'https://cadenaser.com/tag/musica/a/', // done
+  'https://www.eldia.es/tags/musica/',
+  'https://www.cancioneros.com/in/12/0/actualidad',
+  'https://elgeneracionalpost.com/noticias/cultura/musica',
 ];
 const colombia = [
-  'https://www.eltiempo.com/cultura/musica-y-libros',  // Se repite
+  'https://www.eltiempo.com/cultura/musica-y-libros',  // 
   'https://www.elcolombiano.com/cultura/musica', // Se repite
   'https://www.decibeles.net/noticias', // OJO con el link
   'https://www.semana.com/cultura/musica/', // done
@@ -107,8 +109,8 @@ const chile = [
   'https://www.musicachilena.cl/v2/noticias/', // done
 ];
 const rd = [
-  'https://www.diariolibre.com/revista/music',
-  'https://listindiario.com/entretenimiento/musica',
+  'https://www.diariolibre.com/revista/musica', // done
+  'https://listindiario.com/entretenimiento/musica', // done falta el logo(problemas de internet)
   'https://eldia.com.do/secciones/espectaculos/',
   'https://www.elcaribe.com.do/seccion/gente/a-y-e/',
   'https://eldia.com.do/secciones/espectaculos/',
@@ -117,18 +119,61 @@ const rd = [
   'https://eltestigo.do/entretenimiento',
   'https://diariosocialrd.com/categoria/musica/',
 ];
+const venezuela = [
+  "https://www.elnacional.com/musica/", // done
+  "https://eldiario.com/seccion/cultura/", // done
+  "https://2001online.com/seccion/farandula/", // done
+  "https://dentrodelgenero.com/", // error de carga
+  "https://www.noticierovenevision.net/entretenimiento", // done
+  "https://diariodelosandes.com/secciones/entretenimiento/", // done
+  "https://acn.com.ve/espectaculos/", // done
+];
+const paraguay = [
+  'https://independiente.com.py/show/' // error de carga
+];
+const cr = [
+  'https://www.larepublica.net/seccion/magazine', // done
+  'https://www.crhoy.com/noticias/musica' // done
+];
+const uruguay = [
+  'https://www.elpais.com.uy/tvshow', // error de carga
+  'https://www.elobservador.com.uy/tag/musica', // done
+];
+const cuba = [
+  'https://oncubanews.com/category/cultura/musica/', // done
+  'https://magazineampm.com/newness-cuba/', // done
+];
+const bolivia = [
+  'https://www.bolivia.com/entretenimiento/', // vpn
+  'https://www.opinion.com.bo/tags/musica/', // done
+];
+const nicaragua = [
+  'https://www.tn8.tv/category/musica/', // done
+];
+
 const tester = "https://bot.sannysoft.com";
 puppeteer.use(StealthPlugin());
 
 
 const main = async () => {
   // Launch browser and open a new page
-  const browser = await puppeteer.launch({ headless: true, executablePath: executablePath(), });
+  const browser = await puppeteer.launch({
+    args: [
+      '--disable-gpu',
+      '--disable-dev-shm-usage',
+      '--disable-setuid-sandbox',
+      '--no-first-run',
+      '--no-sandbox',
+      '--no-zygote',
+      //'--single-process',
+    ], headless: true, executablePath: executablePath(),
+  });
+
   const page1 = await browser.newPage();
   console.log("pagina abierta");
   // const html = '<h1 class="titulo">Hola Mundo</h1>';
 
-  const url = chile[6];
+  const url = usa[6];
 
 
   // go to url using the page
@@ -136,17 +181,18 @@ const main = async () => {
   await page1.goto(url, { timeout: 60000, waitUntil: 'networkidle2' });
 
   // Set screen size
-  await page1.setViewport({ width: 1920, height: 6000 });
+  // await page1.setViewport({ width: 1920, height: 6000 });
 
 
   // "image": null,
-  // "image": null,
+  // "content": "",
+  // "main": "div > div > div > div > div > div > div > div > div > article",
   const art1 = {
-    "main": "div > div > div > div > div",
-    "title": "div > div > div > h3 > a",
-    "content": "div > p",
-    "link": "div > div > div > h3 > a",
-    "image": "div > div > img",
+    "main": "div > div > main > div > div > div > div > article",
+    "title": "div > h2 > a",
+    "content": "div > div > p",
+    "image": "div > a > img",
+    "link": "div > a",
     "ext": false,
     "extImg": false
   };
