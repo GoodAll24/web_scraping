@@ -5,8 +5,7 @@ const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 const $ = require("cheerio");
 const { executablePath } = require("puppeteer");
 
-const { sdpnoticias } = require("./helpers/scrapers");
-const { timeout } = require("puppeteer");
+const { intern } = require('./helpers/intern.js');
 
 // url
 const mexico = [
@@ -179,7 +178,7 @@ const main = async () => {
   console.log("pagina abierta");
   // const html = '<h1 class="titulo">Hola Mundo</h1>';
 
-  const url = "https://www.latingrammy.com/en/news";
+  const url = "https://www.notistarz.com/categorias/musica/";
 
 
   // go to url using the page
@@ -193,24 +192,17 @@ const main = async () => {
   // "image": null,
   // "content": "",
   // "main": "div > div > div > div > div > div > div > div > div > article",
-  const art2 = {
-    "main": "div > section.top-view > section.sc-48209e94-0.fLIhYk.top-view__content > div.container > div > div.grid > div > div.first-card",
-    "title": "div > div > h2 > a",
-    "content": "div > p.sc-76551ed5-0.cetWEg",
-    "image": "div > div > a > div > img",
-    "link": "div > div > a",
-    "ext": true,
-    "extImg": true
-  };
+
   const art1 = {
-    "main": "div > div > main > section > section > section",
-    "title": "div > div > div > a.text-15.md-xl:text-22.md-xl:font-medium.leading-tight.mt-2",
-    "content": null,
-    "link": "div > div > div > a",
-    "image": "div > div > div > a > img",
-    "ext": true,
+    "main": "div > div > div > div > div > main > div > div",
+    "title": "div > header > h2 > a",
+    "content": "div > div > p",
+    "link": "div > header > h2 > a",
+    "image": "div > figure > a > img",
+    "ext": false,
     "extImg": false
   };
+
   const datos = [];
 
   // para que cargue completa
@@ -263,9 +255,18 @@ const main = async () => {
   console.log(datos);
 };
 
+const secondary = async () => {
+  const access = "div.site > div > div.container > div > div > main.site-main > div > div.entry-content";
+  const url = 'https://www.notistarz.com/trueno-domina-lista-de-popularidad-con-su-real-gangsta-love/';
+  const url2 = 'https://www.notistarz.com/estrenos-musicales-de-la-semana-notistarz-56/';
+  const datis = await intern(url2, access);
 
+  console.log(datis);
+};
 
 main();
+
+// secondary();
 
 
 /*
