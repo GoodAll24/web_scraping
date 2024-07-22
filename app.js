@@ -18,8 +18,8 @@ const mexico = [
   "https://www.elimparcial.com/tags/musica/", // done
   "https://www.informador.mx/musica-t32", // done
   "https://www.cronica.com.mx/escenario", // done
-  "https://desdepuebla.com/noticias/desde-el-show/",
-  "https://www.elsiglodetorreon.com.mx/seccion/espectaculos",
+  "https://desdepuebla.com/noticias/desde-el-show/", // done
+  "https://www.elsiglodetorreon.com.mx/seccion/espectaculos", // done
 ];
 const usa = [
   'https://www.billboard.com/c/espanol/noticias/', // problemas de carga (revisar en server)
@@ -37,8 +37,10 @@ const usa = [
   'https://www.mundodeportivo.com/us/estrellas-latinas', // done
   'https://www.noticiany.com/category/entretenimiento/', // done
   'https://es.rollingstone.com/categoria/musica/noticias-musica/',
-  'https://www.notistarz.com/categorias/musica/',
-  'https://efe.com/noticias/musica/',
+  'https://www.notistarz.com/categorias/musica/', // tema imagen
+  'https://efe.com/noticias/musica/', // done
+  'https://ellatinodigital.com/categoria/secciones/farandula/', // done
+  'https://www.latingrammy.com/noticias', // error de carga
 ];
 const españa = [
   'https://www.epe.es/es/temas/musica-5359', // Error 404
@@ -69,9 +71,9 @@ const españa = [
   'https://www.20minutos.es/minuteca/musica-trap/', // done
   'https://www.laverdad.es/culturas/musica/', // done
   'https://cadenaser.com/tag/musica/a/', // done
-  'https://www.eldia.es/tags/musica/',
-  'https://www.cancioneros.com/in/12/0/actualidad',
-  'https://elgeneracionalpost.com/noticias/cultura/musica',
+  'https://www.eldia.es/tags/musica/', // done
+  'https://www.cancioneros.com/in/12/0/actualidad', // revisar estructura
+  'https://elgeneracionalpost.com/noticias/cultura/musica', // done (tema imagen)
 ];
 const colombia = [
   'https://www.eltiempo.com/cultura/musica-y-libros',  // 
@@ -114,7 +116,7 @@ const rd = [
   'https://eldia.com.do/secciones/espectaculos/',
   'https://www.elcaribe.com.do/seccion/gente/a-y-e/',
   'https://eldia.com.do/secciones/espectaculos/',
-  'https://notidigitalrd.com.do/category/entretenimiento/',
+  'https://notidigitalrd.com.do/category/entretenimiento/', // done
   'https://www.elperiodico.com.do/secciones/entretenimiento/',
   'https://eltestigo.do/entretenimiento',
   'https://diariosocialrd.com/categoria/musica/',
@@ -150,6 +152,10 @@ const bolivia = [
 const nicaragua = [
   'https://www.tn8.tv/category/musica/', // done
 ];
+const extra = [
+  'https://www.cronica.com.ar/elcanaldelamusica', // (Argentina)  done
+  'https://www.lanacion.com.ar/espectaculos/musica/' // (Argentina)
+];
 
 const tester = "https://bot.sannysoft.com";
 puppeteer.use(StealthPlugin());
@@ -173,7 +179,7 @@ const main = async () => {
   console.log("pagina abierta");
   // const html = '<h1 class="titulo">Hola Mundo</h1>';
 
-  const url = usa[6];
+  const url = "https://www.latingrammy.com/en/news";
 
 
   // go to url using the page
@@ -187,16 +193,24 @@ const main = async () => {
   // "image": null,
   // "content": "",
   // "main": "div > div > div > div > div > div > div > div > div > article",
+  const art2 = {
+    "main": "div > section.top-view > section.sc-48209e94-0.fLIhYk.top-view__content > div.container > div > div.grid > div > div.first-card",
+    "title": "div > div > h2 > a",
+    "content": "div > p.sc-76551ed5-0.cetWEg",
+    "image": "div > div > a > div > img",
+    "link": "div > div > a",
+    "ext": true,
+    "extImg": true
+  };
   const art1 = {
-    "main": "div > div > main > div > div > div > div > article",
-    "title": "div > h2 > a",
-    "content": "div > div > p",
-    "image": "div > a > img",
-    "link": "div > a",
-    "ext": false,
+    "main": "div > div > main > section > section > section",
+    "title": "div > div > div > a.text-15.md-xl:text-22.md-xl:font-medium.leading-tight.mt-2",
+    "content": null,
+    "link": "div > div > div > a",
+    "image": "div > div > div > a > img",
+    "ext": true,
     "extImg": false
   };
-
   const datos = [];
 
   // para que cargue completa
