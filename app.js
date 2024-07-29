@@ -19,13 +19,14 @@ const masNoticias = [
   "https://codigotv.net/category/entretenimiento/ ", // done
   "https://azuaalinstante.com/category/arte-y-espectaculo/ ", // done tema imagen
   "https://www.disco89fm.com/noticias", // done
-  "https://precision.com.do/category/revista/espectaculos/",
-  "https://www.elfarandi.com/musica/ https://intervez.com/category/culturaentretenimiento/musica/",
-  "https://www.ntn24.com/noticias-entretenimiento",
-  "https://deultimominuto.net/category/entretenimiento/",
-  "https://www.enlacedigital.com.do/categoria/entretenimiento/",
-  "https://diarioroatan.com/category/sociales/",
-  "https://www.yucatan.com.mx/seccion/espectaculos",
+  "https://precision.com.do/category/revista/espectaculos/", // done tema imagen
+  "https://www.elfarandi.com/musica/", // done tema imagen parte1
+  "https://intervez.com/category/culturaentretenimiento/musica/", // done
+  "https://www.ntn24.com/noticias-entretenimiento", // done
+  "https://deultimominuto.net/category/entretenimiento/", // done tema imagen
+  "https://www.enlacedigital.com.do/categoria/entretenimiento/", // done tema imagen
+  "https://diarioroatan.com/category/sociales/", // done  tema imagen ++
+  "https://www.yucatan.com.mx/seccion/espectaculos", // done
   "https://amariemagazine.com/category/musica/",
   "https://amariemagazine.com/category/entretenimiento/conciertos/",
   "https://www.panasenutah.com/category/entretenimiento/musica/",
@@ -60,7 +61,7 @@ const main = async () => {
   console.log("pagina abierta");
   // const html = '<h1 class="titulo">Hola Mundo</h1>';
 
-  const url = masNoticias[10];
+  const url = masNoticias[18];
 
 
   // go to url using the page
@@ -76,11 +77,11 @@ const main = async () => {
   // "main": "div > div > div > div > div > div > div > div > div > article",
 
   const art1 = {
-    "main": "div > div > section > div > div > div > div > div.single-latest-post",
-    "title": "div > div > a > h4",
-    "link": "div > div > a > h4",
-    "image": "div > div > img",
-    "content": "",
+    "main": "article.type-post",
+    "title": "div > header > h2 > a",
+    "link": "figure > a",
+    "image": "figure > a > img",
+    "content": "div > div > p",
     "ext": false,
     "extImg": false
   };
