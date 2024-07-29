@@ -27,8 +27,8 @@ const masNoticias = [
   "https://www.enlacedigital.com.do/categoria/entretenimiento/", // done tema imagen
   "https://diarioroatan.com/category/sociales/", // done  tema imagen ++
   "https://www.yucatan.com.mx/seccion/espectaculos", // done
-  "https://amariemagazine.com/category/musica/",
-  "https://amariemagazine.com/category/entretenimiento/conciertos/",
+  "https://amariemagazine.com/category/musica/", // done
+  "https://amariemagazine.com/category/entretenimiento/conciertos/", // done
   "https://www.panasenutah.com/category/entretenimiento/musica/",
   "https://panoramaeconomicopma.com/categorias/farandula/",
   "https://impactolatino.com/entretenimiento/",
@@ -61,7 +61,7 @@ const main = async () => {
   console.log("pagina abierta");
   // const html = '<h1 class="titulo">Hola Mundo</h1>';
 
-  const url = masNoticias[18];
+  const url = masNoticias[19];
 
 
   // go to url using the page
@@ -78,10 +78,10 @@ const main = async () => {
 
   const art1 = {
     "main": "article.type-post",
-    "title": "div > header > h2 > a",
-    "link": "figure > a",
-    "image": "figure > a > img",
-    "content": "div > div > p",
+    "title": "div > div > header > h2 > a",
+    "link": "div > div > a",
+    "image": "div > div > a > img",
+    "content": "div > div > div > p",
     "ext": false,
     "extImg": false
   };
