@@ -61,7 +61,7 @@ const main = async () => {
   console.log("pagina abierta");
   // const html = '<h1 class="titulo">Hola Mundo</h1>';
 
-  const url = masNoticias[19];
+  const url = masNoticias[1];
 
 
   // go to url using the page
@@ -103,6 +103,8 @@ const main = async () => {
 
   const content = await page1.evaluate(() => document.body.innerHTML);
 
+  console.log(typeof content);
+
   // console.log(content);
   // Cargando texto de la page
   const data = $.load(content);
@@ -134,8 +136,8 @@ const main = async () => {
   await page1.close();
   await browser.close();
 
-  console.clear();
-  console.log(datos);
+  // console.clear();
+  // console.log(datos);
 };
 
 const secondary = async () => {
