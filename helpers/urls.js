@@ -146,3 +146,52 @@ const extra = [
   'https://www.cronica.com.ar/elcanaldelamusica', // (Argentina)  done
   'https://www.lanacion.com.ar/espectaculos/musica/' // (Argentina)
 ];
+
+const masNoticias = [
+  "https://www.estilosblog.com/category/estilos-blog/entretenimiento/", // done tema imagen
+  "https://blog.joinnus.com/entretenimiento/", // done
+  "https://blog.joinnus.com/nueva-musica/", // done
+  "https://www.lainformacion.com.do/mirador/musica-y-literatura", // problemas de espera
+  "https://infoelnuevonorte.com/?cat=12 ", // done tema imagen
+  "https://infoelnuevonorte.com/?cat=11 ", // done tema imagen
+  "https://miamipocket.us/entretenimiento/", // done tema imagen
+  "https://entretenimientotolima.com/category/agenda/musica/", // done
+  "https://codigotv.net/category/entretenimiento/ ", // done
+  "https://azuaalinstante.com/category/arte-y-espectaculo/ ", // done tema imagen
+  "https://www.disco89fm.com/noticias", // done
+  "https://precision.com.do/category/revista/espectaculos/", // done tema imagen
+  "https://www.elfarandi.com/musica/", // done tema imagen parte1
+  "https://intervez.com/category/culturaentretenimiento/musica/", // done
+  "https://www.ntn24.com/noticias-entretenimiento", // done
+  "https://deultimominuto.net/category/entretenimiento/", // done tema imagen
+  "https://www.enlacedigital.com.do/categoria/entretenimiento/", // done tema imagen
+  "https://diarioroatan.com/category/sociales/", // done  tema imagen ++
+  "https://www.yucatan.com.mx/seccion/espectaculos", // done
+  "https://amariemagazine.com/category/musica/", // done
+  "https://amariemagazine.com/category/entretenimiento/conciertos/", // done
+  "https://www.panasenutah.com/category/entretenimiento/musica/",
+  "https://panoramaeconomicopma.com/categorias/farandula/",
+  "https://impactolatino.com/entretenimiento/",
+  "https://dominicanaaldia.do/Secciones/estilo-de-vida/",
+  "https://elperiodiquito.com/category/mas/escenario/",
+  "https://sglaradio.com/category/noticias/",
+  "https://sglaradio.com/category/lanzamientos/",
+  "https://ultimasnoticia.com/category/entretenimiento/",
+];
+
+
+const onCheck = [
+  "https://www.elpais.com.co/entretenimiento/", // done
+  "https://www.kq105.com/noticias/eventos/", // 
+  "https://2001online.com/seccion/farandula/",
+  "https://www.elnuevodia.com/entretenimiento/musica/",
+  "https://caracol.com.co/tendencias/entretenimiento/",
+  "https://www.cronica.com.ar/elcanaldelamusica",
+  "https://www.elvocero.com/escenario/espectaculos/",
+  "https://acn.com.ve/espectaculos/",
+];
+
+const tester = "https://bot.sannysoft.com";
+
+
+module.exports = { onCheck };
