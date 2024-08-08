@@ -165,7 +165,7 @@ const masNoticias = [
   "https://www.ntn24.com/noticias-entretenimiento", // done
   "https://deultimominuto.net/category/entretenimiento/", // done tema imagen
   "https://www.enlacedigital.com.do/categoria/entretenimiento/", // done tema imagen
-  "https://diarioroatan.com/category/sociales/", // done  tema imagen ++
+  "https://diarioroatan.com/category/sociales/", // done  tema imagen
   "https://www.yucatan.com.mx/seccion/espectaculos", // done
   "https://amariemagazine.com/category/musica/", // done
   "https://amariemagazine.com/category/entretenimiento/conciertos/", // done
@@ -191,7 +191,32 @@ const onCheck = [
   "https://acn.com.ve/espectaculos/",
 ];
 
+const secondTry = [
+  "https://www.elespectador.com/entretenimiento/musica/",
+  "https://www.latercera.com/etiqueta/musica-culto",
+  "https://listindiario.com/entretenimiento/musica",
+  "https://www.elnacional.com/musica/",
+  "https://www.elcaribe.com.do/seccion/gente/a-y-e/",
+  "https://www.elvocero.com/escenario/espectaculos/", // done
+  "https://www.billboard.com/c/espanol/noticias/", // done
+  "https://www.infobae.com/tag/musica/", // done
+];
+
 const tester = "https://bot.sannysoft.com";
 
+const media_images = [
+  'https://www.notistarz.com/categorias/musica/', // tema imagen
+  'https://gladyspalmera.com/actualidad/', // done // tema con la imagen
+  "https://infoelnuevonorte.com/?cat=12 ", // done tema imagen
+  "https://infoelnuevonorte.com/?cat=11 ", // done tema imagen
+  "https://miamipocket.us/entretenimiento/", // done tema imagen
+  "https://azuaalinstante.com/category/arte-y-espectaculo/ ", // done tema imagen
+  "https://precision.com.do/category/revista/espectaculos/", // done tema imagen
+  "https://www.elfarandi.com/musica/", // done tema imagen parte1
+  "https://deultimominuto.net/category/entretenimiento/", // done tema imagen
+  "https://www.enlacedigital.com.do/categoria/entretenimiento/", // done tema imagen
+  "https://diarioroatan.com/category/sociales/", // done  tema imagen
+];
 
-module.exports = { onCheck };
+
+module.exports = { media_images };

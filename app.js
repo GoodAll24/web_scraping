@@ -6,7 +6,7 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 const { intern } = require('./helpers/intern.js');
-const { onCheck } = require('./helpers/urls');
+const { secondTry } = require('./helpers/urls');
 
 
 
@@ -48,15 +48,16 @@ const main = async () => {
 
   const art1 = {
     "ext": true,
-    "link": "div > div > div > h3 > a",
-    "main": "article.tnt-asset-type-article.clearfix",
-    "image": "div > div > div > figure > div > div > img",
-    "title": "div > div > div > h3 > a",
-    "extImg": true,
-    "content": null
+    "link": "div > span > div > a",
+    "main": "div > div > div > section > article.right > article.more_notas",
+    "image": "div > span > div > a > img",
+    "title": "div > span > div > article > h3 > a",
+    "content": "",
+    "extImg": true
   };
 
   const datos = [];
+  const url = "https://www.cadenadial.com/secciones/musica";
 
   // para que cargue completa
   // await page1.waitForNavigation({ waitUntil: 'networkidle0', timeout: 60000 });
@@ -74,9 +75,8 @@ const main = async () => {
   // const content = await page1.evaluate(() => document.body.innerHTML);
   // console.log(typeof content);
   // console.log(content);
-  const url = onCheck[1];
 
-  const { data } = await axios.get("https://www.notistarz.com/paola-jara-pipe-bueno-yeison-jimenez-y-luis-alfonso-en-semana-musical-de-billboard/");
+  const { data } = await axios.get(url);
 
   // Cargando texto de la page
   const $ = cheerio.load(data);
@@ -84,37 +84,38 @@ const main = async () => {
   // -----Artículos pequeños----- //
 
 
-  // console.log($(art1["main"]).html());
+  console.log($(art1["main"]).html());
 
-  // $(art1["main"])
-  //   .each((i, element) => {
-  //     datos.push({});
-  //     let long = datos.length - 1;
-  //     datos[long].title = art1["title"] ? $(element).find(art1["title"]).text() : null;
-  //     datos[long].link = art1["link"] ? art1["ext"] ? `${url}${$(element).find(art1["link"]).attr("href")}` : $(element).find(art1["link"]).attr("href") : null;
-  //     datos[long].content = art1["content"] ? $(element).find(art1["content"]).text() : null;
-  //     datos[long].image = art1["image"] ? art1["extImg"] ? `${url}${$(element).find(art1["image"]).attr("src")}` : $(element).find(art1["image"]).attr("src") : null;
-  //     datos[long].publishedAt = new Date();
-  //     datos[long].pubDate = new Date();
-  //     // datos.scrape = fuente;
-  //     datos[long].likes = 0;
-  //     datos[long].dislikes = 0;
-  //     datos[long].state = "pendiente";
-  //     //datos.opinion = fuente.opinion;
-  //   });
+  $(art1["main"])
+    .each((i, element) => {
+      // console.log($(element).html());
+      datos.push({});
+      let long = datos.length - 1;
+      datos[long].title = art1["title"] ? `${$(element).find(art1["title"]).text()}`.trim() : null;
+      datos[long].link = art1["link"] ? art1["ext"] ? `${url}${$(element).find(art1["link"]).attr("href")}` : $(element).find(art1["link"]).attr("href") : null;
+      datos[long].content = art1["content"] ? $(element).find(art1["content"]).text() : null;
+      datos[long].image = art1["image"] ? art1["extImg"] ? `${url}${$(element).find(art1["image"]).attr("src")}` : $(element).find(art1["image"]).attr("src") : null;
+      datos[long].publishedAt = new Date();
+      datos[long].pubDate = new Date();
+      // datos.scrape = fuente;
+      datos[long].likes = 0;
+      datos[long].dislikes = 0;
+      datos[long].state = "pendiente";
+      //datos.opinion = fuente.opinion;
+    });
 
-  $("div.entry-content").children().each((i, el) => {
-    const ele = $(el).html();
-    console.log("Elemento >>>> ", ele);
-    // todaNoticia.push(ele);
-  });
+  // $("div.entry-content").children().each((i, el) => {
+  //   const ele = $(el).html();
+  //   console.log("Elemento >>>> ", ele);
+  //   // todaNoticia.push(ele);
+  // });
 
   // console.log("contenido --> ", cont);
   // await page1.close();
   // await browser.close();
 
   // console.clear();
-  // console.log(datos);
+  console.log(datos);
 };
 
 const secondary = async () => {

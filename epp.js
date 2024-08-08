@@ -35,10 +35,13 @@ const main = async () => {
 
   const { data } = await axios.get(url);
 
-  const extractionData = ["og:description", "og:image", "og:title"];
-  const extractionData2 = ["twitter:description", "twitter:image", "twitter:title"];
+  const extractionData = ['property="og:description"', 'property="og:image"', 'property="og:title"'];
+  const extractionData2 = ['name="twitter:description"', 'name="twitter:image"', 'name="twitter:title"'];
 
-
+  const props = [
+    {},
+    {}
+  ];
   const pageData = $.load(data);
 
   for (let prop of extractionData2) {
@@ -52,13 +55,6 @@ const main = async () => {
 
   // console.log(pageData("head").html());
   // console.log(pageData('title').text());
-
-
-
-  // await page1.close();
-  // await browser.close();
-
-
 
 };
 
