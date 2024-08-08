@@ -9,7 +9,7 @@ module.exports = (codigo, elemento, imageTag, cssImageAttr, cssImage = false, cs
   //   "cssImageExtraText": true
   // };
   if (cssImage) {
-    return cssImageExtraText ? "" : codigo(elemento).find(imageTag).attr(cssImageAttr);
+    return cssImageExtraText ? `${codigo(elemento).find(imageTag).attr(cssImageAttr)}`.slice(5, -2) : codigo(elemento).find(imageTag).attr(cssImageAttr);
   } else {
     return codigo(elemento).find(imageTag).attr("src");
   }

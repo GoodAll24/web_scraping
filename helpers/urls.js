@@ -205,18 +205,20 @@ const secondTry = [
 const tester = "https://bot.sannysoft.com";
 
 const media_images = [
-  'https://www.notistarz.com/categorias/musica/', // tema imagen
-  'https://gladyspalmera.com/actualidad/', // done // tema con la imagen
-  "https://infoelnuevonorte.com/?cat=12 ", // done tema imagen
-  "https://infoelnuevonorte.com/?cat=11 ", // done tema imagen
-  "https://miamipocket.us/entretenimiento/", // done tema imagen
-  "https://azuaalinstante.com/category/arte-y-espectaculo/ ", // done tema imagen
+  'https://www.notistarz.com/categorias/musica/', // done
+  'https://gladyspalmera.com/actualidad/', // done
+  "https://infoelnuevonorte.com/?cat=12", // done
+  "https://infoelnuevonorte.com/?cat=11", // done
+  "https://miamipocket.us/entretenimiento/", // done
+  "https://azuaalinstante.com/category/arte-y-espectaculo/ ", // done
   "https://precision.com.do/category/revista/espectaculos/", // done tema imagen
   "https://www.elfarandi.com/musica/", // done tema imagen parte1
-  "https://deultimominuto.net/category/entretenimiento/", // done tema imagen
+  "https://deultimominuto.net/category/entretenimiento/", // done
   "https://www.enlacedigital.com.do/categoria/entretenimiento/", // done tema imagen
   "https://diarioroatan.com/category/sociales/", // done  tema imagen
 ];
 
 
 module.exports = { media_images };
+
+// background-image: url('https://gladyspalmera.com/wp-content/uploads/2024/07/Dayme-Visita-984x620.jpg')

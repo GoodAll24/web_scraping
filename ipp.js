@@ -10,22 +10,22 @@ const { media_images } = require('./helpers/urls');
 const main = async () => {
 
   const art1 = {
-    "media": "https://www.notistarz.com/categorias/musica/",
+    "media": "https://precision.com.do/category/revista/espectaculos/",
     "ext": false,
-    "link": "div > header > h2 > a",
-    "main": "div > div > div > div > div > main > div > div",
-    "image": "div > figure > a",
-    "title": "div > header > h2 > a",
+    "link": "div > div > a",
+    "main": "article.format-standard",
+    "image": "div > div > a > div > div",
+    "title": "div > div > div > h2 > a",
+    "content": "",
     "extImg": false,
-    "content": "div > div > p",
-    "details": "div.entry-content",
     "cssImage": true,
-    "cssImageAttr": "data-bg-image",
-    "cssImageExtraText": true
+    "cssImageAttr": "data-src",
+    "cssImageExtraText": false
   };
+  // "details": "div.entry-content",
 
   const datos = [];
-  const url = "https://www.notistarz.com/categorias/musica/";
+  // const url = "https://www.notistarz.com/categorias/musica/";
 
   const { data } = await axios.get(art1["media"]);
 
@@ -44,21 +44,22 @@ const main = async () => {
   //   console.log($(el).attr("data-bg"));
   // });
 
-  // console.log($("figure.post-featured-image.post-img-wrap").html());
+  // console.log($("a.td-image-wrap").html());
 
 
-  // $(art1["main"])
-  //   .each((i, element) => {
-  //     // console.log($(element).html());
-  //     datos.push({});
-  //     let long = datos.length - 1;
-  //     datos[long].title = art1["title"] ? `${$(element).find(art1["title"]).text()}`.trim() : null;
-  //     datos[long].link = art1["link"] ? art1["ext"] ? `${url}${$(element).find(art1["link"]).attr("href")}` : $(element).find(art1["link"]).attr("href") : null;
-  //     datos[long].content = art1["content"] ? $(element).find(art1["content"]).text() : null;
-  //     datos[long].image = art1["image"] ? art1["cssImage"] ? $(element).find(art1["image"]).attr(art1["cssImageAttr"]) : art1["extImg"] ? `${url}${$(element).find(art1["image"]).attr("src")}` : $(element).find(art1["image"]).attr("src") : null;
-  //   });
+  $(art1["main"])
+    .each((i, element) => {
+      // console.log($(element).html());
+      const pseudoObject = {
+        title: art1["title"] ? `${$(element).find(art1["title"]).text()}`.trim() : null,
+        link: art1["link"] ? art1["ext"] ? `${url}${$(element).find(art1["link"]).attr("href")}` : $(element).find(art1["link"]).attr("href") : null,
+        content: art1["content"] ? $(element).find(art1["content"]).text() : null,
+        image: art1["image"] ? art1["cssImage"] ? art1["cssImageExtraText"] ? art1["cssImageAttr"] === "style" ? `${$(element).find(art1["image"]).attr(art1["cssImageAttr"])}`.slice(23, -3) : `${$(element).find(art1["image"]).attr(art1["cssImageAttr"])}`.slice(5, -2) : $(element).find(art1["image"]).attr(art1["cssImageAttr"]) : art1["extImg"] ? `${art1["media"]}/${$(element).find(art1["image"]).attr("src")}` : $(element).find(art1["image"]).attr("src") : null,
+      };
+      if (pseudoObject.title && pseudoObject.link) datos.push(pseudoObject);
+    });
 
-  // console.log(datos);
+  console.log(datos);
 };
 
 main();
