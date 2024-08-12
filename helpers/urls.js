@@ -211,9 +211,9 @@ const media_images = [
   "https://infoelnuevonorte.com/?cat=11", // done
   "https://miamipocket.us/entretenimiento/", // done
   "https://azuaalinstante.com/category/arte-y-espectaculo/ ", // done
-  "https://precision.com.do/category/revista/espectaculos/", // done tema imagen
-  "https://www.elfarandi.com/musica/", // done tema imagen parte1
+  "https://precision.com.do/category/revista/espectaculos/", // done
   "https://deultimominuto.net/category/entretenimiento/", // done
+  "https://www.elfarandi.com/musica/", // done tema imagen parte1
   "https://www.enlacedigital.com.do/categoria/entretenimiento/", // done tema imagen
   "https://diarioroatan.com/category/sociales/", // done  tema imagen
 ];

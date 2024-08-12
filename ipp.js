@@ -56,6 +56,10 @@ const main = async () => {
         content: art1["content"] ? $(element).find(art1["content"]).text() : null,
         image: art1["image"] ? art1["cssImage"] ? art1["cssImageExtraText"] ? art1["cssImageAttr"] === "style" ? `${$(element).find(art1["image"]).attr(art1["cssImageAttr"])}`.slice(23, -3) : `${$(element).find(art1["image"]).attr(art1["cssImageAttr"])}`.slice(5, -2) : $(element).find(art1["image"]).attr(art1["cssImageAttr"]) : art1["extImg"] ? `${art1["media"]}/${$(element).find(art1["image"]).attr("src")}` : $(element).find(art1["image"]).attr("src") : null,
       };
+      if (pseudoObject.image) {
+        const parsedImage = new URL(pseudoObject.image);
+        pseudoObject.image = `${parsedImage.protocol}/${parsedImage.hostname}${parsedImage.pathname}`;
+      }
       if (pseudoObject.title && pseudoObject.link) datos.push(pseudoObject);
     });
 
