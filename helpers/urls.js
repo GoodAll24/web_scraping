@@ -218,7 +218,114 @@ const media_images = [
   "https://diarioroatan.com/category/sociales/", // done  tema imagen
 ];
 
+const add_media = [
+  "https://adnamerica.com/entretenimiento", // done
+  "https://www.conclusion.com.ar/temas/espectaculos/", // done
+  "https://masvip.com.do/secciones/rincon-urbano/", // done
+  "https://masvip.com.do/secciones/quien/", // done
+  "https://www.esquire.com/es/actualidad/musica/", // link issues
+  "https://elcronista.co/cultura", // to test (load error)
+  "https://www.revistavea.com.co/musica/", // to test (load error)
+  "https://urbanaplayfm.com/category/musica/", // to finnish image (load error)
+  "https://lifeandstyle.expansion.mx/noticias-musica", // done
+  "http://tijuanainformativo.info/index.php/noticias-cultura-y-espectaculos-de-tijuana-y-baja-california-y-mexico", // done
+  "https://www.canal26.com/musica", // Error: Unknown pseudo-class :text-base
+  "https://hoydia.com.ar/espectaculos/", // done
+];
 
-module.exports = { media_images };
+add_media_data = [
+  {
+    "ext": true,
+    "link": "div > a",
+    "main": "article[role='article']",
+    "image": "div > a > div > div > div > img",
+    "title": "div > h2 > a",
+    "content": "",
+    "extImg": true
+  },
+  {
+    "ext": false,
+    "link": 'div > div > a',
+    "main": 'div.post-item',
+    "image": 'div > div > a > img',
+    "title": 'div > div > h3 > a',
+    "content": "div > div > p",
+    "extImg": false
+  },
+  {
+    "ext": false,
+    "link": 'a',
+    "main": 'ul > li',
+    "image": 'a > div > img',
+    "title": 'a > div > h2',
+    "content": 'a > div > h2',
+    "extImg": false
+  },
+  {
+    "ext": false,
+    "link": "a",
+    "main": "ul > li",
+    "image": "a > div > img",
+    "title": "a > div > h2",
+    "content": "a > div > h2",
+    "extImg": false
+  },
+  {
+    "ext": true,
+    "link": '',
+    "main": 'a.ee4ms352.css-191dage.e1c1bym14',
+    "image": 'div > img',
+    "title": 'div > span.css-15087j0.e10ip9lg5',
+    "content": "",
+    "extImg": true
+  },
+  {
+    "ext": false,
+    "link": 'div > div > div > div > div > a',
+    "main": 'div.post',
+    "image": 'div > div > div > div > div > a > picture > img',
+    "title": 'div > div > div > div > div > a > h3 > span',
+    "content": "",
+    "extImg": false
+  },
+  {
+    "ext": false,
+    "link": 'div > div > div > div > div > a',
+    "main": 'div.Card.Card_cromos.Card_cromos_fullCard.padding-Border',
+    "image": 'div > div > div > div > div > a > picture > img',
+    "title": 'div > h2 > a',
+    "content": 'div > h3.Card-Hook.Hook > a',
+    "extImg": false
+  },
+  {
+    "ext": false,
+    "link": 'div > a',
+    "main": 'article.l-post.grid-overlay.overlay-post.grid-overlay-a.overlay-base-post',
+    "image": 'div > a > span',
+    "title": 'div > div > div > h2 > a',
+    "content": '',
+    "extImg": false
+  },
+  {
+    "ext": false,
+    "link": "div > div > a",
+    "main": "li.BasicPromoList-items-item",
+    "image": "div > div > a > img",
+    "title": "div > div > h3 > a",
+    "content": "div > div > div > a",
+    "extImg": true
+  },
+  {
+    "ext": true,
+    "link": "div > h3 > a",
+    "main": "div.itemContainer.itemContainerLast.span12",
+    "image": "div > div > span > img",
+    "title": "div > h3 > a",
+    "content": "div > div > p",
+    "extImg": true
+  },
+];
+
+module.exports = { add_media, add_media_data };
 
 // background-image: url('https://gladyspalmera.com/wp-content/uploads/2024/07/Dayme-Visita-984x620.jpg')

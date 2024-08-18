@@ -6,7 +6,7 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 const { intern } = require('./helpers/intern.js');
-const { secondTry } = require('./helpers/urls');
+const { add_media, add_media_data } = require('./helpers/urls');
 
 
 
@@ -14,123 +14,87 @@ const { secondTry } = require('./helpers/urls');
 
 
 const main = async () => {
-  // // Launch browser and open a new page
-  // const browser = await puppeteer.launch({
-  //   args: [
-  //     '--disable-gpu',
-  //     '--disable-dev-shm-usage',
-  //     '--disable-setuid-sandbox',
-  //     '--no-first-run',
-  //     '--no-sandbox',
-  //     '--no-zygote',
-  //     //'--single-process',
-  //   ], headless: true, executablePath: executablePath(),
-  // });
-
-  // const page1 = await browser.newPage();
-  // console.log("pagina abierta");
-  // // const html = '<h1 class="titulo">Hola Mundo</h1>';
-
-  // const url = masNoticias[1];
-
-
-  // // go to url using the page
-  // console.log(`iendo a la pagina \n ${url}`);
-  // await page1.goto(url, { timeout: 90000, waitUntil: 'networkidle2' });
-
-  // Set screen size
-  // await page1.setViewport({ width: 1920, height: 6000 });
-
-
-  // "image": null,
-  // "content": "",
-  // "main": "div > div > div > div > div > div > div > div > div > article",
 
   const art1 = {
-    "ext": true,
-    "link": "div > span > div > a",
-    "main": "div > div > div > section > article.right > article.more_notas",
-    "image": "div > span > div > a > img",
-    "title": "div > span > div > article > h3 > a",
+    "ext": false,
+    "link": "div > a",
+    "main": "article.jeg_post.jeg_pl_md_1.format-standard",
+    "image": "div > a > div > img",
+    "title": "div > h3",
     "content": "",
-    "extImg": true
+    "extImg": false,
+    "cssImage": true,
+    "cssImageAttr": "data-src",
+    "cssImageExtraText": false
   };
-
+  // const pos = 5;
+  // const art1 = add_media_data[pos];
+  // const url = add_media[pos];
+  const url = "https://hoydia.com.ar/espectaculos/";
   const datos = [];
-  const url = "https://www.cadenadial.com/secciones/musica";
+  console.log("Getting page...");
+  await axios.get(url)
+    .then(response => {
+      console.log("Page loaded!");
+      const $ = cheerio.load(response.data);
 
-  // para que cargue completa
-  // await page1.waitForNavigation({ waitUntil: 'networkidle0', timeout: 60000 });
+      // -----Getting articles----- //
+      // console.log($(art1["main"]).html());
 
-  // Para esperar un elemento específico
-  // await page1.waitForSelector(expresion, { visible: true });
+      $(art1["main"])
+        .each((i, element) => {
+          // console.log($(element).html());
+          datos.push({});
+          let long = datos.length - 1;
+          datos[long].title = art1["title"] ? `${$(element).find(art1["title"]).text()}`.trim() : null;
+          datos[long].link = art1["link"] ? art1["ext"] ? `${url}${$(element).find(art1["link"]).attr("href")}` : $(element).find(art1["link"]).attr("href") : null;
+          datos[long].content = art1["content"] ? $(element).find(art1["content"]).text() : null;
+          datos[long].image = art1["image"]
+            ? art1["cssImage"]
+              ? art1["cssImageExtraText"]
+                ? art1["cssImageAttr"] === "style"
+                  ? `${$(element).find(art1["image"]).attr(art1["cssImageAttr"])}`.slice(23, -3)
+                  : `${$(element).find(art1["image"]).attr(art1["cssImageAttr"])}`.slice(5, -2)
+                : $(element).find(art1["image"]).attr(art1["cssImageAttr"])
+              : art1["extImg"]
+                ? `${art1["media"]}/${$(element).find(art1["image"]).attr("src")}`
+                : $(element).find(art1["image"]).attr("src") : null;
+          datos[long].publishedAt = new Date();
+          datos[long].pubDate = new Date();
+          datos[long].likes = 0;
+          datos[long].dislikes = 0;
+          datos[long].state = "pendiente";
+        });
+      console.log(datos);
+    })
+    .catch(error => console.log("Error with page --> ", url, "\n >>>", error.code || error))
+    .finally(() => console.log("Done! \n\n\n"));
 
-  // Screenshot
-  // await page1.screenshot({ path: 'test.jpg' })
+  // -----Getting metadata----- //
+  const parsedEnlace = new URL(url);
+  console.log("Getting metadata from: ", parsedEnlace.hostname, "...");
+  await axios.get(`${parsedEnlace.protocol}//${parsedEnlace.hostname}`)
+    .then(response => {
+      console.log("Metadata obtained!");
+      const metaPage = cheerio.load(response.data);
+      console.log(metaPage("title").text());
+      const pageIcon = metaPage('link[rel="icon"]').attr("href")
+        || metaPage('link[rel="shortcut icon"]').attr("href")
+        || "No hay ícono para este sitio";
 
-  // expresion
+      console.log(art1.ext === true
+        ? pageIcon
+        : `${parsedEnlace}${pageIcon}`);
+    })
+    .catch(error => console.log("Error with metadata --> ", url, "\n >>>", error.code || error))
+    .finally(() => console.log("Meta proccess Done!"));
 
 
-
-  // const content = await page1.evaluate(() => document.body.innerHTML);
-  // console.log(typeof content);
-  // console.log(content);
-
-  const { data } = await axios.get(url);
-
-  // Cargando texto de la page
-  const $ = cheerio.load(data);
-
-  // -----Artículos pequeños----- //
-
-
-  console.log($(art1["main"]).html());
-
-  $(art1["main"])
-    .each((i, element) => {
-      // console.log($(element).html());
-      datos.push({});
-      let long = datos.length - 1;
-      datos[long].title = art1["title"] ? `${$(element).find(art1["title"]).text()}`.trim() : null;
-      datos[long].link = art1["link"] ? art1["ext"] ? `${url}${$(element).find(art1["link"]).attr("href")}` : $(element).find(art1["link"]).attr("href") : null;
-      datos[long].content = art1["content"] ? $(element).find(art1["content"]).text() : null;
-      datos[long].image = art1["image"] ? art1["extImg"] ? `${url}${$(element).find(art1["image"]).attr("src")}` : $(element).find(art1["image"]).attr("src") : null;
-      datos[long].publishedAt = new Date();
-      datos[long].pubDate = new Date();
-      // datos.scrape = fuente;
-      datos[long].likes = 0;
-      datos[long].dislikes = 0;
-      datos[long].state = "pendiente";
-      //datos.opinion = fuente.opinion;
-    });
-
-  // $("div.entry-content").children().each((i, el) => {
-  //   const ele = $(el).html();
-  //   console.log("Elemento >>>> ", ele);
-  //   // todaNoticia.push(ele);
-  // });
-
-  // console.log("contenido --> ", cont);
-  // await page1.close();
-  // await browser.close();
-
-  // console.clear();
-  console.log(datos);
 };
 
-const secondary = async () => {
-  const access = "div.site > div > div.container > div > div > main.site-main > div > div.entry-content";
-  const url = 'https://www.notistarz.com/trueno-domina-lista-de-popularidad-con-su-real-gangsta-love/';
-  const url2 = 'https://www.notistarz.com/estrenos-musicales-de-la-semana-notistarz-56/';
-  const datis = await intern(url2, access);
 
-  console.log(datis);
-};
 
 main();
-
-// secondary();
-
 
 /*
 [
