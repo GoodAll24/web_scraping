@@ -17,20 +17,20 @@ const main = async () => {
 
   const art1 = {
     "ext": false,
-    "link": "div > a",
-    "main": "article.jeg_post.jeg_pl_md_1.format-standard",
-    "image": "div > a > div > img",
-    "title": "div > h3",
-    "content": "",
+    "link": "a",
+    "main": "li.post-item",
+    "image": "a > img",
+    "title": "div > h2",
+    "content": "div > p",
     "extImg": false,
-    "cssImage": true,
-    "cssImageAttr": "data-src",
-    "cssImageExtraText": false
+    // "cssImage": true,
+    // "cssImageAttr": "style",
+    // "cssImageExtraText": false
   };
   // const pos = 5;
   // const art1 = add_media_data[pos];
   // const url = add_media[pos];
-  const url = "https://hoydia.com.ar/espectaculos/";
+  const url = "https://www.panasenutah.com/category/entretenimiento/musica/";
   const datos = [];
   console.log("Getting page...");
   await axios.get(url)
