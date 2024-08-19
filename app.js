@@ -17,20 +17,18 @@ const main = async () => {
 
   const art1 = {
     "ext": false,
-    "link": "a",
-    "main": "li.post-item",
-    "image": "a > img",
-    "title": "div > h2",
-    "content": "div > p",
-    "extImg": false,
-    // "cssImage": true,
-    // "cssImageAttr": "style",
-    // "cssImageExtraText": false
+    "link": "div > figure > a",
+    "main": "div.post-col",
+    "image": "div > figure > a",
+    "title": "div > header > h2 > a",
+    "content": "div > div > p",
+    "extImg": true,
+    "cssImage": true,
+    "cssImageAttr": "style",
+    "cssImageExtraText": true,
   };
-  // const pos = 5;
-  // const art1 = add_media_data[pos];
-  // const url = add_media[pos];
-  const url = "https://www.panasenutah.com/category/entretenimiento/musica/";
+
+  const url = "https://sglaradio.com/category/noticias/";
   const datos = [];
   console.log("Getting page...");
   await axios.get(url)
@@ -77,14 +75,12 @@ const main = async () => {
     .then(response => {
       console.log("Metadata obtained!");
       const metaPage = cheerio.load(response.data);
-      console.log(metaPage("title").text());
+      console.log("Medio >>>>>> ", metaPage("title").text());
       const pageIcon = metaPage('link[rel="icon"]').attr("href")
         || metaPage('link[rel="shortcut icon"]').attr("href")
         || "No hay ícono para este sitio";
 
-      console.log(art1.ext === true
-        ? pageIcon
-        : `${parsedEnlace}${pageIcon}`);
+      console.log(pageIcon);
     })
     .catch(error => console.log("Error with metadata --> ", url, "\n >>>", error.code || error))
     .finally(() => console.log("Meta proccess Done!"));

@@ -169,26 +169,51 @@ const masNoticias = [
   "https://www.yucatan.com.mx/seccion/espectaculos", // done
   "https://amariemagazine.com/category/musica/", // done
   "https://amariemagazine.com/category/entretenimiento/conciertos/", // done
-  "https://www.panasenutah.com/category/entretenimiento/musica/",
-  "https://panoramaeconomicopma.com/categorias/farandula/",
-  "https://impactolatino.com/entretenimiento/",
+  "https://panoramaeconomicopma.com/categorias/farandula/", // done
+  "https://sglaradio.com/category/noticias/",// ready (just fix image issue on backend)
+  "https://sglaradio.com/category/lanzamientos/",// ready (just fix image issue on backend)
+  "https://www.panasenutah.com/category/entretenimiento/musica/", // onCheck
+  "https://impactolatino.com/entretenimiento/", // onCheck
   "https://dominicanaaldia.do/Secciones/estilo-de-vida/",
   "https://elperiodiquito.com/category/mas/escenario/",
-  "https://sglaradio.com/category/noticias/",
-  "https://sglaradio.com/category/lanzamientos/",
   "https://ultimasnoticia.com/category/entretenimiento/",
 ];
 
 
 const onCheck = [
-  "https://www.elpais.com.co/entretenimiento/", // done
-  "https://www.kq105.com/noticias/eventos/", // 
-  "https://2001online.com/seccion/farandula/",
-  "https://www.elnuevodia.com/entretenimiento/musica/",
-  "https://caracol.com.co/tendencias/entretenimiento/",
-  "https://www.cronica.com.ar/elcanaldelamusica",
-  "https://www.elvocero.com/escenario/espectaculos/",
-  "https://acn.com.ve/espectaculos/",
+  {
+    url: "https://www.panasenutah.com/category/entretenimiento/musica/",
+    "ext": false,
+    "link": "a",
+    "main": "li.post-item",
+    "image": "a > img",
+    "title": "div > h2",
+    "content": "div > p",
+    "extImg": false,
+  },
+  {
+    url: "https://impactolatino.com/entretenimiento/",
+    "ext": false,
+    "link": "div > a",
+    "main": "div.td-big-grid-post",
+    "image": "div > a > img",
+    "title": "div > div > div > h3 > a",
+    "content": "div > div > p",
+    "extImg": false,
+  },
+  {
+    url: "https://sglaradio.com/category/noticias/",
+    "ext": false,
+    "link": "div > figure > a",
+    "main": "div.post-col",
+    "image": "div > figure > a",
+    "title": "div > header > h2 > a",
+    "content": "div > div > p",
+    "extImg": true,
+    "cssImage": true,
+    "cssImageAttr": "style",
+    "cssImageExtraText": true,
+  }
 ];
 
 const secondTry = [
@@ -204,19 +229,6 @@ const secondTry = [
 
 const tester = "https://bot.sannysoft.com";
 
-const media_images = [
-  'https://www.notistarz.com/categorias/musica/', // done
-  'https://gladyspalmera.com/actualidad/', // done
-  "https://infoelnuevonorte.com/?cat=12", // done
-  "https://infoelnuevonorte.com/?cat=11", // done
-  "https://miamipocket.us/entretenimiento/", // done
-  "https://azuaalinstante.com/category/arte-y-espectaculo/ ", // done
-  "https://precision.com.do/category/revista/espectaculos/", // done
-  "https://deultimominuto.net/category/entretenimiento/", // done
-  "https://www.elfarandi.com/musica/", // done tema imagen parte1
-  "https://www.enlacedigital.com.do/categoria/entretenimiento/", // done tema imagen
-  "https://diarioroatan.com/category/sociales/", // done  tema imagen
-];
 
 const add_media = [
   "https://adnamerica.com/entretenimiento", // done
@@ -233,99 +245,6 @@ const add_media = [
   "https://hoydia.com.ar/espectaculos/", // done
 ];
 
-add_media_data = [
-  {
-    "ext": true,
-    "link": "div > a",
-    "main": "article[role='article']",
-    "image": "div > a > div > div > div > img",
-    "title": "div > h2 > a",
-    "content": "",
-    "extImg": true
-  },
-  {
-    "ext": false,
-    "link": 'div > div > a',
-    "main": 'div.post-item',
-    "image": 'div > div > a > img',
-    "title": 'div > div > h3 > a',
-    "content": "div > div > p",
-    "extImg": false
-  },
-  {
-    "ext": false,
-    "link": 'a',
-    "main": 'ul > li',
-    "image": 'a > div > img',
-    "title": 'a > div > h2',
-    "content": 'a > div > h2',
-    "extImg": false
-  },
-  {
-    "ext": false,
-    "link": "a",
-    "main": "ul > li",
-    "image": "a > div > img",
-    "title": "a > div > h2",
-    "content": "a > div > h2",
-    "extImg": false
-  },
-  {
-    "ext": true,
-    "link": '',
-    "main": 'a.ee4ms352.css-191dage.e1c1bym14',
-    "image": 'div > img',
-    "title": 'div > span.css-15087j0.e10ip9lg5',
-    "content": "",
-    "extImg": true
-  },
-  {
-    "ext": false,
-    "link": 'div > div > div > div > div > a',
-    "main": 'div.post',
-    "image": 'div > div > div > div > div > a > picture > img',
-    "title": 'div > div > div > div > div > a > h3 > span',
-    "content": "",
-    "extImg": false
-  },
-  {
-    "ext": false,
-    "link": 'div > div > div > div > div > a',
-    "main": 'div.Card.Card_cromos.Card_cromos_fullCard.padding-Border',
-    "image": 'div > div > div > div > div > a > picture > img',
-    "title": 'div > h2 > a',
-    "content": 'div > h3.Card-Hook.Hook > a',
-    "extImg": false
-  },
-  {
-    "ext": false,
-    "link": 'div > a',
-    "main": 'article.l-post.grid-overlay.overlay-post.grid-overlay-a.overlay-base-post',
-    "image": 'div > a > span',
-    "title": 'div > div > div > h2 > a',
-    "content": '',
-    "extImg": false
-  },
-  {
-    "ext": false,
-    "link": "div > div > a",
-    "main": "li.BasicPromoList-items-item",
-    "image": "div > div > a > img",
-    "title": "div > div > h3 > a",
-    "content": "div > div > div > a",
-    "extImg": true
-  },
-  {
-    "ext": true,
-    "link": "div > h3 > a",
-    "main": "div.itemContainer.itemContainerLast.span12",
-    "image": "div > div > span > img",
-    "title": "div > h3 > a",
-    "content": "div > div > p",
-    "extImg": true
-  },
-];
-
-module.exports = { add_media, add_media_data };
+// module.exports = { add_media, add_media_data };
 
 // background-image: url('https://gladyspalmera.com/wp-content/uploads/2024/07/Dayme-Visita-984x620.jpg')
