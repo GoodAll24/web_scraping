@@ -103,13 +103,12 @@ const chile = [
 const rd = [
   'https://www.diariolibre.com/revista/musica', // done
   'https://listindiario.com/entretenimiento/musica', // done falta el logo(problemas de internet)
-  'https://eldia.com.do/secciones/espectaculos/',
-  'https://www.elcaribe.com.do/seccion/gente/a-y-e/',
-  'https://eldia.com.do/secciones/espectaculos/',
+  'https://diariosocialrd.com/categoria/musica/', // done
   'https://notidigitalrd.com.do/category/entretenimiento/', // done
+  'https://eldia.com.do/secciones/espectaculos/', // onCheck
+  'https://www.elcaribe.com.do/seccion/gente/a-y-e/', // onCheck
   'https://www.elperiodico.com.do/secciones/entretenimiento/',
   'https://eltestigo.do/entretenimiento',
-  'https://diariosocialrd.com/categoria/musica/',
 ];
 const venezuela = [
   "https://www.elnacional.com/musica/", // done
@@ -121,7 +120,7 @@ const venezuela = [
   "https://acn.com.ve/espectaculos/", // done
 ];
 const paraguay = [
-  'https://independiente.com.py/show/' // error de carga
+  'https://independiente.com.py/show/' // onCheck
 ];
 const cr = [
   'https://www.larepublica.net/seccion/magazine', // done
@@ -142,43 +141,50 @@ const bolivia = [
 const nicaragua = [
   'https://www.tn8.tv/category/musica/', // done
 ];
-const extra = [
-  'https://www.cronica.com.ar/elcanaldelamusica', // (Argentina)  done
-  'https://www.lanacion.com.ar/espectaculos/musica/' // (Argentina)
-];
 
 const masNoticias = [
-  "https://www.estilosblog.com/category/estilos-blog/entretenimiento/", // done tema imagen
+  "https://www.estilosblog.com/category/estilos-blog/entretenimiento/", // done
   "https://blog.joinnus.com/entretenimiento/", // done
   "https://blog.joinnus.com/nueva-musica/", // done
   "https://www.lainformacion.com.do/mirador/musica-y-literatura", // problemas de espera
-  "https://infoelnuevonorte.com/?cat=12 ", // done tema imagen
-  "https://infoelnuevonorte.com/?cat=11 ", // done tema imagen
-  "https://miamipocket.us/entretenimiento/", // done tema imagen
+  "https://infoelnuevonorte.com/?cat=12 ", // done
+  "https://infoelnuevonorte.com/?cat=11 ", // done
+  "https://miamipocket.us/entretenimiento/", // done
   "https://entretenimientotolima.com/category/agenda/musica/", // done
   "https://codigotv.net/category/entretenimiento/ ", // done
-  "https://azuaalinstante.com/category/arte-y-espectaculo/ ", // done tema imagen
+  "https://azuaalinstante.com/category/arte-y-espectaculo/ ", // done
   "https://www.disco89fm.com/noticias", // done
-  "https://precision.com.do/category/revista/espectaculos/", // done tema imagen
-  "https://www.elfarandi.com/musica/", // done tema imagen parte1
+  "https://precision.com.do/category/revista/espectaculos/", // done 
+  "https://www.elfarandi.com/musica/", // done
   "https://intervez.com/category/culturaentretenimiento/musica/", // done
   "https://www.ntn24.com/noticias-entretenimiento", // done
-  "https://deultimominuto.net/category/entretenimiento/", // done tema imagen
+  "https://deultimominuto.net/category/entretenimiento/", // done
   "https://www.enlacedigital.com.do/categoria/entretenimiento/", // done tema imagen
-  "https://diarioroatan.com/category/sociales/", // done  tema imagen
+  "https://diarioroatan.com/category/sociales/", // done
   "https://www.yucatan.com.mx/seccion/espectaculos", // done
   "https://amariemagazine.com/category/musica/", // done
   "https://amariemagazine.com/category/entretenimiento/conciertos/", // done
   "https://panoramaeconomicopma.com/categorias/farandula/", // done
+  "https://adnamerica.com/entretenimiento", // done
+  "https://hoydia.com.ar/espectaculos/", // done
+  "https://www.conclusion.com.ar/temas/espectaculos/", // done
+  "https://masvip.com.do/secciones/rincon-urbano/", // done
+  "https://masvip.com.do/secciones/quien/", // done
+  "https://lifeandstyle.expansion.mx/noticias-musica", // done
   "https://sglaradio.com/category/noticias/",// ready (just fix image issue on backend)
   "https://sglaradio.com/category/lanzamientos/",// ready (just fix image issue on backend)
   "https://www.panasenutah.com/category/entretenimiento/musica/", // onCheck
   "https://impactolatino.com/entretenimiento/", // onCheck
-  "https://dominicanaaldia.do/Secciones/estilo-de-vida/",
-  "https://elperiodiquito.com/category/mas/escenario/",
-  "https://ultimasnoticia.com/category/entretenimiento/",
+  "https://dominicanaaldia.do/Secciones/estilo-de-vida/", // onCheck
+  "https://elcronista.co/cultura", // to test (load error)
+  "https://www.revistavea.com.co/musica/", // to test (load error)
+  "https://urbanaplayfm.com/category/musica/", // to finnish image (load error)
+  "http://tijuanainformativo.info/index.php/noticias-cultura-y-espectaculos-de-tijuana-y-baja-california-y-mexico", // done
+  "https://www.canal26.com/musica", // Error: Unknown pseudo-class :text-base
+  "https://www.esquire.com/es/actualidad/musica/", // link issues
+  "https://ultimasnoticia.com/category/entretenimiento/", // link issues 
+  "https://elperiodiquito.com/category/mas/escenario/", // No se deja ver codigo fuente
 ];
-
 
 const onCheck = [
   {
@@ -213,37 +219,43 @@ const onCheck = [
     "cssImage": true,
     "cssImageAttr": "style",
     "cssImageExtraText": true,
+  },
+  {
+    url: "https://dominicanaaldia.do/Secciones/estilo-de-vida/",
+    "ext": false,
+    "link": "div > a",
+    "main": "article.list-post",
+    "image": "div > a > img",
+    "title": "div > div > h2 > a",
+    "content": "div > div > p",
+    "extImg": true,
+  },
+  {
+    url: "https://eldia.com.do/secciones/espectaculos/",
+    "ext": false,
+    "link": "a",
+    "main": "article.post",
+    "title": "div > header > h3 > a",
+    "image": "a > div > div > img",
+    "content": "",
+    "extImg": false,
+  },
+  {
+    url: "https://independiente.com.py/show/",
+    "ext": false,
+    "link": "div > div > div > a",
+    "main": "div.tdb_module_loop.td_module_wrap.td-animation-stack.td-cpt-post",
+    "title": "div > div > h3 > a",
+    "image": "div > div > div > a > span",
+    "content": "div.td-excerpt",
+    "extImg": false,
+    "cssImage": true,
+    "cssImageAttr": "data-img-url",
+    "cssImageExtraText": false,
   }
 ];
 
-const secondTry = [
-  "https://www.elespectador.com/entretenimiento/musica/",
-  "https://www.latercera.com/etiqueta/musica-culto",
-  "https://listindiario.com/entretenimiento/musica",
-  "https://www.elnacional.com/musica/",
-  "https://www.elcaribe.com.do/seccion/gente/a-y-e/",
-  "https://www.elvocero.com/escenario/espectaculos/", // done
-  "https://www.billboard.com/c/espanol/noticias/", // done
-  "https://www.infobae.com/tag/musica/", // done
-];
-
 const tester = "https://bot.sannysoft.com";
-
-
-const add_media = [
-  "https://adnamerica.com/entretenimiento", // done
-  "https://www.conclusion.com.ar/temas/espectaculos/", // done
-  "https://masvip.com.do/secciones/rincon-urbano/", // done
-  "https://masvip.com.do/secciones/quien/", // done
-  "https://www.esquire.com/es/actualidad/musica/", // link issues
-  "https://elcronista.co/cultura", // to test (load error)
-  "https://www.revistavea.com.co/musica/", // to test (load error)
-  "https://urbanaplayfm.com/category/musica/", // to finnish image (load error)
-  "https://lifeandstyle.expansion.mx/noticias-musica", // done
-  "http://tijuanainformativo.info/index.php/noticias-cultura-y-espectaculos-de-tijuana-y-baja-california-y-mexico", // done
-  "https://www.canal26.com/musica", // Error: Unknown pseudo-class :text-base
-  "https://hoydia.com.ar/espectaculos/", // done
-];
 
 // module.exports = { add_media, add_media_data };
 

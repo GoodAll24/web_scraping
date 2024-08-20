@@ -17,18 +17,18 @@ const main = async () => {
 
   const art1 = {
     "ext": false,
-    "link": "div > figure > a",
-    "main": "div.post-col",
-    "image": "div > figure > a",
-    "title": "div > header > h2 > a",
-    "content": "div > div > p",
-    "extImg": true,
-    "cssImage": true,
-    "cssImageAttr": "style",
-    "cssImageExtraText": true,
+    "link": "a",
+    "main": "article.standard-entry-box.category-yellow ",
+    "title": "h2.entry-title",
+    "image": "picture > img",
+    "content": "",
+    "extImg": false
+    // "cssImage": true,
+    // "cssImageAttr": "data-img-url",
+    // "cssImageExtraText": false,
   };
 
-  const url = "https://sglaradio.com/category/noticias/";
+  const url = "https://www.lacapital.com.ar/secciones/zoom.html";
   const datos = [];
   console.log("Getting page...");
   await axios.get(url)
@@ -84,24 +84,6 @@ const main = async () => {
     })
     .catch(error => console.log("Error with metadata --> ", url, "\n >>>", error.code || error))
     .finally(() => console.log("Meta proccess Done!"));
-
-
 };
 
-
-
 main();
-
-/*
-[
-  {
-    "main":"",
-    "title":"",
-    "content":"",
-    "link":"",
-    "image":"",
-    "ext":false,
-    "extImg":false
-  }
-]
-*/
