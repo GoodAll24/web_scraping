@@ -175,14 +175,14 @@ const masNoticias = [
   "http://tijuanainformativo.info/index.php/noticias-cultura-y-espectaculos-de-tijuana-y-baja-california-y-mexico", // done
   "https://impactolatino.com/entretenimiento/", // done
   "https://dominicanaaldia.do/Secciones/estilo-de-vida/", // done
+  "https://urbanaplayfm.com/category/musica/", // done
+  "https://elcronista.co/cultura", // done
   "https://sglaradio.com/category/noticias/", // ready (just fix image issue on backend)
   "https://sglaradio.com/category/lanzamientos/", // ready (just fix image issue on backend)
-  "https://elcronista.co/cultura", // done
-  "https://www.revistavea.com.co/musica/", // to test (load error)
-  "https://urbanaplayfm.com/category/musica/", // to finnish image (load error)
   "https://www.canal26.com/musica", // Error: Unknown pseudo-class :text-base
   "https://www.esquire.com/es/actualidad/musica/", // link issues
   "https://ultimasnoticia.com/category/entretenimiento/", // link issues
+  "https://www.revistavea.com.co/musica/", // html error
   "https://elperiodiquito.com/category/mas/escenario/", // No se deja ver codigo fuente
 ];
 
@@ -201,17 +201,17 @@ const onCheck = [
     cssImageExtraText: true,
   },
   {
-    url: "https://www.revistavea.com.co/musica/",
+    url: "https://elperiodiquito.com/category/mas/escenario/",
     ext: false,
-    link: "",
-    main: "",
-    title: "",
-    image: "",
+    link: "a.image-link",
+    main: "article.l-post",
+    title: "div > div > div > h2 > a",
+    image: "a.image-link > span",
     content: "",
     extImg: false,
-    // cssImage: true,
-    // cssImageAttr: "data-src",
-    // cssImageExtraText: false,
+    cssImage: true,
+    cssImageAttr: "data-bgsrc",
+    cssImageExtraText: false,
   },
 ];
 

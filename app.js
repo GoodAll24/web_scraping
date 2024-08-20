@@ -37,7 +37,7 @@ const main = async () => {
       const $ = cheerio.load(response.data);
 
       // -----Getting articles----- //
-      // console.log($(art1["main"]).html());
+      console.log($().html());
 
       $(page["main"]).each((i, element) => {
         // console.log($(element).html());
@@ -48,7 +48,7 @@ const main = async () => {
           : null;
         datos[long].link = page["link"]
           ? page["ext"]
-            ? `${url}${$(element).find(page["link"]).attr("href")}`
+            ? `${page.url}${$(element).find(page["link"]).attr("href")}`
             : $(element).find(page["link"]).attr("href")
           : null;
         datos[long].content = page["content"]
@@ -77,7 +77,7 @@ const main = async () => {
         datos[long].dislikes = 0;
         datos[long].state = "pendiente";
       });
-      console.log(datos);
+      // console.log(datos);
     })
     .catch((error) =>
       console.log(
