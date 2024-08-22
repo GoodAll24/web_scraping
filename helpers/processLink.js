@@ -27,7 +27,7 @@ module.exports = async (page) => {
         const $ = cheerio.load(response.data);
 
         // -----Getting articles----- //
-        console.log($().html());
+        // console.log($().html());
 
         $(page["main"]).each((i, element) => {
           // console.log($(element).html());
@@ -99,7 +99,7 @@ module.exports = async (page) => {
           link_logo: pageIcon,
           access: JSON.stringify(page),
         };
-        if (datos.length) resolve({ datos, ...data2Fill });
+        if (datos.length) resolve({ ...data2Fill });
         else reject("No hay datos para guardar \n\n--->", datos);
       })
       .catch((error) =>

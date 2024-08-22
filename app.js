@@ -9,6 +9,9 @@ const getUrlData = require("./helpers/processLink");
 
 // puppeteer.use(StealthPlugin());
 
-const main = async () => getUrlData(onCheck[1]).catch((e) => console.log(e));
+const main = async () =>
+  getUrlData(onCheck[1])
+    .then((metadata) => console.log(metadata))
+    .catch((e) => console.log(e));
 
 main();
