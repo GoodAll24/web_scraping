@@ -52,7 +52,7 @@ const españa = [
   "https://www.cadena100.es/musica", // done
   "https://masterfm.es/category/musica/", // done
   "https://as.com/tikitakas/noticias/musica/", // done
-  "https://gladyspalmera.com/actualidad/", // done 
+  "https://gladyspalmera.com/actualidad/", // done
   "https://elpais.com/noticias/musica/", // done
   "https://www.lasexta.com/temas/musica-1", // done
   "https://www.telecinco.es/tags/musica", // done
@@ -192,24 +192,37 @@ const masNoticias = [
 
 const onCheck = [
   {
-    url: "https://sglaradio.com/category/noticias/",
+    url: "https://peopleenespanol.com/musica/",
     ext: false,
-    link: "div > figure > a",
-    main: "div.post-col",
-    image: "div > figure > a",
-    title: "div > header > h2 > a",
-    content: "div > div > p",
-    extImg: true,
+    link: "",
+    main: "div.comp.tax-sc__recirc-list.card-list.mntl-universal-card-list.mntl-document-card-list.mntl-card-list.mntl-block > a",
+    title: "span.card__title-text",
+    image: "img",
+    content: "div.post-content-inner > p",
+    extImg: false,
     cssImage: true,
-    cssImageAttr: "style",
-    cssImageExtraText: true,
+    cssImageAttr: "data-src",
+    cssImageExtraText: false,
   },
   {
-    url: "https://dentrodelgenero.com/",
+    url: "https://www.radionica.rocks/musica/musica-colombiana",
     ext: false,
-    link: "a.entry-featured-image-url",
-    main: "article",
-    title: "h3 > a",
+    link: "div > a",
+    main: "div.owl-carousel > div.owl-stage-outer > div.owl-stage > div.owl-item",
+    image: "img.img-fluid",
+    title: "div > a > span",
+    extImg: false,
+    content: "",
+    // cssImage: true,
+    // cssImageAttr: "style",
+    // cssImageExtraText: true,
+  },
+  {
+    url: "https://peopleenespanol.com/musica/",
+    ext: false,
+    link: "a",
+    main: "div.comp.tax-sc__recirc-list.card-list.mntl-universal-card-list.mntl-document-card-list.mntl-card-list.mntl-block",
+    title: "span.card__title-text",
     image: "img",
     content: "div.post-content-inner > p",
     extImg: false,

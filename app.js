@@ -5,12 +5,12 @@
 // const { executablePath } = require("puppeteer");
 // const { add_media, add_media_data } = require('./helpers/urls');
 const { onCheck } = require("./helpers/urls");
-const getUrlData = require("./helpers/processLink");
+const {processLink1,processLink2} = require("./helpers/processLink");
 
 // puppeteer.use(StealthPlugin());
 
 const main = async () =>
-  getUrlData(onCheck[1])
+  processLink2(onCheck[1])
     .then((metadata) => console.log(metadata))
     .catch((e) => console.log(e));
 
