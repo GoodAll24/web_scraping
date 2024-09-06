@@ -45,9 +45,9 @@ const processLink1 = async (page) => {
           datos[long].link = page["link"]
             ? page["ext"]
               ? `${page.url}${$(element).find(page["link"]).attr("href")}` ||
-                `${page.url}${$(element).attr("href")}`
+              `${page.url}${$(element).attr("href")}`
               : $(element).find(page["link"]).attr("href") ||
-                $(element).attr("href")
+              $(element).attr("href")
             : "error trying to get link";
           datos[long].content = page["content"]
             ? `${$(element).find(page["content"]).text()}`.trim()
@@ -57,13 +57,13 @@ const processLink1 = async (page) => {
               ? page["cssImageExtraText"]
                 ? page["cssImageAttr"] === "style"
                   ? `${$(element).find(page["image"]).attr(page["cssImageAttr"])}`.slice(
-                      23,
-                      -3,
-                    )
+                    23,
+                    -3,
+                  )
                   : `${$(element).find(page["image"]).attr(page["cssImageAttr"])}`.slice(
-                      5,
-                      -2,
-                    )
+                    5,
+                    -2,
+                  )
                 : $(element).find(page["image"]).attr(page["cssImageAttr"])
               : page["extImg"]
                 ? `${page["media"]}/${$(element).find(page["image"]).attr("src")}`
@@ -134,8 +134,10 @@ const processLink2 = async (page) => {
         const $2 = cheerio.load(response.data);
 
         // -----Getting articles----- //
-        const test = "body > div.dialog-off-canvas-main-canvas";
-        console.log($(test).html());
+        // const test = "div.owl-carousel > div.slider";
+        // $(test).each((i, e) => {
+        //   console.log(i, "\n\n\n", $(e).html());
+        // });
 
         $(page["main"]).each((i, element) => {
           // console.log($(element).html());
@@ -148,11 +150,11 @@ const processLink2 = async (page) => {
             : null;
           datos[long].link = page["ext"]
             ? `${page.url}${$(element).find(page["link"]).attr("href")}` ||
-              `${page.url}${$2(`${page.main}:nth-child(${i + 1})`).attr("href")}` ||
-              null
+            `${page.url}${$2(`${page.main}:nth-child(${i + 1})`).attr("href")}` ||
+            null
             : $(element).find(page["link"]).attr("href") ||
-              $2(`${page.main}:nth-child(${i + 1})`).attr("href") ||
-              null;
+            $2(`${page.main}:nth-child(${i + 1})`).attr("href") ||
+            null;
           datos[long].content = page["content"]
             ? $(element).find(page["content"]).text()
             : null;
@@ -161,13 +163,13 @@ const processLink2 = async (page) => {
               ? page["cssImageExtraText"]
                 ? page["cssImageAttr"] === "style"
                   ? `${$(element).find(page["image"]).attr(page["cssImageAttr"])}`.slice(
-                      23,
-                      -3,
-                    )
+                    23,
+                    -3,
+                  )
                   : `${$(element).find(page["image"]).attr(page["cssImageAttr"])}`.slice(
-                      5,
-                      -2,
-                    )
+                    5,
+                    -2,
+                  )
                 : $(element).find(page["image"]).attr(page["cssImageAttr"])
               : page["extImg"]
                 ? `${page["media"]}/${$(element).find(page["image"]).attr("src")}`
