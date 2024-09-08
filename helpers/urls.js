@@ -1,8 +1,8 @@
 // url
 const mexico = [
   "https://www.excelsior.com.mx/musica", // done
-  "https://radiobox.com.mx/category/espectaculos/", //  error de carga (posible necesidad de vpn)
-  "https://es.rollingstone.com/categoria/musica/", // error de carga (posible necesidad de vpn)
+  "https://radiobox.com.mx/category/espectaculos/", // done
+  "https://es.rollingstone.com/categoria/musica/", // done
   "https://www.sdpnoticias.com/espectaculos/musica/", // done
   "https://www.milenio.com/espectaculos/musica", // done
   "https://www.elimparcial.com/tags/musica/", // done
@@ -12,10 +12,10 @@ const mexico = [
   "https://www.elsiglodetorreon.com.mx/seccion/espectaculos", // done
 ];
 const usa = [
-  "https://www.billboard.com/c/espanol/noticias/", // problemas de carga (revisar en server)
-  "https://www.billboard.com/c/espanol/musica/", // problemas de carga (revisar en server)
-  "https://musicaislife.com/musica-news/", // done (tema imagen)
-  "https://prensadehouston.com/category/entretenimiento/", // done (imagen en source ("srcset"))
+  "https://www.billboard.com/c/espanol/noticias/", // done
+  "https://www.billboard.com/c/espanol/musica/", // done
+  "https://musicaislife.com/musica-news/", // done
+  "https://prensadehouston.com/category/entretenimiento/", // done
   "https://wowlarevista.com/category/musica/", // security issues
   "https://www.telemundo.com/entretenimiento", // done * (aquí hay que revisar si las noticias con video se pueden integrar directamente a la Tele Revista)
   "https://cnnespanol.cnn.com/category/musica/", // done *(aquí hay que revisar si las noticias con video se pueden integrar directamente a la Tele Revista)
@@ -27,10 +27,10 @@ const usa = [
   "https://www.mundodeportivo.com/us/estrellas-latinas", // done
   "https://www.noticiany.com/category/entretenimiento/", // done
   "https://es.rollingstone.com/categoria/musica/noticias-musica/",
-  "https://www.notistarz.com/categorias/musica/", // tema imagen
+  "https://www.notistarz.com/categorias/musica/", // done
   "https://efe.com/noticias/musica/", // done
   "https://ellatinodigital.com/categoria/secciones/farandula/", // done
-  "https://www.latingrammy.com/noticias", // error de carga
+  "https://www.latingrammy.com/noticias", // revisar
 ];
 const españa = [
   "https://www.epe.es/es/temas/musica-5359", // Error 404
@@ -52,23 +52,22 @@ const españa = [
   "https://www.cadena100.es/musica", // done
   "https://masterfm.es/category/musica/", // done
   "https://as.com/tikitakas/noticias/musica/", // done
-  "https://gladyspalmera.com/actualidad/", // done // tema con la imagen "header > div > a"
+  "https://gladyspalmera.com/actualidad/", // done
   "https://elpais.com/noticias/musica/", // done
   "https://www.lasexta.com/temas/musica-1", // done
   "https://www.telecinco.es/tags/musica", // done
-  "https://www.cosmopolitan.com/es/musica-novedades/", // done OJO con el link
-  "https://www.esquire.com/es/actualidad/musica/", // done OJO con el link
+  "https://www.cosmopolitan.com/es/musica-novedades/", // link issues
+  "https://www.esquire.com/es/actualidad/musica/", // link issues
   "https://www.20minutos.es/minuteca/musica-trap/", // done
   "https://www.laverdad.es/culturas/musica/", // done
   "https://cadenaser.com/tag/musica/a/", // done
   "https://www.eldia.es/tags/musica/", // done
-  "https://www.cancioneros.com/in/12/0/actualidad", // revisar estructura
-  "https://elgeneracionalpost.com/noticias/cultura/musica", // done (tema imagen)
+  "https://www.cancioneros.com/in/12/0/actualidad", // structure error
+  "https://elgeneracionalpost.com/noticias/cultura/musica", // done
 ];
 const colombia = [
-  "https://www.eltiempo.com/cultura/musica-y-libros", //
+  "https://www.eltiempo.com/cultura/musica-y-libros", // done
   "https://www.elcolombiano.com/cultura/musica", // Se repite
-  "https://www.decibeles.net/noticias", // OJO con el link
   "https://www.semana.com/cultura/musica/", // done
   "https://www.elespectador.com/entretenimiento/musica/", // done
   "https://www.eluniversal.com.co/farandula", // done
@@ -84,15 +83,16 @@ const colombia = [
   "https://www.estiloplay.com.co/category/universal-music/", // done
   "https://www.estiloplay.com.co/category/warner-music/", // done
   "https://www.estiloplay.com.co/category/onerpm/", // done
-  "https://es.rollingstone.com/col/", // VPN
   "https://revistadiners.com.co/category/cultura/musica/", // done
   "https://caracol.com.co/tendencias/entretenimiento/", // done
   "https://www.shock.co/musica", // done
   "https://www.shock.co/eventos", // done
+  "https://es.rollingstone.com/col/", // done
   "https://www.wradio.com.co/tag/musica/a/", // done
+  "https://www.decibeles.net/noticias", // link issues
 ];
 const chile = [
-  "https://www.emol.com/espectaculos/musica/", // error de carga
+  "https://www.emol.com/espectaculos/musica/", // done
   "https://www.latercera.com/etiqueta/musica-culto/", // done
   "https://www.biobiochile.cl/lista/categorias/musica", // done
   "https://www.lacuarta.com/musica/", // done
@@ -102,19 +102,19 @@ const chile = [
 ];
 const rd = [
   "https://www.diariolibre.com/revista/musica", // done
-  "https://listindiario.com/entretenimiento/musica", // done falta el logo(problemas de internet)
+  "https://listindiario.com/entretenimiento/musica", // done
   "https://diariosocialrd.com/categoria/musica/", // done
   "https://notidigitalrd.com.do/category/entretenimiento/", // done
   "https://www.elcaribe.com.do/seccion/gente/a-y-e/", // onCheck
-  "https://www.elperiodico.com.do/secciones/entretenimiento/",
-  "https://eltestigo.do/entretenimiento",
+  "https://www.elperiodico.com.do/secciones/entretenimiento/", // done
+  "https://eltestigo.do/entretenimiento", // done
   "https://eldia.com.do/secciones/espectaculos/", // BAD_REQUEST_ERROR
 ];
 const venezuela = [
   "https://www.elnacional.com/musica/", // done
   "https://eldiario.com/seccion/cultura/", // done
   "https://2001online.com/seccion/farandula/", // done
-  "https://dentrodelgenero.com/", // error de carga
+  "https://dentrodelgenero.com/", // revisar
   "https://www.noticierovenevision.net/entretenimiento", // done
   "https://diariodelosandes.com/secciones/entretenimiento/", // done
   "https://acn.com.ve/espectaculos/", // done
@@ -127,7 +127,7 @@ const cr = [
   "https://www.crhoy.com/noticias/musica", // done
 ];
 const uruguay = [
-  "https://www.elpais.com.uy/tvshow", // error de carga
+  "https://www.elpais.com.uy/tvshow", // revisar
   "https://www.elobservador.com.uy/tag/musica", // done
 ];
 const cuba = [
@@ -135,7 +135,7 @@ const cuba = [
   "https://magazineampm.com/newness-cuba/", // done
 ];
 const bolivia = [
-  "https://www.bolivia.com/entretenimiento/", // vpn
+  "https://www.bolivia.com/entretenimiento/", // done
   "https://www.opinion.com.bo/tags/musica/", // done
 ];
 const nicaragua = [
@@ -146,7 +146,6 @@ const masNoticias = [
   "https://www.estilosblog.com/category/estilos-blog/entretenimiento/", // done
   "https://blog.joinnus.com/entretenimiento/", // done
   "https://blog.joinnus.com/nueva-musica/", // done
-  "https://www.lainformacion.com.do/mirador/musica-y-literatura", // problemas de espera
   "https://infoelnuevonorte.com/?cat=12 ", // done
   "https://infoelnuevonorte.com/?cat=11 ", // done
   "https://miamipocket.us/entretenimiento/", // done
@@ -159,7 +158,7 @@ const masNoticias = [
   "https://intervez.com/category/culturaentretenimiento/musica/", // done
   "https://www.ntn24.com/noticias-entretenimiento", // done
   "https://deultimominuto.net/category/entretenimiento/", // done
-  "https://www.enlacedigital.com.do/categoria/entretenimiento/", // done tema imagen
+  "https://www.enlacedigital.com.do/categoria/entretenimiento/", // done
   "https://diarioroatan.com/category/sociales/", // done
   "https://www.yucatan.com.mx/seccion/espectaculos", // done
   "https://amariemagazine.com/category/musica/", // done
@@ -177,43 +176,34 @@ const masNoticias = [
   "https://dominicanaaldia.do/Secciones/estilo-de-vida/", // done
   "https://urbanaplayfm.com/category/musica/", // done
   "https://elcronista.co/cultura", // done
+  "https://www.hola.com/us-es/entretenimiento/", // done
+  "https://www.hola.com/us/tags/music/", // done
+  "https://www.hola.com/tags/musica/", // done
   "https://sglaradio.com/category/noticias/", // ready (just fix image issue on backend)
   "https://sglaradio.com/category/lanzamientos/", // ready (just fix image issue on backend)
-  "https://www.canal26.com/musica", // Error: Unknown pseudo-class :text-base
+  "https://peopleenespanol.com/musica/", // link issues
   "https://www.esquire.com/es/actualidad/musica/", // link issues
   "https://ultimasnoticia.com/category/entretenimiento/", // link issues
+  "https://www.lainformacion.com.do/mirador/musica-y-literatura", // problemas de espera
+  "https://www.canal26.com/musica", // Error: Unknown pseudo-class :text-base
   "https://www.revistavea.com.co/musica/", // html error
   "https://elperiodiquito.com/category/mas/escenario/", // No se deja ver codigo fuente
 ];
 
-const onCheck = [
-  {
-    url: "https://sglaradio.com/category/noticias/",
-    ext: false,
-    link: "div > figure > a",
-    main: "div.post-col",
-    image: "div > figure > a",
-    title: "div > header > h2 > a",
-    content: "div > div > p",
-    extImg: true,
-    cssImage: true,
-    cssImageAttr: "style",
-    cssImageExtraText: true,
-  },
-  {
-    url: "https://elperiodiquito.com/category/mas/escenario/",
-    ext: false,
-    link: "a.image-link",
-    main: "article.l-post",
-    title: "div > div > div > h2 > a",
-    image: "a.image-link > span",
-    content: "",
-    extImg: false,
-    cssImage: true,
-    cssImageAttr: "data-bgsrc",
-    cssImageExtraText: false,
-  },
-];
+const onCheck = {
+  url: "https://www.torontohispano.com/secciones/entretenimiento/",
+  ext: false,
+  link: "a",
+  main: "div.formac-item",
+  image: "div.formac-post-img",
+  title: "span.fi-tit",
+  extImg: false,
+  content: "span.fi-tex",
+  cssImage: true,
+  cssImageAttr: "style",
+  cssImageExtraText: true,
+};
+
 
 const tester = "https://bot.sannysoft.com";
 
