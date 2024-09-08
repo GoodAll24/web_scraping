@@ -10,7 +10,7 @@ const {processLink1,processLink2} = require("./helpers/processLink");
 // puppeteer.use(StealthPlugin());
 
 const main = async () =>
-  processLink2(onCheck[1])
+  processLink2(onCheck)
     .then((metadata) => console.log(metadata))
     .catch((e) => console.log(e));
 

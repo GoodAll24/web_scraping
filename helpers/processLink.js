@@ -162,19 +162,24 @@ const processLink2 = async (page) => {
             ? page["cssImage"]
               ? page["cssImageExtraText"]
                 ? page["cssImageAttr"] === "style"
-                  ? `${$(element).find(page["image"]).attr(page["cssImageAttr"])}`.slice(
-                    23,
-                    -3,
-                  )
-                  : `${$(element).find(page["image"]).attr(page["cssImageAttr"])}`.slice(
-                    5,
-                    -2,
-                  )
-                : $(element).find(page["image"]).attr(page["cssImageAttr"])
-              : page["extImg"]
-                ? `${page["media"]}/${$(element).find(page["image"]).attr("src")}`
-                : $(element).find(page["image"]).attr("src")
-            : null;
+                  ? `${$(element).find(page["image"]).attr(page["cssImageAttr"])}`.endsWith(";")
+                    ? `${$(element).find(page["image"]).attr(page["cssImageAttr"])}`.slice(
+                      23,
+                      -3,
+                    )
+                    : `${$(element).find(page["image"]).attr(page["cssImageAttr"])}`.slice(
+                      23,
+                      -2,
+                    )
+                    : `${$(element).find(page["image"]).attr(page["cssImageAttr"])}`.slice(
+                      5,
+                      -2,
+                    )
+                  : $(element).find(page["image"]).attr(page["cssImageAttr"])
+                : page["extImg"]
+                  ? `${page["media"]}/${$(element).find(page["image"]).attr("src")}`
+                  : $(element).find(page["image"]).attr("src")
+              : null;
           // datos[long].publishedAt = new Date();
           // datos[long].pubDate = new Date();
           // datos[long].likes = 0;

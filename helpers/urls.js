@@ -190,47 +190,20 @@ const masNoticias = [
   "https://elperiodiquito.com/category/mas/escenario/", // No se deja ver codigo fuente
 ];
 
-const onCheck = [
-  {
-    url: "https://peopleenespanol.com/musica/",
-    ext: false,
-    link: "",
-    main: "div.comp.tax-sc__recirc-list.card-list.mntl-universal-card-list.mntl-document-card-list.mntl-card-list.mntl-block > a",
-    title: "span.card__title-text",
-    image: "img",
-    content: "div.post-content-inner > p",
-    extImg: false,
-    cssImage: true,
-    cssImageAttr: "data-src",
-    cssImageExtraText: false,
-  },
-  {
-    url: "https://www.radionica.rocks/musica/musica-colombiana",
-    ext: false,
-    link: "div > a",
-    main: "div.owl-carousel > div.slider",
-    image: "img",
-    title: "div > a > span",
-    extImg: false,
-    content: "",
-    // cssImage: true,
-    // cssImageAttr: "style",
-    // cssImageExtraText: true,
-  },
-  {
-    url: "https://peopleenespanol.com/musica/",
-    ext: false,
-    link: "a",
-    main: "div.comp.tax-sc__recirc-list.card-list.mntl-universal-card-list.mntl-document-card-list.mntl-card-list.mntl-block",
-    title: "span.card__title-text",
-    image: "img",
-    content: "div.post-content-inner > p",
-    extImg: false,
-    // cssImage: true,
-    // cssImageAttr: "data-bgsrc",
-    // cssImageExtraText: false,
-  },
-];
+const onCheck = {
+  url: "https://www.torontohispano.com/secciones/entretenimiento/",
+  ext: false,
+  link: "a",
+  main: "div.formac-item",
+  image: "div.formac-post-img",
+  title: "span.fi-tit",
+  extImg: false,
+  content: "span.fi-tex",
+  cssImage: true,
+  cssImageAttr: "style",
+  cssImageExtraText: true,
+};
+
 
 const tester = "https://bot.sannysoft.com";
 
