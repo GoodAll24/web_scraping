@@ -191,19 +191,18 @@ const masNoticias = [
 ];
 
 const onCheck = {
-  url: "https://www.torontohispano.com/secciones/entretenimiento/",
+  url: "https://zonacaptiva.com/category/entretenimiento/",
   ext: false,
-  link: "a",
-  main: "div.formac-item",
-  image: "div.formac-post-img",
-  title: "span.fi-tit",
+  link: "a.elementor-post__thumbnail__link",
+  main: "article.elementor-post",
+  image: "img",
+  title: "h3.elementor-post__title > a",
   extImg: false,
-  content: "span.fi-tex",
+  content: "div.elementor-post__excerpt > p",
   cssImage: true,
-  cssImageAttr: "style",
-  cssImageExtraText: true,
+  cssImageAttr: "data-lazy-src",
+  cssImageExtraText: false,
 };
-
 
 const tester = "https://bot.sannysoft.com";
 
