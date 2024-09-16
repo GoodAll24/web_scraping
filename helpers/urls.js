@@ -191,19 +191,18 @@ const masNoticias = [
 ];
 
 const onCheck = {
-  url: "https://www.torontohispano.com/secciones/entretenimiento/",
+  url: "https://olimpicastereo.com.co/secciones/virales",
   ext: false,
-  link: "a",
-  main: "div.formac-item",
-  image: "div.formac-post-img",
-  title: "span.fi-tit",
+  link: "a.qt-btn",
+  main: "div.post",
+  image: "div.qt-header-bg",
+  title: "h3.qt-title > a",
   extImg: false,
-  content: "span.fi-tex",
+  content: "div.qt-item-content > p",
   cssImage: true,
-  cssImageAttr: "style",
-  cssImageExtraText: true,
+  cssImageAttr: "data-bgimage",
+  cssImageExtraText: false,
 };
-
 
 const tester = "https://bot.sannysoft.com";
 
