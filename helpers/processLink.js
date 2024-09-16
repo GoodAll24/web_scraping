@@ -222,7 +222,7 @@ const processLink2 = async (page) => {
           url: page.url,
           original: originalUrl,
           channel: metaPage("title").text(),
-          link_logo: pageIcon,
+          link_logo: pageIcon.startsWith("/") ? `${originalUrl}${pageIcon}` : pageIcon,
           access: JSON.stringify(page),
         };
         if (datos.length) resolve({ ...data2Fill });

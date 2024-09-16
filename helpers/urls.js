@@ -191,16 +191,16 @@ const masNoticias = [
 ];
 
 const onCheck = {
-  url: "https://zonacaptiva.com/category/entretenimiento/",
+  url: "https://olimpicastereo.com.co/secciones/virales",
   ext: false,
-  link: "a.elementor-post__thumbnail__link",
-  main: "article.elementor-post",
-  image: "img",
-  title: "h3.elementor-post__title > a",
+  link: "a.qt-btn",
+  main: "div.post",
+  image: "div.qt-header-bg",
+  title: "h3.qt-title > a",
   extImg: false,
-  content: "div.elementor-post__excerpt > p",
+  content: "div.qt-item-content > p",
   cssImage: true,
-  cssImageAttr: "data-lazy-src",
+  cssImageAttr: "data-bgimage",
   cssImageExtraText: false,
 };
 
