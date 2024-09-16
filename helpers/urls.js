@@ -1,7 +1,7 @@
 lastNews = [
-  "https://www.diariodecultura.com.ar/musica/",
-  "https://www.lanacion.com.ar/espectaculos/musica/",
-  "https://tn.com.ar/tags/musica/",
+  "https://www.diariodecultura.com.ar/musica/", // oone
+  "https://www.lanacion.com.ar/espectaculos/musica/", // revisar
+  "https://tn.com.ar/tags/musica/", 
   "https://www.a24.com/primiciasya/musica",
   "https://www.infobae.com/tag/musica/",
   "https://www.infobae.com/entretenimiento/",
@@ -13,7 +13,7 @@ lastNews = [
   "https://www.eldestapeweb.com/tag/musica",
   "https://www.filo.news/musica",
   "https://www.cronica.com.ar/seccion/elcanaldelamusica/",
-  "https://es.rollingstone.com/arg/",
+  "https://es.rollingstone.com/arg/", // revisar
   "https://www.billboard.ar/",
   "https://los40.com.ar/",
   "https://www.lavoz.com.ar/espectaculos/musica/",
