@@ -1,192 +1,192 @@
-lastNews=[
-https://www.diariodecultura.com.ar/musica/
-https://www.lanacion.com.ar/espectaculos/musica/
-https://tn.com.ar/tags/musica/
-https://www.a24.com/primiciasya/musica
-https://www.infobae.com/tag/musica/
-https://www.infobae.com/entretenimiento/
-https://www.infobae.com/teleshow/
-https://www.infobae.com/tag/colombia-entretenimiento/
-https://www.infobae.com/tag/mexico-entretenimiento/
-https://www.infobae.com/tag/peru-entretenimiento/
-https://www.losandes.com.ar/temas/musica/
-https://www.eldestapeweb.com/tag/musica
-https://www.filo.news/musica
-https://www.cronica.com.ar/seccion/elcanaldelamusica/
-https://es.rollingstone.com/arg/
-https://www.billboard.ar/
-https://los40.com.ar/
-https://www.lavoz.com.ar/espectaculos/musica/
-https://www.qmusica.tv/Noticias
-https://www.cmtv.com.ar/noticias/
-https://www.elliberal.com.ar/Espectaculos
-https://talcomosoy.com.ar/index.php/category/musica/
-https://www.prensariomusica.com/en-vivo.aspx
-https://www.prensariomusica.com/discograficas.aspx
-https://www.prensariomusica.com/actualidad.aspx
-https://www.lv16.com.ar/sg/seccion/categoria/10-variedades
-https://www.rosario3.com/tags/Musica
-https://qradiosanjuan.com/category/musica/
-https://eldoce.tv/cuarteteando/
-https://dequeruza.ar/category/musica/
-https://www.bolivia.com/entretenimiento/
-https://www.opinion.com.bo/tags/musica/
-https://www.semana.com/cultura/musica/
-https://www.elespectador.com/entretenimiento/musica/
-https://www.eluniversal.com.co/farandula
-https://occidente.co/secciones/espectaculo/
-https://www.elpais.com.co/entretenimiento/
-https://colombia.as.com/tikitakas/noticias/musica/
-https://intervallenato.com/inicio/category/noticias/
-https://www.midiario.co/category/farandula-2/
-https://elpilon.com.co/Noticias/el-vallenato/
-https://www.elcolombiano.com/cultura/musica
-https://www.estiloplay.com.co/category/musica/
-https://www.estiloplay.com.co/category/sony-music/
-https://www.estiloplay.com.co/category/universal-music/
-https://www.estiloplay.com.co/category/warner-music/
-https://www.estiloplay.com.co/category/onerpm/
-https://www.estiloplay.com.co/category/conciertos/
-https://es.rollingstone.com/col/
-https://revistadiners.com.co/category/cultura/musica/
-https://caracol.com.co/tendencias/entretenimiento/
-https://www.shock.co/musica
-https://www.shock.co/eventos
-https://www.radionacional.co/noticias-de-musica
-https://www.lapatria.com/entretenimiento
-https://www.caracoltv.com/cultura-caracol
-https://www.urosarioradio.co/index.php/ur-music/lanzamientos
-https://colectivosonoro.com/category/noticia/
-https://www.canalrcn.com/super-like/musica/
-https://www.wradio.com.co/tag/musica/a/
-https://lareinadelvallenato.co/secciones/noticias
-https://www.qhubobogota.com/zona-rosa/
-https://www.radionica.rocks/musica/musica-colombiana
-https://www.radionica.rocks/musica/musica-internacional
-https://www.laotraverdad.info/category/cultura/
-https://www.rcnradio.com/entretenimiento
-https://cambiocolombia.com/cultura
-https://www.solarlatinclub.com/
-https://www.nacion.com/viva/musica/
-https://observador.cr/seccion/avenida/
-https://oncubanews.com/category/cultura/musica/
-https://www.lacuarta.com/urbana/
-https://www.musicachilena.cl/v2/noticias/
-https://www.radioactiva.cl/tag/musicaradioactiva
-https://fanky.cl/categoria/musica/
-https://www.parlante.cl/category/musica/
-https://www.eluniverso.com/entretenimiento/musica/
-https://www.primicias.ec/entretenimiento/musica/
-https://elvanguardistaonline.com/category/farandula/
-https://www.elsalvador.com/category/entretenimiento/espectaculos/
-https://los40.com/musica/
-https://los40.com/los40_urban/
-http://noticiasclave.net/
-https://www.elperiodico.com/es/temas/musica-6584
-https://www.europapress.es/cultura/musica-00129/
-https://www.diariosur.es/culturas/musica/
-https://es.rollingstone.com/esp/
-https://www.efeeme.com/agenda/conciertos-agenda/
-https://masterfm.es/category/musica/
-https://as.com/tikitakas/noticias/musica/
-https://gladyspalmera.com/actualidad/
-https://elpais.com/noticias/musica/
-https://www.telecinco.es/tags/musica/
-https://www.cosmopolitan.com/es/musica-novedades/
-https://www.20minutos.es/minuteca/musica-trap/
-https://www.laverdad.es/culturas/musica/
-https://cadenaser.com/tag/musica/a/
-https://www.eldia.es/tags/musica/
-https://www.laopiniondemurcia.es/cultura/
-https://www.laguiago.com/espana/musica/
-https://industriamusical.com/category/discograficas/
-https://industriamusical.com/category/streaming/
-https://industriamusical.com/category/negocio/
-https://industriamusical.com/category/noticias/
-https://www.elmundo.es/cultura/musica.html
-https://www.elcorreogallego.es/tags/musica/
-https://www.billboard.com/c/espanol/noticias/
-https://www.billboard.com/c/espanol/musica/
-https://www.telemundo.com/entretenimiento
-https://www.latimes.com/espanol/etiqueta/musica
-https://cnnespanol.cnn.com/category/musica/
-https://es.rollingstone.com/categoria/musica/noticias-musica/
-https://remezcla.com/music/
-https://www.hola.com/us/tags/music/
-https://www.hola.com/tags/musica/ 
-https://peopleenespanol.com/musica/
-https://www.hola.com/us-es/entretenimiento/
-https://us.marca.com/tiramillas/musica.html?intcmp=MENUMIGA&s_kw=musica
-https://prensadehouston.com/category/entretenimiento/
-https://impactolatino.com/musica-entretenimiento/
-https://lakw.us/category/musica/
-https://www.noticiany.com/category/entretenimiento/
-https://musicaislife.com/musica-news/
-https://efe.com/noticias/musica/
-https://www.panasenutah.com/category/entretenimiento/musica/
-https://dmhmagazine.com/discos/
-https://www.billboard.com/c/espanol/negocios/
-https://miniondas.com/category/farandula/
-https://www.torontohispano.com/secciones/entretenimiento/
-https://www.univision.com/musica/
-https://www.revistalatinanc.com/category/cultura/
-https://www.prensalibre.com/vida/escenario/
-https://www.elheraldo.hn/entretenimiento
-https://es.rollingstone.com/mex/
-https://www.sdpnoticias.com/espectaculos/musica/
-https://sicomnoticias.mx/category/entretenimiento/
-https://amexi.com.mx/category/espectaculos/
-https://www.marca.com/mx/trending/musica.html?intcmp=MENUMIGA&s_kw=musica
-https://www.excelsior.com.mx/musica
-https://www.milenio.com/espectaculos/musica
-https://www.elimparcial.com/tags/musica/
-https://radiobox.com.mx/category/espectaculos/
-https://desdepuebla.com/noticias/desde-el-show/
-https://los40.com.mx/actualidad/
-https://www.contrareplica.mx/tendencias
-https://sicomnoticias.mx/category/entretenimiento/
-https://www.luciernagainformativa.com/category/espectaculos/
-https://amexi.com.mx/category/espectaculos/
-https://www.alchilepoblano.com/entretenimiento/
-https://www.fusionradio.mx/musica.cfm
-https://heraldodemexico.com.mx/espectaculos/
-https://lovefm.com.mx/noticias-relevantes
-https://los40cuernavaca.com/category/musica/
-https://www.tn8.tv/category/musica/
-https://www.panamaamerica.com.pa/variedades
-https://zeta.com.pa/noticias-del-dia.html
-https://www.critica.com.pa/show
-https://www.panama24horas.com.pa/entretenimiento/
-https://independiente.com.py/show/
-https://trece.com.py/category/tendencias-trece/
-https://trome.com/espectaculos/musica/
-https://elcomercio.pe/luces/musica/
-https://elcomercio.pe/noticias/musica/
-https://lanoticia.com.pe/category/musica/
-https://www.ritmoromantica.pe/noticias/musica/
-https://www.serperuano.com/categoria/entretenimiento/
-https://blog.joinnus.com/nueva-musica/
-https://billboard.com.pe/
-https://www.rockachorao.com/category/eventos/
-https://www.rockachorao.com/category/lanzamientos/
-https://tercerparlante.com/lonuevo/
-https://www.elvocero.com/escenario/espectaculos/
-https://www.primerahora.com/entretenimiento/musica/
-https://www.kq105.com/noticias/eventos/
-https://www.kq105.com/noticias/entretenimiento/
-https://prpop.org/category/noticias/musica/
-https://amariemagazine.com/category/musica/
-https://amariemagazine.com/category/entretenimiento/conciertos/
-https://listindiario.com/entretenimiento/musica
-https://www.elcaribe.com.do/seccion/gente/a-y-e/
-https://www.elperiodico.com.do/secciones/entretenimiento/
-https://diariosocialrd.com/categoria/musica/
-https://infoelnuevonorte.com/?cat=12
-https://www.elpais.com.uy/tvshow
-https://www.elobservador.com.uy/tag/musica
-https://www.elnacional.com/musica/
-https://intervez.com/category/culturaentretenimiento/musica/
-https://plus.cusica.com/category/noticias/nacionales/
+lastNews = [
+  "https://www.diariodecultura.com.ar/musica/",
+  "https://www.lanacion.com.ar/espectaculos/musica/",
+  "https://tn.com.ar/tags/musica/",
+  "https://www.a24.com/primiciasya/musica",
+  "https://www.infobae.com/tag/musica/",
+  "https://www.infobae.com/entretenimiento/",
+  "https://www.infobae.com/teleshow/",
+  "https://www.infobae.com/tag/colombia-entretenimiento/",
+  "https://www.infobae.com/tag/mexico-entretenimiento/",
+  "https://www.infobae.com/tag/peru-entretenimiento/",
+  "https://www.losandes.com.ar/temas/musica/",
+  "https://www.eldestapeweb.com/tag/musica",
+  "https://www.filo.news/musica",
+  "https://www.cronica.com.ar/seccion/elcanaldelamusica/",
+  "https://es.rollingstone.com/arg/",
+  "https://www.billboard.ar/",
+  "https://los40.com.ar/",
+  "https://www.lavoz.com.ar/espectaculos/musica/",
+  "https://www.qmusica.tv/Noticias",
+  "https://www.cmtv.com.ar/noticias/",
+  "https://www.elliberal.com.ar/Espectaculos",
+  "https://talcomosoy.com.ar/index.php/category/musica/",
+  "https://www.prensariomusica.com/en-vivo.aspx",
+  "https://www.prensariomusica.com/discograficas.aspx",
+  "https://www.prensariomusica.com/actualidad.aspx",
+  "https://www.lv16.com.ar/sg/seccion/categoria/10-variedades",
+  "https://www.rosario3.com/tags/Musica",
+  "https://qradiosanjuan.com/category/musica/",
+  "https://eldoce.tv/cuarteteando/",
+  "https://dequeruza.ar/category/musica/",
+  "https://www.bolivia.com/entretenimiento/",
+  "https://www.opinion.com.bo/tags/musica/",
+  "https://www.semana.com/cultura/musica/",
+  "https://www.elespectador.com/entretenimiento/musica/",
+  "https://www.eluniversal.com.co/farandula",
+  "https://occidente.co/secciones/espectaculo/",
+  "https://www.elpais.com.co/entretenimiento/",
+  "https://colombia.as.com/tikitakas/noticias/musica/",
+  "https://intervallenato.com/inicio/category/noticias/",
+  "https://www.midiario.co/category/farandula-2/",
+  "https://elpilon.com.co/Noticias/el-vallenato/",
+  "https://www.elcolombiano.com/cultura/musica",
+  "https://www.estiloplay.com.co/category/musica/",
+  "https://www.estiloplay.com.co/category/sony-music/",
+  "https://www.estiloplay.com.co/category/universal-music/",
+  "https://www.estiloplay.com.co/category/warner-music/",
+  "https://www.estiloplay.com.co/category/onerpm/",
+  "https://www.estiloplay.com.co/category/conciertos/",
+  "https://es.rollingstone.com/col/",
+  "https://revistadiners.com.co/category/cultura/musica/",
+  "https://caracol.com.co/tendencias/entretenimiento/",
+  "https://www.shock.co/musica",
+  "https://www.shock.co/eventos",
+  "https://www.radionacional.co/noticias-de-musica",
+  "https://www.lapatria.com/entretenimiento",
+  "https://www.caracoltv.com/cultura-caracol",
+  "https://www.urosarioradio.co/index.php/ur-music/lanzamientos",
+  "https://colectivosonoro.com/category/noticia/",
+  "https://www.canalrcn.com/super-like/musica/",
+  "https://www.wradio.com.co/tag/musica/a/",
+  "https://lareinadelvallenato.co/secciones/noticias",
+  "https://www.qhubobogota.com/zona-rosa/",
+  "https://www.radionica.rocks/musica/musica-colombiana",
+  "https://www.radionica.rocks/musica/musica-internacional",
+  "https://www.laotraverdad.info/category/cultura/",
+  "https://www.rcnradio.com/entretenimiento",
+  "https://cambiocolombia.com/cultura",
+  "https://www.solarlatinclub.com/",
+  "https://www.nacion.com/viva/musica/",
+  "https://observador.cr/seccion/avenida/",
+  "https://oncubanews.com/category/cultura/musica/",
+  "https://www.lacuarta.com/urbana/",
+  "https://www.musicachilena.cl/v2/noticias/",
+  "https://www.radioactiva.cl/tag/musicaradioactiva",
+  "https://fanky.cl/categoria/musica/",
+  "https://www.parlante.cl/category/musica/",
+  "https://www.eluniverso.com/entretenimiento/musica/",
+  "https://www.primicias.ec/entretenimiento/musica/",
+  "https://elvanguardistaonline.com/category/farandula/",
+  "https://www.elsalvador.com/category/entretenimiento/espectaculos/",
+  "https://los40.com/musica/",
+  "https://los40.com/los40_urban/",
+  "http://noticiasclave.net/",
+  "https://www.elperiodico.com/es/temas/musica-6584",
+  "https://www.europapress.es/cultura/musica-00129/",
+  "https://www.diariosur.es/culturas/musica/",
+  "https://es.rollingstone.com/esp/",
+  "https://www.efeeme.com/agenda/conciertos-agenda/",
+  "https://masterfm.es/category/musica/",
+  "https://as.com/tikitakas/noticias/musica/",
+  "https://gladyspalmera.com/actualidad/",
+  "https://elpais.com/noticias/musica/",
+  "https://www.telecinco.es/tags/musica/",
+  "https://www.cosmopolitan.com/es/musica-novedades/",
+  "https://www.20minutos.es/minuteca/musica-trap/",
+  "https://www.laverdad.es/culturas/musica/",
+  "https://cadenaser.com/tag/musica/a/",
+  "https://www.eldia.es/tags/musica/",
+  "https://www.laopiniondemurcia.es/cultura/",
+  "https://www.laguiago.com/espana/musica/",
+  "https://industriamusical.com/category/discograficas/",
+  "https://industriamusical.com/category/streaming/",
+  "https://industriamusical.com/category/negocio/",
+  "https://industriamusical.com/category/noticias/",
+  "https://www.elmundo.es/cultura/musica.html",
+  "https://www.elcorreogallego.es/tags/musica/",
+  "https://www.billboard.com/c/espanol/noticias/",
+  "https://www.billboard.com/c/espanol/musica/",
+  "https://www.telemundo.com/entretenimiento",
+  "https://www.latimes.com/espanol/etiqueta/musica",
+  "https://cnnespanol.cnn.com/category/musica/",
+  "https://es.rollingstone.com/categoria/musica/noticias-musica/",
+  "https://remezcla.com/music/",
+  "https://www.hola.com/us/tags/music/",
+  "https://www.hola.com/tags/musica/ ",
+  "https://peopleenespanol.com/musica/",
+  "https://www.hola.com/us-es/entretenimiento/",
+  "https://us.marca.com/tiramillas/musica.html?intcmp=MENUMIGA&s_kw=musica",
+  "https://prensadehouston.com/category/entretenimiento/",
+  "https://impactolatino.com/musica-entretenimiento/",
+  "https://lakw.us/category/musica/",
+  "https://www.noticiany.com/category/entretenimiento/",
+  "https://musicaislife.com/musica-news/",
+  "https://efe.com/noticias/musica/",
+  "https://www.panasenutah.com/category/entretenimiento/musica/",
+  "https://dmhmagazine.com/discos/",
+  "https://www.billboard.com/c/espanol/negocios/",
+  "https://miniondas.com/category/farandula/",
+  "https://www.torontohispano.com/secciones/entretenimiento/",
+  "https://www.univision.com/musica/",
+  "https://www.revistalatinanc.com/category/cultura/",
+  "https://www.prensalibre.com/vida/escenario/",
+  "https://www.elheraldo.hn/entretenimiento",
+  "https://es.rollingstone.com/mex/",
+  "https://www.sdpnoticias.com/espectaculos/musica/",
+  "https://sicomnoticias.mx/category/entretenimiento/",
+  "https://amexi.com.mx/category/espectaculos/",
+  "https://www.marca.com/mx/trending/musica.html?intcmp=MENUMIGA&s_kw=musica",
+  "https://www.excelsior.com.mx/musica",
+  "https://www.milenio.com/espectaculos/musica",
+  "https://www.elimparcial.com/tags/musica/",
+  "https://radiobox.com.mx/category/espectaculos/",
+  "https://desdepuebla.com/noticias/desde-el-show/",
+  "https://los40.com.mx/actualidad/",
+  "https://www.contrareplica.mx/tendencias",
+  "https://sicomnoticias.mx/category/entretenimiento/",
+  "https://www.luciernagainformativa.com/category/espectaculos/",
+  "https://amexi.com.mx/category/espectaculos/",
+  "https://www.alchilepoblano.com/entretenimiento/",
+  "https://www.fusionradio.mx/musica.cfm",
+  "https://heraldodemexico.com.mx/espectaculos/",
+  "https://lovefm.com.mx/noticias-relevantes",
+  "https://los40cuernavaca.com/category/musica/",
+  "https://www.tn8.tv/category/musica/",
+  "https://www.panamaamerica.com.pa/variedades",
+  "https://zeta.com.pa/noticias-del-dia.html",
+  "https://www.critica.com.pa/show",
+  "https://www.panama24horas.com.pa/entretenimiento/",
+  "https://independiente.com.py/show/",
+  "https://trece.com.py/category/tendencias-trece/",
+  "https://trome.com/espectaculos/musica/",
+  "https://elcomercio.pe/luces/musica/",
+  "https://elcomercio.pe/noticias/musica/",
+  "https://lanoticia.com.pe/category/musica/",
+  "https://www.ritmoromantica.pe/noticias/musica/",
+  "https://www.serperuano.com/categoria/entretenimiento/",
+  "https://blog.joinnus.com/nueva-musica/",
+  "https://billboard.com.pe/",
+  "https://www.rockachorao.com/category/eventos/",
+  "https://www.rockachorao.com/category/lanzamientos/",
+  "https://tercerparlante.com/lonuevo/",
+  "https://www.elvocero.com/escenario/espectaculos/",
+  "https://www.primerahora.com/entretenimiento/musica/",
+  "https://www.kq105.com/noticias/eventos/",
+  "https://www.kq105.com/noticias/entretenimiento/",
+  "https://prpop.org/category/noticias/musica/",
+  "https://amariemagazine.com/category/musica/",
+  "https://amariemagazine.com/category/entretenimiento/conciertos/",
+  "https://listindiario.com/entretenimiento/musica",
+  "https://www.elcaribe.com.do/seccion/gente/a-y-e/",
+  "https://www.elperiodico.com.do/secciones/entretenimiento/",
+  "https://diariosocialrd.com/categoria/musica/",
+  "https://infoelnuevonorte.com/?cat=12",
+  "https://www.elpais.com.uy/tvshow",
+  "https://www.elobservador.com.uy/tag/musica",
+  "https://www.elnacional.com/musica/",
+  "https://intervez.com/category/culturaentretenimiento/musica/",
+  "https://plus.cusica.com/category/noticias/nacionales/",
 ];
 
 
