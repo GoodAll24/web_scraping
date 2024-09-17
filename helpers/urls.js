@@ -1,13 +1,4 @@
 lastNews = [
-  "https://www.lanacion.com.ar/espectaculos/musica/", // revisar
-  "https://es.rollingstone.com/arg/", // revisar
-  "https://www.billboard.ar/", // revisar
-  "https://talcomosoy.com.ar/index.php/category/musica/", // revisar
-  "https://www.prensariomusica.com/en-vivo.aspx", // revisar
-  "https://www.prensariomusica.com/discograficas.aspx", // revisar
-  "https://www.prensariomusica.com/actualidad.aspx", // revisar
-  "https://www.lv16.com.ar/sg/seccion/categoria/10-variedades", // revisar
-  "https://qradiosanjuan.com/category/musica/", // revisar
   "https://eldoce.tv/cuarteteando/", // revisar
   "https://dequeruza.ar/category/musica/", // revisar
   "https://www.caracoltv.com/cultura-caracol", // revisar
@@ -37,9 +28,18 @@ lastNews = [
   "https://www.panama24horas.com.pa/entretenimiento/", // revisar
   "https://trece.com.py/category/tendencias-trece/", // revisar
   "https://www.serperuano.com/categoria/entretenimiento/", // revisar
-  "https://billboard.com.pe/", // revisar
+  "https://billboard.com.pe/", // revisar pt2
+  "https://www.billboard.ar/", // revisar pt2
+  "https://www.prensariomusica.com/en-vivo.aspx", // revisar pt2
+  "https://www.prensariomusica.com/discograficas.aspx", // revisar pt2
+  "https://www.prensariomusica.com/actualidad.aspx", // revisar pt2
+  "https://qradiosanjuan.com/category/musica/", // done
+  "https://www.lv16.com.ar/sg/seccion/categoria/10-variedades", // done
+  "https://talcomosoy.com.ar/index.php/category/musica/", // done
+  "https://es.rollingstone.com/arg/", // done
+  "https://www.lanacion.com.ar/espectaculos/musica/", // done
   "https://www.diariodecultura.com.ar/musica/", // oone
-  "https://tn.com.ar/tags/musica/",  // done
+  "https://tn.com.ar/tags/musica/", // done
   "https://www.a24.com/primiciasya/musica", // done
   "https://www.infobae.com/tag/musica/", // done
   "https://www.infobae.com/entretenimiento/", // done
@@ -60,7 +60,7 @@ lastNews = [
   "https://www.bolivia.com/entretenimiento/", // done
   "https://www.opinion.com.bo/tags/musica/", // done
   "https://www.semana.com/cultura/musica/", // done
-  "https://www.elespectador.com/entretenimiento/musica/",// done
+  "https://www.elespectador.com/entretenimiento/musica/", // done
   "https://www.eluniversal.com.co/farandula", // done
   "https://occidente.co/secciones/espectaculo/", // done
   "https://www.elpais.com.co/entretenimiento/", // done
@@ -106,7 +106,7 @@ lastNews = [
   "https://www.efeeme.com/agenda/conciertos-agenda/", // done
   "https://masterfm.es/category/musica/", // done
   "https://as.com/tikitakas/noticias/musica/", // done
-  "https://gladyspalmera.com/actualidad/",  // done
+  "https://gladyspalmera.com/actualidad/", // done
   "https://elpais.com/noticias/musica/", // done
   "https://www.telecinco.es/tags/musica/", // done
   "https://www.cosmopolitan.com/es/musica-novedades/", // done
@@ -170,7 +170,7 @@ lastNews = [
   "https://tercerparlante.com/lonuevo/", // done
   "https://www.elvocero.com/escenario/espectaculos/", // done
   "https://www.primerahora.com/entretenimiento/musica/", // done
-  "https://www.kq105.com/noticias/eventos/",// done
+  "https://www.kq105.com/noticias/eventos/", // done
   "https://www.kq105.com/noticias/entretenimiento/", // done
   "https://prpop.org/category/noticias/musica/", // done
   "https://amariemagazine.com/category/musica/", // done
@@ -187,20 +187,35 @@ lastNews = [
   "https://plus.cusica.com/category/noticias/nacionales/", // done
 ];
 
-
 const onCheck = {
-  url: "https://olimpicastereo.com.co/secciones/virales",
+  url: lastNews[0],
   ext: false,
-  link: "a.qt-btn",
-  main: "div.post",
-  image: "div.qt-header-bg",
-  title: "h3.qt-title > a",
+  link: "a.td-image-wrap",
+  main: "div.td-big-grid-post",
+  image: "img.entry-thumb",
+  title: "h3.entry-title > a",
   extImg: false,
-  content: "div.qt-item-content > p",
+  // content: "div.listado-ppal > p",
   cssImage: true,
-  cssImageAttr: "data-bgimage",
+  cssImageAttr: "data-img-url",
   cssImageExtraText: false,
 };
+
+const watchLater = [
+  {
+    url: lastNews[0],
+    ext: true,
+    link: "a.blog-title-small",
+    main: "div.w-dyn-item",
+    image: "div.blog-features-small-photo",
+    title: "a.blog-title-small",
+    extImg: false,
+    content: "",
+    cssImage: true,
+    cssImageAttr: "style",
+    cssImageExtraText: true,
+  },
+];
 
 const tester = "https://bot.sannysoft.com";
 
