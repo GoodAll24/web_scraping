@@ -1,15 +1,4 @@
 lastNews = [
-  "https://eldoce.tv/cuarteteando/", // revisar
-  "https://dequeruza.ar/category/musica/", // revisar
-  "https://www.caracoltv.com/cultura-caracol", // revisar
-  "https://www.qhubobogota.com/zona-rosa/", // revisar
-  "https://www.rcnradio.com/entretenimiento", // revisar
-  "https://cambiocolombia.com/cultura", //revisar
-  "https://www.solarlatinclub.com/", // revisar
-  "https://www.nacion.com/viva/musica/", // revisar
-  "https://www.radioactiva.cl/tag/musicaradioactiva", // revisar
-  "https://fanky.cl/categoria/musica/", // revisar
-  "https://www.parlante.cl/category/musica/", // revisar
   "https://elvanguardistaonline.com/category/farandula/", // revisar
   "https://www.elsalvador.com/category/entretenimiento/espectaculos/", // revisar
   "https://www.elmundo.es/cultura/musica.html", // revisar
@@ -33,6 +22,17 @@ lastNews = [
   "https://www.prensariomusica.com/en-vivo.aspx", // revisar pt2
   "https://www.prensariomusica.com/discograficas.aspx", // revisar pt2
   "https://www.prensariomusica.com/actualidad.aspx", // revisar pt2
+  "https://www.rcnradio.com/entretenimiento", // revisar pt2
+  "https://cambiocolombia.com/cultura", //revisar error
+  "https://www.parlante.cl/category/musica/", // done
+  "https://fanky.cl/categoria/musica/", // done
+  "https://www.radioactiva.cl/tag/musicaradioactiva", // done
+  "https://www.nacion.com/viva/musica/", // done
+  "https://www.solarlatinclub.com/", // done
+  "https://www.qhubobogota.com/zona-rosa/", // done
+  "https://www.caracoltv.com/cultura-caracol", // done
+  "https://dequeruza.ar/category/musica/", // done
+  "https://eldoce.tv/cuarteteando/", // done
   "https://qradiosanjuan.com/category/musica/", // done
   "https://www.lv16.com.ar/sg/seccion/categoria/10-variedades", // done
   "https://talcomosoy.com.ar/index.php/category/musica/", // done
@@ -189,16 +189,16 @@ lastNews = [
 
 const onCheck = {
   url: lastNews[0],
-  ext: false,
-  link: "a.td-image-wrap",
-  main: "div.td-big-grid-post",
-  image: "img.entry-thumb",
-  title: "h3.entry-title > a",
-  extImg: false,
-  // content: "div.listado-ppal > p",
-  cssImage: true,
-  cssImageAttr: "data-img-url",
-  cssImageExtraText: false,
+  link: "div.cb-mask > a",
+  main: "article.post",
+  image: "img.wp-post-image",
+  title: "h2.cb-post-title > a",
+  content: "div.cb-excerpt",
+  // ext: true,
+  // extImg: true,
+  // cssImage: true,
+  // cssImageAttr: "data-src",
+  // cssImageExtraText: true,
 };
 
 const watchLater = [
