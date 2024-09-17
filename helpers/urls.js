@@ -1,73 +1,64 @@
-// url
-const mexico = [
-  "https://www.excelsior.com.mx/musica", // done
-  "https://radiobox.com.mx/category/espectaculos/", // done
-  "https://es.rollingstone.com/categoria/musica/", // done
-  "https://www.sdpnoticias.com/espectaculos/musica/", // done
-  "https://www.milenio.com/espectaculos/musica", // done
-  "https://www.elimparcial.com/tags/musica/", // done
-  "https://www.informador.mx/musica-t32", // done
-  "https://www.cronica.com.mx/escenario", // done
-  "https://desdepuebla.com/noticias/desde-el-show/", // done
-  "https://www.elsiglodetorreon.com.mx/seccion/espectaculos", // done
-];
-const usa = [
-  "https://www.billboard.com/c/espanol/noticias/", // done
-  "https://www.billboard.com/c/espanol/musica/", // done
-  "https://musicaislife.com/musica-news/", // done
-  "https://prensadehouston.com/category/entretenimiento/", // done
-  "https://wowlarevista.com/category/musica/", // security issues
-  "https://www.telemundo.com/entretenimiento", // done * (aquí hay que revisar si las noticias con video se pueden integrar directamente a la Tele Revista)
-  "https://cnnespanol.cnn.com/category/musica/", // done *(aquí hay que revisar si las noticias con video se pueden integrar directamente a la Tele Revista)
-  "https://www.latimes.com/espanol/etiqueta/musica", // done
-  "https://www.hispanicpost.com/category/entretenimiento/musica-tv-y-cine/", // error 404
-  "https://somoslarevistausa.com/category/musica/", // done
-  "https://lakw.us/category/musica/", // done
-  "https://www.telemundoamarillo.com/entretenimiento/", // done
-  "https://www.mundodeportivo.com/us/estrellas-latinas", // done
-  "https://www.noticiany.com/category/entretenimiento/", // done
-  "https://es.rollingstone.com/categoria/musica/noticias-musica/",
-  "https://www.notistarz.com/categorias/musica/", // done
-  "https://efe.com/noticias/musica/", // done
-  "https://ellatinodigital.com/categoria/secciones/farandula/", // done
-  "https://www.latingrammy.com/noticias", // revisar
-];
-const españa = [
-  "https://www.epe.es/es/temas/musica-5359", // Error 404
-  "https://www.diariodecadiz.es/mapademusicas/", // Error 404
-  "https://es.rollingstone.com/esp/", // VPN
-  "http://noticiasclave.net", // done
-  "https://www.elconfidencial.com/tags/temas/musica-5272/", // done, con falta de datos
-  "https://www.larazon.es/cultura/musica/", // done
-  "https://www.elespanol.com/el-cultural/escenarios/musica/", // done
-  "https://www.elperiodico.com/es/temas/musica-6584", // done
-  "https://www.europapress.es/cultura/musica-00129/", // done
-  "https://www.lavozdealmeria.com/temas/conciertos/1", // done
-  "https://www.laopiniondemalaga.es/tags/musica/", // done
-  "https://www.diariosur.es/culturas/musica/", // done
-  "https://www.lasprovincias.es/culturas/musica/", // done
-  "https://los40.com/musica", // done
-  "https://los40.com/los40_urban/",
-  "https://www.efeeme.com/agenda/conciertos-agenda/", // done
-  "https://www.cadena100.es/musica", // done
-  "https://masterfm.es/category/musica/", // done
-  "https://as.com/tikitakas/noticias/musica/", // done
-  "https://gladyspalmera.com/actualidad/", // done
-  "https://elpais.com/noticias/musica/", // done
-  "https://www.lasexta.com/temas/musica-1", // done
-  "https://www.telecinco.es/tags/musica", // done
-  "https://www.cosmopolitan.com/es/musica-novedades/", // link issues
-  "https://www.esquire.com/es/actualidad/musica/", // link issues
-  "https://www.20minutos.es/minuteca/musica-trap/", // done
-  "https://www.laverdad.es/culturas/musica/", // done
-  "https://cadenaser.com/tag/musica/a/", // done
-  "https://www.eldia.es/tags/musica/", // done
-  "https://www.cancioneros.com/in/12/0/actualidad", // structure error
-  "https://elgeneracionalpost.com/noticias/cultura/musica", // done
-];
-const colombia = [
-  "https://www.eltiempo.com/cultura/musica-y-libros", // done
-  "https://www.elcolombiano.com/cultura/musica", // Se repite
+lastNews = [
+  "https://elvanguardistaonline.com/category/farandula/", // revisar
+  "https://www.elsalvador.com/category/entretenimiento/espectaculos/", // revisar
+  "https://www.elmundo.es/cultura/musica.html", // revisar
+  "https://www.elcorreogallego.es/tags/musica/", // revisar
+  "https://us.marca.com/tiramillas/musica.html?intcmp=MENUMIGA&s_kw=musica", // revisar
+  "https://www.noticiany.com/category/entretenimiento/", // revisar
+  "https://miniondas.com/category/farandula/", // reviasr
+  "https://www.univision.com/musica/", // revisar
+  "https://www.revistalatinanc.com/category/cultura/", // revisar
+  "https://es.rollingstone.com/mex/", // revisar
+  "https://www.marca.com/mx/trending/musica.html?intcmp=MENUMIGA&s_kw=musica", // revisar
+  "https://www.contrareplica.mx/tendencias", // revisar
+  "https://www.fusionradio.mx/musica.cfm", // reviasr
+  "https://heraldodemexico.com.mx/espectaculos/", // revisar
+  "https://www.critica.com.pa/show", // reviasr
+  "https://www.panama24horas.com.pa/entretenimiento/", // revisar
+  "https://trece.com.py/category/tendencias-trece/", // revisar
+  "https://www.serperuano.com/categoria/entretenimiento/", // revisar
+  "https://billboard.com.pe/", // revisar pt2
+  "https://www.billboard.ar/", // revisar pt2
+  "https://www.prensariomusica.com/en-vivo.aspx", // revisar pt2
+  "https://www.prensariomusica.com/discograficas.aspx", // revisar pt2
+  "https://www.prensariomusica.com/actualidad.aspx", // revisar pt2
+  "https://www.rcnradio.com/entretenimiento", // revisar pt2
+  "https://cambiocolombia.com/cultura", //revisar error
+  "https://www.parlante.cl/category/musica/", // done
+  "https://fanky.cl/categoria/musica/", // done
+  "https://www.radioactiva.cl/tag/musicaradioactiva", // done
+  "https://www.nacion.com/viva/musica/", // done
+  "https://www.solarlatinclub.com/", // done
+  "https://www.qhubobogota.com/zona-rosa/", // done
+  "https://www.caracoltv.com/cultura-caracol", // done
+  "https://dequeruza.ar/category/musica/", // done
+  "https://eldoce.tv/cuarteteando/", // done
+  "https://qradiosanjuan.com/category/musica/", // done
+  "https://www.lv16.com.ar/sg/seccion/categoria/10-variedades", // done
+  "https://talcomosoy.com.ar/index.php/category/musica/", // done
+  "https://es.rollingstone.com/arg/", // done
+  "https://www.lanacion.com.ar/espectaculos/musica/", // done
+  "https://www.diariodecultura.com.ar/musica/", // oone
+  "https://tn.com.ar/tags/musica/", // done
+  "https://www.a24.com/primiciasya/musica", // done
+  "https://www.infobae.com/tag/musica/", // done
+  "https://www.infobae.com/entretenimiento/", // done
+  "https://www.infobae.com/teleshow/", // done
+  "https://www.infobae.com/tag/colombia-entretenimiento/", // done
+  "https://www.infobae.com/tag/mexico-entretenimiento/", // done
+  "https://www.infobae.com/tag/peru-entretenimiento/", // done
+  "https://www.losandes.com.ar/temas/musica/", // done
+  "https://www.eldestapeweb.com/tag/musica", // done
+  "https://www.filo.news/musica", // done
+  "https://www.cronica.com.ar/seccion/elcanaldelamusica/", // done
+  "https://los40.com.ar/", // done
+  "https://www.lavoz.com.ar/espectaculos/musica/", //done
+  "https://www.qmusica.tv/Noticias", // done
+  "https://www.cmtv.com.ar/noticias/", // done
+  "https://www.elliberal.com.ar/Espectaculos", // done
+  "https://www.rosario3.com/tags/Musica", // done
+  "https://www.bolivia.com/entretenimiento/", // done
+  "https://www.opinion.com.bo/tags/musica/", // done
   "https://www.semana.com/cultura/musica/", // done
   "https://www.elespectador.com/entretenimiento/musica/", // done
   "https://www.eluniversal.com.co/farandula", // done
@@ -79,130 +70,152 @@ const colombia = [
   "https://elpilon.com.co/Noticias/el-vallenato/", // done
   "https://www.elcolombiano.com/cultura/musica", // done
   "https://www.estiloplay.com.co/category/musica/", // done
-  "https://www.estiloplay.com.co/category/sony-music", // done
+  "https://www.estiloplay.com.co/category/sony-music/", // done
   "https://www.estiloplay.com.co/category/universal-music/", // done
   "https://www.estiloplay.com.co/category/warner-music/", // done
   "https://www.estiloplay.com.co/category/onerpm/", // done
+  "https://www.estiloplay.com.co/category/conciertos/", // done
+  "https://es.rollingstone.com/col/", // done
   "https://revistadiners.com.co/category/cultura/musica/", // done
   "https://caracol.com.co/tendencias/entretenimiento/", // done
   "https://www.shock.co/musica", // done
   "https://www.shock.co/eventos", // done
-  "https://es.rollingstone.com/col/", // done
+  "https://www.radionacional.co/noticias-de-musica", // done
+  "https://www.lapatria.com/entretenimiento", // done
+  "https://www.urosarioradio.co/index.php/ur-music/lanzamientos", // done
+  "https://colectivosonoro.com/category/noticia/", // done
+  "https://www.canalrcn.com/super-like/musica/", // done
   "https://www.wradio.com.co/tag/musica/a/", // done
-  "https://www.decibeles.net/noticias", // link issues
-];
-const chile = [
-  "https://www.emol.com/espectaculos/musica/", // done
-  "https://www.latercera.com/etiqueta/musica-culto/", // done
-  "https://www.biobiochile.cl/lista/categorias/musica", // done
-  "https://www.lacuarta.com/musica/", // done
-  "https://www.lacuarta.com/urbana/", // done
-  "https://los40.cl/actualidad/", // done
-  "https://www.musicachilena.cl/v2/noticias/", // done
-];
-const rd = [
-  "https://www.diariolibre.com/revista/musica", // done
-  "https://listindiario.com/entretenimiento/musica", // done
-  "https://diariosocialrd.com/categoria/musica/", // done
-  "https://notidigitalrd.com.do/category/entretenimiento/", // done
-  "https://www.elcaribe.com.do/seccion/gente/a-y-e/", // onCheck
-  "https://www.elperiodico.com.do/secciones/entretenimiento/", // done
-  "https://eltestigo.do/entretenimiento", // done
-  "https://eldia.com.do/secciones/espectaculos/", // BAD_REQUEST_ERROR
-];
-const venezuela = [
-  "https://www.elnacional.com/musica/", // done
-  "https://eldiario.com/seccion/cultura/", // done
-  "https://2001online.com/seccion/farandula/", // done
-  "https://dentrodelgenero.com/", // revisar
-  "https://www.noticierovenevision.net/entretenimiento", // done
-  "https://diariodelosandes.com/secciones/entretenimiento/", // done
-  "https://acn.com.ve/espectaculos/", // done
-];
-const paraguay = [
-  "https://independiente.com.py/show/", // done
-];
-const cr = [
-  "https://www.larepublica.net/seccion/magazine", // done
-  "https://www.crhoy.com/noticias/musica", // done
-];
-const uruguay = [
-  "https://www.elpais.com.uy/tvshow", // revisar
-  "https://www.elobservador.com.uy/tag/musica", // done
-];
-const cuba = [
+  "https://lareinadelvallenato.co/secciones/noticias", // done
+  "https://www.radionica.rocks/musica/musica-colombiana", // done
+  "https://www.radionica.rocks/musica/musica-internacional", // done
+  "https://www.laotraverdad.info/category/cultura/", //done
+  "https://observador.cr/seccion/avenida/", // done
   "https://oncubanews.com/category/cultura/musica/", // done
-  "https://magazineampm.com/newness-cuba/", // done
-];
-const bolivia = [
-  "https://www.bolivia.com/entretenimiento/", // done
-  "https://www.opinion.com.bo/tags/musica/", // done
-];
-const nicaragua = [
+  "https://www.lacuarta.com/urbana/", // done
+  "https://www.musicachilena.cl/v2/noticias/", // done
+  "https://www.eluniverso.com/entretenimiento/musica/", // done
+  "https://www.primicias.ec/entretenimiento/musica/", // done
+  "https://los40.com/musica/", // done
+  "https://los40.com/los40_urban/", // done
+  "http://noticiasclave.net/", // done
+  "https://www.elperiodico.com/es/temas/musica-6584", // done
+  "https://www.europapress.es/cultura/musica-00129/", // done
+  "https://www.diariosur.es/culturas/musica/", // done
+  "https://es.rollingstone.com/esp/", // done
+  "https://www.efeeme.com/agenda/conciertos-agenda/", // done
+  "https://masterfm.es/category/musica/", // done
+  "https://as.com/tikitakas/noticias/musica/", // done
+  "https://gladyspalmera.com/actualidad/", // done
+  "https://elpais.com/noticias/musica/", // done
+  "https://www.telecinco.es/tags/musica/", // done
+  "https://www.cosmopolitan.com/es/musica-novedades/", // done
+  "https://www.20minutos.es/minuteca/musica-trap/", // done
+  "https://www.laverdad.es/culturas/musica/", // done
+  "https://cadenaser.com/tag/musica/a/", // done
+  "https://www.eldia.es/tags/musica/", // done
+  "https://www.laopiniondemurcia.es/cultura/", // done
+  "https://www.laguiago.com/espana/musica/", // done
+  "https://industriamusical.com/category/discograficas/", // done
+  "https://industriamusical.com/category/streaming/", // done
+  "https://industriamusical.com/category/negocio/", // done
+  "https://industriamusical.com/category/noticias/", // done
+  "https://www.billboard.com/c/espanol/noticias/", // done
+  "https://www.billboard.com/c/espanol/musica/", // done
+  "https://www.telemundo.com/entretenimiento", // done
+  "https://www.latimes.com/espanol/etiqueta/musica", // done
+  "https://cnnespanol.cnn.com/category/musica/", // done
+  "https://es.rollingstone.com/categoria/musica/noticias-musica/", // done
+  "https://remezcla.com/music/", // done
+  "https://www.hola.com/us/tags/music/", // done
+  "https://www.hola.com/tags/musica/ ", // done
+  "https://peopleenespanol.com/musica/", // done
+  "https://www.hola.com/us-es/entretenimiento/", // done
+  "https://prensadehouston.com/category/entretenimiento/", // done
+  "https://impactolatino.com/musica-entretenimiento/", // done
+  "https://lakw.us/category/musica/", // done
+  "https://musicaislife.com/musica-news/", // done
+  "https://efe.com/noticias/musica/", //done
+  "https://www.panasenutah.com/category/entretenimiento/musica/", // done
+  "https://dmhmagazine.com/discos/", // done
+  "https://www.billboard.com/c/espanol/negocios/", // done
+  "https://www.torontohispano.com/secciones/entretenimiento/", // done
+  "https://www.prensalibre.com/vida/escenario/", // done
+  "https://www.elheraldo.hn/entretenimiento", // done
+  "https://www.sdpnoticias.com/espectaculos/musica/", // done
+  "https://sicomnoticias.mx/category/entretenimiento/", // done
+  "https://amexi.com.mx/category/espectaculos/", // done
+  "https://www.excelsior.com.mx/musica", // done
+  "https://www.milenio.com/espectaculos/musica", // done
+  "https://www.elimparcial.com/tags/musica/", // done
+  "https://radiobox.com.mx/category/espectaculos/", // done
+  "https://desdepuebla.com/noticias/desde-el-show/", // done
+  "https://los40.com.mx/actualidad/", // done
+  "https://www.luciernagainformativa.com/category/espectaculos/", // done
+  "https://www.alchilepoblano.com/entretenimiento/", // done
+  "https://lovefm.com.mx/noticias-relevantes", // done
+  "https://los40cuernavaca.com/category/musica/", // done
   "https://www.tn8.tv/category/musica/", // done
-];
-
-const masNoticias = [
-  "https://www.estilosblog.com/category/estilos-blog/entretenimiento/", // done
-  "https://blog.joinnus.com/entretenimiento/", // done
+  "https://www.panamaamerica.com.pa/variedades", // done
+  "https://zeta.com.pa/noticias-del-dia.html", // done
+  "https://independiente.com.py/show/", // done
+  "https://trome.com/espectaculos/musica/", // done
+  "https://elcomercio.pe/luces/musica/", // done
+  "https://elcomercio.pe/noticias/musica/", // done
+  "https://lanoticia.com.pe/category/musica/", // done
+  "https://www.ritmoromantica.pe/noticias/musica/", // done
   "https://blog.joinnus.com/nueva-musica/", // done
-  "https://infoelnuevonorte.com/?cat=12 ", // done
-  "https://infoelnuevonorte.com/?cat=11 ", // done
-  "https://miamipocket.us/entretenimiento/", // done
-  "https://entretenimientotolima.com/category/agenda/musica/", // done
-  "https://codigotv.net/category/entretenimiento/ ", // done
-  "https://azuaalinstante.com/category/arte-y-espectaculo/ ", // done
-  "https://www.disco89fm.com/noticias", // done
-  "https://precision.com.do/category/revista/espectaculos/", // done
-  "https://www.elfarandi.com/musica/", // done
-  "https://intervez.com/category/culturaentretenimiento/musica/", // done
-  "https://www.ntn24.com/noticias-entretenimiento", // done
-  "https://deultimominuto.net/category/entretenimiento/", // done
-  "https://www.enlacedigital.com.do/categoria/entretenimiento/", // done
-  "https://diarioroatan.com/category/sociales/", // done
-  "https://www.yucatan.com.mx/seccion/espectaculos", // done
+  "https://www.rockachorao.com/category/eventos/", // done
+  "https://www.rockachorao.com/category/lanzamientos/", // done
+  "https://tercerparlante.com/lonuevo/", // done
+  "https://www.elvocero.com/escenario/espectaculos/", // done
+  "https://www.primerahora.com/entretenimiento/musica/", // done
+  "https://www.kq105.com/noticias/eventos/", // done
+  "https://www.kq105.com/noticias/entretenimiento/", // done
+  "https://prpop.org/category/noticias/musica/", // done
   "https://amariemagazine.com/category/musica/", // done
   "https://amariemagazine.com/category/entretenimiento/conciertos/", // done
-  "https://panoramaeconomicopma.com/categorias/farandula/", // done
-  "https://adnamerica.com/entretenimiento", // done
-  "https://hoydia.com.ar/espectaculos/", // done
-  "https://www.conclusion.com.ar/temas/espectaculos/", // done
-  "https://masvip.com.do/secciones/rincon-urbano/", // done
-  "https://masvip.com.do/secciones/quien/", // done
-  "https://lifeandstyle.expansion.mx/noticias-musica", // done
-  "https://www.panasenutah.com/category/entretenimiento/musica/", // done
-  "http://tijuanainformativo.info/index.php/noticias-cultura-y-espectaculos-de-tijuana-y-baja-california-y-mexico", // done
-  "https://impactolatino.com/entretenimiento/", // done
-  "https://dominicanaaldia.do/Secciones/estilo-de-vida/", // done
-  "https://urbanaplayfm.com/category/musica/", // done
-  "https://elcronista.co/cultura", // done
-  "https://www.hola.com/us-es/entretenimiento/", // done
-  "https://www.hola.com/us/tags/music/", // done
-  "https://www.hola.com/tags/musica/", // done
-  "https://sglaradio.com/category/noticias/", // ready (just fix image issue on backend)
-  "https://sglaradio.com/category/lanzamientos/", // ready (just fix image issue on backend)
-  "https://peopleenespanol.com/musica/", // link issues
-  "https://www.esquire.com/es/actualidad/musica/", // link issues
-  "https://ultimasnoticia.com/category/entretenimiento/", // link issues
-  "https://www.lainformacion.com.do/mirador/musica-y-literatura", // problemas de espera
-  "https://www.canal26.com/musica", // Error: Unknown pseudo-class :text-base
-  "https://www.revistavea.com.co/musica/", // html error
-  "https://elperiodiquito.com/category/mas/escenario/", // No se deja ver codigo fuente
+  "https://listindiario.com/entretenimiento/musica", // done
+  "https://www.elcaribe.com.do/seccion/gente/a-y-e/", // done
+  "https://www.elperiodico.com.do/secciones/entretenimiento/", // done
+  "https://diariosocialrd.com/categoria/musica/", // done
+  "https://infoelnuevonorte.com/?cat=12", // done
+  "https://www.elpais.com.uy/tvshow", //done
+  "https://www.elobservador.com.uy/tag/musica", // done
+  "https://www.elnacional.com/musica/", // done
+  "https://intervez.com/category/culturaentretenimiento/musica/", // done
+  "https://plus.cusica.com/category/noticias/nacionales/", // done
 ];
 
 const onCheck = {
-  url: "https://olimpicastereo.com.co/secciones/virales",
-  ext: false,
-  link: "a.qt-btn",
-  main: "div.post",
-  image: "div.qt-header-bg",
-  title: "h3.qt-title > a",
-  extImg: false,
-  content: "div.qt-item-content > p",
-  cssImage: true,
-  cssImageAttr: "data-bgimage",
-  cssImageExtraText: false,
+  url: lastNews[0],
+  link: "div.cb-mask > a",
+  main: "article.post",
+  image: "img.wp-post-image",
+  title: "h2.cb-post-title > a",
+  content: "div.cb-excerpt",
+  // ext: true,
+  // extImg: true,
+  // cssImage: true,
+  // cssImageAttr: "data-src",
+  // cssImageExtraText: true,
 };
+
+const watchLater = [
+  {
+    url: lastNews[0],
+    ext: true,
+    link: "a.blog-title-small",
+    main: "div.w-dyn-item",
+    image: "div.blog-features-small-photo",
+    title: "a.blog-title-small",
+    extImg: false,
+    content: "",
+    cssImage: true,
+    cssImageAttr: "style",
+    cssImageExtraText: true,
+  },
+];
 
 const tester = "https://bot.sannysoft.com";
 
