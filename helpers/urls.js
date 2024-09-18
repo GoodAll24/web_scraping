@@ -1,15 +1,7 @@
 lastNews = [
-  "https://elvanguardistaonline.com/category/farandula/", // revisar
-  "https://www.elsalvador.com/category/entretenimiento/espectaculos/", // revisar
-  "https://www.elmundo.es/cultura/musica.html", // revisar
-  "https://www.elcorreogallego.es/tags/musica/", // revisar
-  "https://us.marca.com/tiramillas/musica.html?intcmp=MENUMIGA&s_kw=musica", // revisar
-  "https://www.noticiany.com/category/entretenimiento/", // revisar
-  "https://miniondas.com/category/farandula/", // reviasr
   "https://www.univision.com/musica/", // revisar
   "https://www.revistalatinanc.com/category/cultura/", // revisar
   "https://es.rollingstone.com/mex/", // revisar
-  "https://www.marca.com/mx/trending/musica.html?intcmp=MENUMIGA&s_kw=musica", // revisar
   "https://www.contrareplica.mx/tendencias", // revisar
   "https://www.fusionradio.mx/musica.cfm", // reviasr
   "https://heraldodemexico.com.mx/espectaculos/", // revisar
@@ -24,6 +16,14 @@ lastNews = [
   "https://www.prensariomusica.com/actualidad.aspx", // revisar pt2
   "https://www.rcnradio.com/entretenimiento", // revisar pt2
   "https://cambiocolombia.com/cultura", //revisar error
+  "https://www.elsalvador.com/category/entretenimiento/espectaculos/", // revisar (content)
+  "https://elvanguardistaonline.com/category/farandula/", // done (no image)
+  "https://miniondas.com/category/farandula/", // done
+  "https://www.marca.com/mx/trending/musica.html?intcmp=MENUMIGA&s_kw=musica", // done
+  "https://www.noticiany.com/category/entretenimiento/", // done
+  "https://us.marca.com/tiramillas/musica.html?intcmp=MENUMIGA&s_kw=musica", // done
+  "https://www.elcorreogallego.es/tags/musica/", // done
+  "https://www.elmundo.es/cultura/musica.html", // done
   "https://www.parlante.cl/category/musica/", // done
   "https://fanky.cl/categoria/musica/", // done
   "https://www.radioactiva.cl/tag/musicaradioactiva", // done
@@ -189,36 +189,36 @@ lastNews = [
 
 const onCheck = {
   url: lastNews[0],
-  link: "div.cb-mask > a",
-  main: "article.post",
-  image: "img.wp-post-image",
-  title: "h2.cb-post-title > a",
-  content: "div.cb-excerpt",
   // ext: true,
+  link: "a.featured-image",
+  main: "article.post",
+  image: "a.featured-image > img",
+  title: "h2.post-title > a",
+  content: "div.excerpt.entry-summary > p",
   // extImg: true,
   // cssImage: true,
   // cssImageAttr: "data-src",
   // cssImageExtraText: true,
 };
 
-const watchLater = [
-  {
-    url: lastNews[0],
-    ext: true,
-    link: "a.blog-title-small",
-    main: "div.w-dyn-item",
-    image: "div.blog-features-small-photo",
-    title: "a.blog-title-small",
-    extImg: false,
-    content: "",
-    cssImage: true,
-    cssImageAttr: "style",
-    cssImageExtraText: true,
-  },
-];
-
 const tester = "https://bot.sannysoft.com";
 
 module.exports = { onCheck };
 
 // background-image: url('https://gladyspalmera.com/wp-content/uploads/2024/07/Dayme-Visita-984x620.jpg')
+
+const doneWithErrs = [
+  {
+    url: "https://elvanguardistaonline.com/category/farandula/",
+    // ext: true,
+    link: "a.link",
+    main: "article.post",
+    image: "img.image",
+    title: "h4.post_title.entry-title > a",
+    // extImg: true,
+    content: "div.post_content_inner",
+    // cssImage: true,
+    // cssImageAttr: "style",
+    // cssImageExtraText: true,
+  },
+];

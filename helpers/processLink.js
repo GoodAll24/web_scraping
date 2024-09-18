@@ -24,7 +24,7 @@ const processLink2 = async (page) => {
           // console.log($(element).find(page.image).attr("src"));
           // console.log($(element).find(page.image).attr("data-src"));
           // console.log($(element).find(page.image).attr("srcset"));
-          // console.log($(element).html());
+          console.log($(element).html());
           // console.log($(element).find(page.image).attr("class"));
           // console.log($2(`${page.main}:nth-child(${i + 1})`).attr("href"));
           // console.log(i);
@@ -98,6 +98,9 @@ const processLink2 = async (page) => {
           metaPage('link[rel="apple-touch-icon"]').attr("href") ||
           "No hay ícono para este sitio";
         console.log(metaPage('link[rel="apple-touch-icon"]').attr("href"));
+
+        const access = { ...page };
+        
         const data2Fill = {
           url: page.url,
           original: originalUrl,
@@ -105,7 +108,7 @@ const processLink2 = async (page) => {
           link_logo: pageIcon.startsWith("/")
             ? `${originalUrl}${pageIcon}`
             : pageIcon,
-          access: JSON.stringify(page),
+          access: JSON.stringify(access),
         };
         if (datos.length)
           resolve({ datos: { ...datos }, meatadatos: { ...data2Fill } });
