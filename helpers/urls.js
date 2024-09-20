@@ -1,9 +1,4 @@
 lastNews = [
-  "https://trece.com.py/category/tendencias-trece/", // revisar
-  "https://www.serperuano.com/categoria/entretenimiento/", // revisar
-  "https://elplanteo.com/musica/",
-  "https://asondesalsa.com.pa/category/internacional/",
-  "https://ifmnoticias.com/category/gente-bacana/musica/",
   "https://www.contrareplica.mx/tendencias", // revisar despues
   "https://www.fusionradio.mx/musica.cfm", // reviasr no
   "https://www.revistalatinanc.com/category/cultura/", // revisar no
@@ -16,8 +11,13 @@ lastNews = [
   "https://www.rcnradio.com/entretenimiento", // revisar pt2
   "https://cambiocolombia.com/cultura", //revisar error
   "https://www.elsalvador.com/category/entretenimiento/espectaculos/", // revisar (content)
-  "https://www.critica.com.pa/show", // done
+  "https://asondesalsa.com.pa/category/internacional/", // error cannot scrape
   "https://elvanguardistaonline.com/category/farandula/", // done (no image)
+  "https://www.critica.com.pa/show", // done
+  "https://trece.com.py/category/tendencias-trece/", // done
+  "https://ifmnoticias.com/category/gente-bacana/musica/", // done
+  "https://elplanteo.com/musica/", // done
+  "https://www.serperuano.com/categoria/entretenimiento/", // done
   "https://miniondas.com/category/farandula/", // done
   "https://www.marca.com/mx/trending/musica.html?intcmp=MENUMIGA&s_kw=musica", // done
   "https://www.noticiany.com/category/entretenimiento/", // done
@@ -193,14 +193,14 @@ lastNews = [
 const onCheck = {
   url: lastNews[0],
   // ext: true,
-  link: "a.post_image",
-  main: "li.post",
-  image: "img.wp-post-image",
-  title: "h2.clearfix > a",
-  content: "p",
+  link: "a.td-image-wrap",
+  main: "div.tdb-cat-grid-post",
+  image: "span.entry-thumb",
+  title: "h3.entry-title > a",
   // extImg: true,
-  // cssImage: true,
-  // cssImageAttr: "data-src",
+  // content: "div.post-excerpt",
+  cssImage: true,
+  cssImageAttr: "data-img-url",
   // cssImageExtraText: true,
 };
 
@@ -214,12 +214,12 @@ const doneWithErrs = [
   {
     url: "https://elvanguardistaonline.com/category/farandula/",
     // ext: true,
-    link: "a.link",
-    main: "article.post",
-    image: "img.image",
-    title: "h4.post_title.entry-title > a",
+    link: "div.post-img-wrapper > a",
+    main: "div.post-block-wrapper",
+    image: "img.wp-post-image",
+    title: "h2.post-title > a",
     // extImg: true,
-    content: "div.post_content_inner",
+    content: "div.post-excerpt",
     // cssImage: true,
     // cssImageAttr: "style",
     // cssImageExtraText: true,
