@@ -1,14 +1,13 @@
 lastNews = [
-  "https://www.univision.com/musica/", // revisar
-  "https://www.revistalatinanc.com/category/cultura/", // revisar
-  "https://es.rollingstone.com/mex/", // revisar
-  "https://www.contrareplica.mx/tendencias", // revisar
-  "https://www.fusionradio.mx/musica.cfm", // reviasr
-  "https://heraldodemexico.com.mx/espectaculos/", // revisar
-  "https://www.critica.com.pa/show", // reviasr
-  "https://www.panama24horas.com.pa/entretenimiento/", // revisar
   "https://trece.com.py/category/tendencias-trece/", // revisar
   "https://www.serperuano.com/categoria/entretenimiento/", // revisar
+  "https://elplanteo.com/musica/",
+  "https://asondesalsa.com.pa/category/internacional/",
+  "https://ifmnoticias.com/category/gente-bacana/musica/",
+  "https://www.contrareplica.mx/tendencias", // revisar despues
+  "https://www.fusionradio.mx/musica.cfm", // reviasr no
+  "https://www.revistalatinanc.com/category/cultura/", // revisar no
+  "https://heraldodemexico.com.mx/espectaculos/", // revisar no
   "https://billboard.com.pe/", // revisar pt2
   "https://www.billboard.ar/", // revisar pt2
   "https://www.prensariomusica.com/en-vivo.aspx", // revisar pt2
@@ -17,12 +16,16 @@ lastNews = [
   "https://www.rcnradio.com/entretenimiento", // revisar pt2
   "https://cambiocolombia.com/cultura", //revisar error
   "https://www.elsalvador.com/category/entretenimiento/espectaculos/", // revisar (content)
+  "https://www.critica.com.pa/show", // done
   "https://elvanguardistaonline.com/category/farandula/", // done (no image)
   "https://miniondas.com/category/farandula/", // done
   "https://www.marca.com/mx/trending/musica.html?intcmp=MENUMIGA&s_kw=musica", // done
   "https://www.noticiany.com/category/entretenimiento/", // done
   "https://us.marca.com/tiramillas/musica.html?intcmp=MENUMIGA&s_kw=musica", // done
+  "https://www.univision.com/musica/", // done
+  "https://www.panama24horas.com.pa/entretenimiento/", // done
   "https://www.elcorreogallego.es/tags/musica/", // done
+  "https://es.rollingstone.com/mex/", // done
   "https://www.elmundo.es/cultura/musica.html", // done
   "https://www.parlante.cl/category/musica/", // done
   "https://fanky.cl/categoria/musica/", // done
@@ -190,11 +193,11 @@ lastNews = [
 const onCheck = {
   url: lastNews[0],
   // ext: true,
-  link: "a.featured-image",
-  main: "article.post",
-  image: "a.featured-image > img",
-  title: "h2.post-title > a",
-  content: "div.excerpt.entry-summary > p",
+  link: "a.post_image",
+  main: "li.post",
+  image: "img.wp-post-image",
+  title: "h2.clearfix > a",
+  content: "p",
   // extImg: true,
   // cssImage: true,
   // cssImageAttr: "data-src",
