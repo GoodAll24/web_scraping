@@ -1,4 +1,11 @@
 lastNews = [
+  "https://www.elnuevoherald.com/entretenimiento/musica/",
+  "https://quepasasv.com/category/espectaculos/",
+  "https://www.xn--salvadoreonoticias-v0b.com/category/famosos/",
+  "https://www.salvadoreñoticias.com/category/famosos/",
+  "https://diarioelsalvador.com/seccion/dediversion/",
+  "https://delfino.cr/tema/musica",
+  "https://www.lateja.cr/farandula/",
   "https://www.contrareplica.mx/tendencias", // revisar despues
   "https://www.fusionradio.mx/musica.cfm", // reviasr no
   "https://www.revistalatinanc.com/category/cultura/", // revisar no
@@ -193,10 +200,10 @@ lastNews = [
 const onCheck = {
   url: lastNews[0],
   // ext: true,
-  link: "a.td-image-wrap",
-  main: "div.tdb-cat-grid-post",
-  image: "span.entry-thumb",
-  title: "h3.entry-title > a",
+  link: "a.image-link-macro",
+  main: "article.card",
+  image: "a.image-link-macro > img",
+  title: "h3 > a",
   // extImg: true,
   // content: "div.post-excerpt",
   cssImage: true,

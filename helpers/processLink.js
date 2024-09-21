@@ -97,7 +97,7 @@ const processLink2 = async (page) => {
           metaPage('link[rel="shortcut icon"]').attr("href") ||
           metaPage('link[rel="apple-touch-icon"]').attr("href") ||
           "No hay ícono para este sitio";
-        console.log(metaPage('link[rel="apple-touch-icon"]').attr("href"));
+        // console.log(metaPage('link[rel="apple-touch-icon"]').attr("href"));
 
         const access = { ...page };
         
