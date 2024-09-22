@@ -6,14 +6,22 @@
 // const { add_media, add_media_data } = require('./helpers/urls');
 const { onCheck } = require("./helpers/urls");
 const { processMetadata, processLink2 } = require("./helpers/processLink");
+const { processLinkBeta } = require("./helpers/processImage");
 
 // puppeteer.use(StealthPlugin());
 
 const main = async () => {
   // const page = "https://2001online.com/";
-  processLink2(onCheck)
+  // --------------- main tester ---------------  //
+  // processLink2(onCheck)
+  //   .then((metadata) => console.log(metadata))
+  //   .catch((e) => console.log(e));
+
+  // --------------- beta tester ---------------  //
+  processLinkBeta(onCheck)
     .then((metadata) => console.log(metadata))
     .catch((e) => console.log(e));
+  
   // await processMetadata(page)
   //   .then((data) => console.log(data))
   //   .catch((error) => console.log(error));

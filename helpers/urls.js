@@ -1,11 +1,5 @@
 lastNews = [
-  "https://www.elnuevoherald.com/entretenimiento/musica/",
-  "https://quepasasv.com/category/espectaculos/",
-  "https://www.xn--salvadoreonoticias-v0b.com/category/famosos/",
-  "https://www.salvadoreñoticias.com/category/famosos/",
-  "https://diarioelsalvador.com/seccion/dediversion/",
-  "https://delfino.cr/tema/musica",
-  "https://www.lateja.cr/farandula/",
+  "https://www.xn--salvadoreonoticias-v0b.com/category/famosos/", // ERR_BAD_REQUEST
   "https://www.contrareplica.mx/tendencias", // revisar despues
   "https://www.fusionradio.mx/musica.cfm", // reviasr no
   "https://www.revistalatinanc.com/category/cultura/", // revisar no
@@ -19,7 +13,12 @@ lastNews = [
   "https://cambiocolombia.com/cultura", //revisar error
   "https://www.elsalvador.com/category/entretenimiento/espectaculos/", // revisar (content)
   "https://asondesalsa.com.pa/category/internacional/", // error cannot scrape
+  "https://www.salvadoreñoticias.com/category/famosos/", // NOT_FOUND --> ERR_BAD_RESPONSE
+  "https://delfino.cr/tema/musica", // estructure error
   "https://elvanguardistaonline.com/category/farandula/", // done (no image)
+  "https://www.elnuevoherald.com/entretenimiento/musica", // done
+  "https://diarioelsalvador.com/seccion/dediversion/", // done
+  "https://www.lateja.cr/farandula/", // done
   "https://www.critica.com.pa/show", // done
   "https://trece.com.py/category/tendencias-trece/", // done
   "https://ifmnoticias.com/category/gente-bacana/musica/", // done
@@ -39,6 +38,7 @@ lastNews = [
   "https://www.radioactiva.cl/tag/musicaradioactiva", // done
   "https://www.nacion.com/viva/musica/", // done
   "https://www.solarlatinclub.com/", // done
+  "https://quepasasv.com/category/espectaculos/", // done
   "https://www.qhubobogota.com/zona-rosa/", // done
   "https://www.caracoltv.com/cultura-caracol", // done
   "https://dequeruza.ar/category/musica/", // done
@@ -199,15 +199,15 @@ lastNews = [
 
 const onCheck = {
   url: lastNews[0],
-  // ext: true,
-  link: "a.image-link-macro",
-  main: "article.card",
-  image: "a.image-link-macro > img",
+  ext: true,
+  link: "a.td-image-wrap",
+  main: "div.td-big-grid-post",
+  image: "span.entry-thumb",
   title: "h3 > a",
   // extImg: true,
-  // content: "div.post-excerpt",
-  cssImage: true,
-  cssImageAttr: "data-img-url",
+  // content: "p.description-text",
+  // cssImage: true,
+  // cssImageAttr: "data-src",
   // cssImageExtraText: true,
 };
 
