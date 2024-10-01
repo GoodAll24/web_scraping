@@ -1,4 +1,5 @@
 lastNews = [
+  "https://www.enstarz.com/latino/musica",
   "https://www.xn--salvadoreonoticias-v0b.com/category/famosos/", // ERR_BAD_REQUEST
   "https://www.contrareplica.mx/tendencias", // revisar despues
   "https://www.fusionradio.mx/musica.cfm", // reviasr no
@@ -200,15 +201,15 @@ lastNews = [
 const onCheck = {
   url: lastNews[0],
   ext: true,
-  link: "a.td-image-wrap",
-  main: "div.td-big-grid-post",
-  image: "span.entry-thumb",
-  title: "h3 > a",
+  link: "h2 > a",
+  main: "article",
+  image: "figure > a",
+  title: "h2 > a",
   // extImg: true,
-  // content: "p.description-text",
-  // cssImage: true,
-  // cssImageAttr: "data-src",
-  // cssImageExtraText: true,
+  content: "div.tags",
+  cssImage: true,
+  cssImageAttr: "style",
+  cssImageExtraText: true,
 };
 
 const tester = "https://bot.sannysoft.com";
