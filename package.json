@@ -4,7 +4,8 @@
   "description": "Test en local de web scraping",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "clear && node app.js"
   },
   "author": "Alden Gonzalez",
   "license": "ISC",

@@ -1,5 +1,8 @@
 lastNews = [
-  "https://www.enstarz.com/latino/musica",
+  "https://ladiaria.com.uy/seccion/musica/", // done
+  "https://fmrockandpop.com/noticias/musica/", // done
+  "https://www.alertacaribe.com/noticias/famosos", // done
+  "https://www.enstarz.com/latino/musica", // done
   "https://www.xn--salvadoreonoticias-v0b.com/category/famosos/", // ERR_BAD_REQUEST
   "https://www.contrareplica.mx/tendencias", // revisar despues
   "https://www.fusionradio.mx/musica.cfm", // reviasr no
@@ -201,15 +204,15 @@ lastNews = [
 const onCheck = {
   url: lastNews[0],
   ext: true,
-  link: "h2 > a",
-  main: "article",
-  image: "figure > a",
-  title: "h2 > a",
-  // extImg: true,
-  content: "div.tags",
-  cssImage: true,
-  cssImageAttr: "style",
-  cssImageExtraText: true,
+  link: "h3.ld-card__title > a",
+  main: "article.ld-grid-simple__area",
+  image: "img.ld-card__img",
+  title: "h3.ld-card__title > a",
+  extImg: true,
+  content: "div.ld-card__intro",
+  // cssImage: true,
+  // cssImageAttr: "data-src",
+  // cssImageExtraText: true,
 };
 
 const tester = "https://bot.sannysoft.com";
