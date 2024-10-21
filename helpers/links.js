@@ -1,4 +1,9 @@
 module.exports = [
+  "https://diariocorreo.pe/espectaculos/",
+  "https://peru21.pe/espectaculos/", // done
+  "https://trome.com/espectaculos/musica/", // done
+  "https://elpopular.pe/tag/musica", // done
+  "https://ojo.pe/ojo-show/", //done
   "https://ladiaria.com.uy/seccion/musica/", // done
   "https://fmrockandpop.com/noticias/musica/", // done
   "https://www.alertacaribe.com/noticias/famosos", // done
