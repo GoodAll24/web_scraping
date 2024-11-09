@@ -1,4 +1,4 @@
-// const tester = "https://bot.sannysoft.com";
+/* // const tester = "https://bot.sannysoft.com";
 const lastNews = require('./links');
 
 
@@ -13,6 +13,17 @@ module.exports = {
   // extImg: true,
   content: "p.story-item__subtitle",
   // cssImage: true,
-  // cssImageAttr: "data-src",
+  // cssImageAttr: "srcset",
   // cssImageExtraText: true,
+};
+ */
+
+module.exports = {
+  "link": "a.New-wrapper-link",
+  "main": "article.New",
+  "image": "img.New-photo",
+  "title": "h2.New-title",
+  "cssImage": true,
+  "cssImageAttr": "srcset",
+  "url": "https://www.europafm.com/noticias/musica/"
 };
