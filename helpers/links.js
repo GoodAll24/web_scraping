@@ -1,5 +1,6 @@
 module.exports = [
-  "https://www.europafm.com/noticias/musica/",
+  "https://www.ambito.com/musica-a5123156", // done
+  "https://www.europafm.com/noticias/musica/", // done
   "https://diariocorreo.pe/espectaculos/", // done
   "https://peru21.pe/espectaculos/", // done
   "https://trome.com/espectaculos/musica/", // done
