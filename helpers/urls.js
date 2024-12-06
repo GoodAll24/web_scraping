@@ -17,12 +17,13 @@ module.exports = {
  */
 
 module.exports = {
-  "link": "h2.news__title > a",
-  "main": "article.news",
-  "image": "figure.news__media > a > img",
-  "title": "h2.news__title > a",
-  "url": "https://lavibra.com/categoria/musica/",
-  cssImage: true,
-  cssImageAttr: "data-src",
+  "link": "div.blog-post-category-link-hashtag-hover-color > a",
+  "main": "div.gallery-item-container",
+  "image": "img.gallery-item",
+  "title": "div.post-title > p",
+  "url": "https://www.conopinion.cl/noticias/categories/m%C3%BAsica",
+  "content": "div.blog-post-description-style-font > div > div",
+  // cssImage: true,
+  // cssImageAttr: "data-src",
   // cssImageExtraText: true,
 };

@@ -4,7 +4,7 @@
 // const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 // const { executablePath } = require("puppeteer");
 // const { add_media, add_media_data } = require('./helpers/urls');
-const  onCheck  = require("./helpers/urls");
+const onCheck = require("./helpers/urls");
 const { processMetadata, processLink2 } = require("./helpers/processLink");
 const { processLinkBeta } = require("./helpers/processImage");
 

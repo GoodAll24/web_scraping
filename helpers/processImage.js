@@ -39,7 +39,7 @@ const processLinkBeta = async (page) => {
           // console.log($(element).find(page.image).attr("src"));
           // console.log($(element).find(page.image).attr("data-src"));
           // console.log($(element).find(page.image).attr("srcset"));
-          // console.log($(element).html());
+          if (i===1) console.log($(element).html());
           // console.log($(element).find(page.image).attr("class"));
           // console.log($2(`${page.main}:nth-child(${i + 1})`).attr("href"));
           // console.log(i);
