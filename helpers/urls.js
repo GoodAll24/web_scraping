@@ -17,12 +17,13 @@ module.exports = {
  */
 
 module.exports = {
-  "link": "div.blog-post-category-link-hashtag-hover-color > a",
-  "main": "div.gallery-item-container",
-  "image": "img.gallery-item",
-  "title": "div.post-title > p",
-  "url": "https://www.conopinion.cl/noticias/categories/m%C3%BAsica",
-  "content": "div.blog-post-description-style-font > div > div",
+  "link": "a",
+  "main": "div.grid.grid-cols-12.gap-x-5.gap-y-10 > div.col-span-full",
+  "image": "a > img",
+  "title": "div > h2 > a",
+  "url": "https://www.lamega.com.co/tendencias/musica",
+  "extImg": true,
+  // "content": "div.blog-post-description-style-font > div > div",
   // cssImage: true,
   // cssImageAttr: "data-src",
   // cssImageExtraText: true,

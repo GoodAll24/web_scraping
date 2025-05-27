@@ -78,10 +78,10 @@ const processLinkBeta = async (page) => {
                         -2,
                       )
                   : page["extImg"]
-                    ? `${originalUrl}/${$(element).find(page["image"]).attr(page["cssImageAttr"])}`
+                    ? `${originalUrl}${$(element).find(page["image"]).attr(page["cssImageAttr"])}`
                     : $(element).find(page["image"]).attr(page["cssImageAttr"])
                 : page["extImg"]
-                  ? `${originalUrl}/${$(element).find(page["image"]).attr("src")}`
+                  ? `${originalUrl}${$(element).find(page["image"]).attr("src")}`
                   : $(element).find(page["image"]).attr("src")
               : null,
           });
