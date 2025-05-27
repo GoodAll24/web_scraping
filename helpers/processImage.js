@@ -39,7 +39,7 @@ const processLinkBeta = async (page) => {
           // console.log($(element).find(page.image).attr("src"));
           // console.log($(element).find(page.image).attr("data-src"));
           // console.log($(element).find(page.image).attr("srcset"));
-          if (i===1) console.log($(element).html());
+          if (i === 1) console.log($(element).html());
           // console.log($(element).find(page.image).attr("class"));
           // console.log($2(`${page.main}:nth-child(${i + 1})`).attr("href"));
           // console.log(i);
@@ -50,11 +50,11 @@ const processLinkBeta = async (page) => {
               : null,
             link: page["ext"]
               ? `${originalUrl}${$(element).find(page["link"]).attr("href")}` ||
-                `${originalUrl}${$2(`${page.main}:nth-child(${i + 1})`).attr("href")}` ||
-                null
+              `${originalUrl}${$2(`${page.main}:nth-child(${i + 1})`).attr("href")}` ||
+              null
               : $(element).find(page["link"]).attr("href") ||
-                $2(`${page.main}:nth-child(${i + 1})`).attr("href") ||
-                null,
+              $2(`${page.main}:nth-child(${i + 1})`).attr("href") ||
+              null,
             content: page["content"]
               ? $(element).find(page["content"]).text()
               : null,
@@ -63,20 +63,20 @@ const processLinkBeta = async (page) => {
                 ? page["cssImageExtraText"]
                   ? page["cssImageAttr"] === "style"
                     ? `${$(element).find(page["image"]).attr(page["cssImageAttr"])}`.endsWith(
-                        ";",
-                      )
+                      ";",
+                    )
                       ? `${$(element).find(page["image"]).attr(page["cssImageAttr"])}`.slice(
-                          23,
-                          -3,
-                        )
+                        23,
+                        -3,
+                      )
                       : `${$(element).find(page["image"]).attr(page["cssImageAttr"])}`.slice(
-                          23,
-                          -2,
-                        )
-                    : `${$(element).find(page["image"]).attr(page["cssImageAttr"])}`.slice(
-                        5,
+                        23,
                         -2,
                       )
+                    : `${$(element).find(page["image"]).attr(page["cssImageAttr"])}`.slice(
+                      5,
+                      -2,
+                    )
                   : page["extImg"]
                     ? `${originalUrl}${$(element).find(page["image"]).attr(page["cssImageAttr"])}`
                     : $(element).find(page["image"]).attr(page["cssImageAttr"])
@@ -117,7 +117,7 @@ const processLinkBeta = async (page) => {
         const access = { ...page };
 
         const data2Fill = {
-          url: page.url,
+          // url: page.url,
           original: originalUrl,
           channel: metaPage("title").text(),
           link_logo: pageIcon.startsWith("/")
@@ -126,7 +126,7 @@ const processLinkBeta = async (page) => {
           access: JSON.stringify(access),
         };
         if (datos.length)
-          resolve({ datos: { ...datos }, meatadatos: { ...data2Fill } });
+          resolve(JSON.stringify({ datos: { ...datos }, meatadatos: { ...data2Fill } }));
         else reject("No hay datos para guardar \n\n--->", datos);
       })
       .catch((error) =>
