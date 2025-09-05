@@ -1,0 +1,21 @@
+curl --request POST \
+  --url https://srv585271.hstgr.cloud/api/scrapes \
+  --header 'Authorization: Bearer 0326c25c5ab3aa737c99797d0f4b5ac5a58b0cb9a65368f2a39cbee1d8155050dbd95439e3c0f962e3a22f04180b9d767a0d7a5e3bbd1766b2feefe817720c7557f0bea33fc323ca6d697e61e0b3f1976128be0c473a01ff8bad4fe55e8fa312025351f907e809f675f5d59911a75ab1f6fbcc9d0845e936ffe2a203f99dea86' \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/2023.5.8' \
+  --data '{
+	"data": {
+		"url": "https: //www.lamega.com.co/tendencias/musica",
+		"original": "https: //www.lamega.com.co",
+		"channel": "LaMega",
+		"link_logo": "https: //www.lamega.com.co/favicon.ico",
+		"access": {
+			"link": "a",
+			"main": "div.grid.grid-cols-12.gap-x-5.gap-y-10 > div.col-span-full",
+			"image": "a > img",
+			"title": "div > h2 > a",
+			"url": "https://www.lamega.com.co/tendencias/musica",
+			"extImg": true
+		}
+	}
+}'

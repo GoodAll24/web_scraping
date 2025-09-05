@@ -5,8 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "clear && node app.js",
-    "charts": "clear && node epp.js"
+    "start": "clear && node app.js"
   },
   "author": "Alden Gonzalez",
   "license": "ISC",

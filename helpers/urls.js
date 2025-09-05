@@ -17,14 +17,15 @@ module.exports = {
  */
 
 module.exports = {
-  "link": "a",
-  "main": "div.grid.grid-cols-12.gap-x-5.gap-y-10 > div.col-span-full",
-  "image": "a > img",
-  "title": "div > h2 > a",
-  "url": "https://www.lamega.com.co/tendencias/musica",
-  "extImg": true,
-  // "content": "div.blog-post-description-style-font > div > div",
+  // "ext": true,
+  "link": "div.small-news-thumb > a",
+  "main": "div.col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30".replaceAll(" ", "."),
+  "image": "div.small-news-thumb > a > img",
+  "title": "h4.title > a",
+  "url": "https://movidamusical.com/",
+  // "extImg": true,
+  // "content": "p.c-article__subtitle",
   // cssImage: true,
-  // cssImageAttr: "data-src",
+  // cssImageAttr: "data-lazy-src",
   // cssImageExtraText: true,
 };

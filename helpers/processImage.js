@@ -34,7 +34,7 @@ const processLinkBeta = async (page) => {
         // $(test).each((i, e) => {
         //   console.log(i, "\n\n\n", $(e).html());
         // });
-        // console.log($("body").html());
+        console.log($("body").html());
         $(page["main"]).each((i, element) => {
           // console.log($(element).find(page.image).attr("src"));
           // console.log($(element).find(page.image).attr("data-src"));
@@ -117,16 +117,18 @@ const processLinkBeta = async (page) => {
         const access = { ...page };
 
         const data2Fill = {
-          // url: page.url,
+          url: page.url,
           original: originalUrl,
           channel: metaPage("title").text(),
           link_logo: pageIcon.startsWith("/")
             ? `${originalUrl}${pageIcon}`
             : pageIcon,
-          access: JSON.stringify(access),
+          access,
+          // JSON.stringify(access),
         };
+        // datos: { ...datos },
         if (datos.length)
-          resolve(JSON.stringify({ datos: { ...datos }, meatadatos: { ...data2Fill } }));
+          resolve(JSON.stringify({ data: { ...data2Fill } }));
         else reject("No hay datos para guardar \n\n--->", datos);
       })
       .catch((error) =>
