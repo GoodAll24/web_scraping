@@ -1,0 +1,20 @@
+{
+  "28": {
+    "ext": false,
+    "link": "article figure a",
+    "main": "article",
+    "image": "img.s_m_e",
+    "title": "h2.s_t",
+    "extImg": false,
+    "content": null
+  },
+  "30": {
+    "ext": false,
+    "link": "header > h2 > a",
+    "main": "main > div > div > article",
+    "image": "figure > a > img",
+    "title": "h2.c_t",
+    "extImg": false,
+    "content": "p"
+  }
+}

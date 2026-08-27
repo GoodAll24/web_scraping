@@ -5,7 +5,12 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "clear && node app.js"
+    "start": "node scrape.js",
+    "scrape": "node scrape.js",
+    "postinstall": "puppeteer browsers install chrome",
+    "install-chrome": "puppeteer browsers install chrome",
+    "fetch-html": "node fetch-html.js",
+    "fetch-html:browser": "node fetch-html.js --browser"
   },
   "author": "Alden Gonzalez",
   "license": "ISC",
@@ -14,7 +19,9 @@
     "axios-cookiejar-support": "^5.0.2",
     "axios-retry": "^4.5.0",
     "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^25.9.0",
     "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
     "tough-cookie": "^4.1.4"
   }
 }
