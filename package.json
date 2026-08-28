@@ -9,7 +9,8 @@
     "scrape": "node scrape.js",
     "install-chrome": "npx puppeteer browsers install chrome@126.0.6478.55",
     "fetch-html": "node fetch-html.js",
-    "fetch-html:browser": "node fetch-html.js --browser"
+    "fetch-html:browser": "node fetch-html.js --browser",
+    "export-migration": "node export-migration.js"
   },
   "author": "Alden Gonzalez",
   "license": "ISC",

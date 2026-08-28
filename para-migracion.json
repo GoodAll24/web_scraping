@@ -1,0 +1,74 @@
+{
+  "news": [
+    {
+      "id": 4,
+      "access": [
+        {
+          "main": "div.col",
+          "title": "a.medium-title",
+          "link": "a.medium-title",
+          "ext": true,
+          "extImg": false,
+          "content": "p",
+          "image": "img.c-image"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "access": [
+        {
+          "main": "div.promo",
+          "title": "",
+          "link": "",
+          "ext": false,
+          "extImg": false,
+          "content": null,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "access": [
+        {
+          "main": "article",
+          "title": "h2.s_t",
+          "link": "article figure a",
+          "ext": false,
+          "extImg": false,
+          "content": null,
+          "image": "img.s_m_e"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "access": [
+        {
+          "main": "article",
+          "title": "h2.c_t",
+          "link": "h2.c_t > a",
+          "ext": false,
+          "extImg": false,
+          "content": "p.c_d",
+          "image": "img.c_m_e"
+        }
+      ]
+    },
+    {
+      "id": 147,
+      "access": [
+        {
+          "main": "div.p-wrap",
+          "title": "h2.entry-title",
+          "link": "a.p-url",
+          "ext": false,
+          "extImg": false,
+          "content": null,
+          "image": "img.featured-img"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "at": "2026-08-28T22:05:52.296Z",
+  "checks": [
+    {
+      "id": 28,
+      "name": "As",
+      "url": "https://as.com/tikitakas/noticias/musica/",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 30,
+      "name": "El País",
+      "url": "https://elpais.com/noticias/musica/",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 4,
+      "name": "Crónica México",
+      "url": "https://www.cronica.com.mx/escenario",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 147,
+      "name": "De Último Minuto",
+      "url": "https://deultimominuto.net/category/entretenimiento/",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 3,
+      "name": "El Imparcial",
+      "url": "https://www.elimparcial.com/tags/musica",
+      "result": "no se puede scrapear"
+    },
+    {
+      "id": 6,
+      "name": "L.A. Times",
+      "url": "https://www.latimes.com/espanol/etiqueta/musica",
+      "result": "no se puede scrapear"
+    },
+    {
+      "id": 9,
+      "name": "L.A.K.W.",
+      "url": "https://lakw.us/category/musica",
+      "result": "no se puede scrapear"
+    }
+  ]
+}

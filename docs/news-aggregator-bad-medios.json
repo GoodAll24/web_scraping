@@ -76,7 +76,7 @@
       "created": null,
       "skipped": null,
       "reviewed": false,
-      "notes": ""
+      "notes": "ya esta arreglado"
     },
     {
       "id": 45,
@@ -356,7 +356,7 @@
       "created": 0,
       "skipped": 0,
       "reviewed": false,
-      "notes": ""
+      "notes": "ya esta arreglado"
     },
     {
       "id": 147,
@@ -370,7 +370,7 @@
       "created": 0,
       "skipped": 0,
       "reviewed": false,
-      "notes": ""
+      "notes": "ya esta arreglado"
     },
     {
       "id": 70,
@@ -538,7 +538,7 @@
       "created": 0,
       "skipped": 0,
       "reviewed": false,
-      "notes": ""
+      "notes": "no se puede scrapear"
     },
     {
       "id": 71,
@@ -692,7 +692,7 @@
       "created": 0,
       "skipped": 0,
       "reviewed": false,
-      "notes": ""
+      "notes": "no se puede scrapear"
     },
     {
       "id": 61,
@@ -1168,7 +1168,7 @@
       "created": null,
       "skipped": null,
       "reviewed": false,
-      "notes": ""
+      "notes": "no se puede scrapear"
     }
   ]
 }
