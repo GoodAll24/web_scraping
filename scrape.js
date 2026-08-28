@@ -4,9 +4,6 @@ const cheerio = require("cheerio");
 const report = require("./docs/news-aggregator-bad-medios.json");
 const accessMap = require("./access.json");
 
-const UA =
-  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
-
 function abs(base, href, join) {
   if (!href) return null;
   if (!join && /^https?:\/\//i.test(href)) return href;
@@ -18,11 +15,14 @@ function abs(base, href, join) {
   }
 }
 
-async function resolveChrome() {
-  const { executablePath } = require("puppeteer");
-  const expected = await executablePath();
-  if (fs.existsSync(expected)) return expected;
-
+function resolveChrome() {
+  try {
+    const { executablePath } = require("puppeteer");
+    const expected = executablePath();
+    if (fs.existsSync(expected)) return expected;
+  } catch {
+    // chrome del puppeteer aún no descargado
+  }
   const cacheDir = path.join(process.env.HOME, ".cache/puppeteer/chrome");
   if (fs.existsSync(cacheDir)) {
     for (const dir of fs.readdirSync(cacheDir).sort().reverse()) {
@@ -30,45 +30,36 @@ async function resolveChrome() {
       if (fs.existsSync(bin)) return bin;
     }
   }
-
-  throw new Error(
-    "Chrome no instalado. Corré: npx puppeteer browsers install chrome",
-  );
+  throw new Error("Chrome no instalado. Corré: npm run install-chrome");
 }
 
 async function fetchHtml(url) {
-  const puppeteer = require("puppeteer-extra");
-  const StealthPlugin = require("puppeteer-extra-plugin-stealth");
-  puppeteer.use(StealthPlugin());
+  const puppeteer = require("puppeteer");
+  const chrome = resolveChrome();
+  const minBytes = 8000;
 
-  const browser = await puppeteer.launch({
-    headless: "new",
-    executablePath: await resolveChrome(),
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
-  });
-  try {
-    const page = await browser.newPage();
-    await page.setUserAgent(UA);
-    await page.setViewport({ width: 1280, height: 900 });
-    await page.goto(url, { waitUntil: "networkidle2", timeout: 60000 });
-    // ponytail: lazy lists — scroll + short wait for JS render
-    await page.evaluate(async () => {
-      await new Promise((resolve) => {
-        let y = 0;
-        const step = () => {
-          y += window.innerHeight;
-          window.scrollTo(0, y);
-          if (y >= document.body.scrollHeight) resolve();
-          else setTimeout(step, 150);
-        };
-        step();
-      });
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const browser = await puppeteer.launch({
+      headless: true,
+      executablePath: chrome,
+      args: ["--no-sandbox"],
     });
-    await new Promise((r) => setTimeout(r, 1500));
-    return page.content();
-  } finally {
-    await browser.close();
+    try {
+      const page = await browser.newPage();
+      await page.setViewport({ width: 1280, height: 900 });
+      await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
+      await new Promise((r) => setTimeout(r, 3000));
+      const html = await page.content();
+      if (html.length >= minBytes) return html;
+    } catch (e) {
+      if (attempt === 3) throw e;
+    } finally {
+      await browser.close();
+    }
+    await new Promise((r) => setTimeout(r, 1500 * attempt));
   }
+
+  throw new Error(`Página incompleta o bloqueada: ${url}`);
 }
 
 async function scrape(url, access) {
@@ -128,7 +119,7 @@ async function main() {
   }
 
   const access = accessMap[id] ?? accessMap[String(id)];
-  if (!access) {
+  if (!access || !access.main) {
     console.error(`Sin access para ${id}. Pegá en access.json:`);
     console.log(
       JSON.stringify(
@@ -166,6 +157,6 @@ async function main() {
 }
 
 main().catch((e) => {
-  console.error(e.code || e.message || e);
+  console.error(e.message || e);
   process.exit(1);
 });
