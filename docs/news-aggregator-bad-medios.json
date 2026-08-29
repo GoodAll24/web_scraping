@@ -2,40 +2,23 @@
   "generatedFrom": "logs/news-aggregator.log",
   "reportAt": "2026-08-27T11:00:48.994Z",
   "summary": {
-    "totalBad": 98,
+    "totalBad": 80,
     "byKind": {
-      "rss": 7,
-      "scrape": 91
+      "scrape": 80
     },
     "byCategory": {
-      "duplicate": 1,
-      "http_4xx": 11,
+      "http_4xx": 9,
       "http_5xx": 1,
       "reset": 1,
-      "selectors": 74,
-      "timeout": 1,
-      "tls": 1
+      "selectors": 68,
+      "timeout": 1
     },
     "byStatus": {
-      "fail": 24,
-      "empty": 74
+      "fail": 12,
+      "empty": 68
     }
   },
   "medios": [
-    {
-      "id": 28,
-      "kind": "scrape",
-      "name": "As",
-      "url": "https://as.com/tikitakas/noticias/musica/",
-      "status": "fail",
-      "category": "http_4xx",
-      "reason": "No data available --> ERR_BAD_REQUEST",
-      "items": null,
-      "created": null,
-      "skipped": null,
-      "reviewed": false,
-      "notes": "ya esta arreglado"
-    },
     {
       "id": 23,
       "kind": "scrape",
@@ -63,20 +46,6 @@
       "skipped": null,
       "reviewed": false,
       "notes": ""
-    },
-    {
-      "id": 30,
-      "kind": "scrape",
-      "name": "El País",
-      "url": "https://elpais.com/noticias/musica/",
-      "status": "fail",
-      "category": "http_4xx",
-      "reason": "No data available --> ERR_BAD_REQUEST",
-      "items": null,
-      "created": null,
-      "skipped": null,
-      "reviewed": false,
-      "notes": "ya esta arreglado"
     },
     {
       "id": 45,
@@ -345,62 +314,6 @@
       "notes": ""
     },
     {
-      "id": 4,
-      "kind": "scrape",
-      "name": "Crónica México",
-      "url": "https://www.cronica.com.mx/escenario",
-      "status": "empty",
-      "category": "selectors",
-      "reason": "no items matched selectors",
-      "items": 0,
-      "created": 0,
-      "skipped": 0,
-      "reviewed": false,
-      "notes": "ya esta arreglado"
-    },
-    {
-      "id": 147,
-      "kind": "scrape",
-      "name": "De Último Minuto",
-      "url": "https://deultimominuto.net/category/entretenimiento/",
-      "status": "empty",
-      "category": "selectors",
-      "reason": "no items matched selectors",
-      "items": 0,
-      "created": 0,
-      "skipped": 0,
-      "reviewed": false,
-      "notes": "ya esta arreglado"
-    },
-    {
-      "id": 70,
-      "kind": "scrape",
-      "name": "Diario Social R.D.",
-      "url": "https://diariosocialrd.com/categoria/musica/",
-      "status": "empty",
-      "category": "selectors",
-      "reason": "no items matched selectors",
-      "items": 0,
-      "created": 0,
-      "skipped": 0,
-      "reviewed": false,
-      "notes": "no se puede scrapear"
-    },
-    {
-      "id": 20,
-      "kind": "scrape",
-      "name": "Diario Sur",
-      "url": "https://www.diariosur.es/culturas/musica/",
-      "status": "empty",
-      "category": "selectors",
-      "reason": "no items matched selectors",
-      "items": 0,
-      "created": 0,
-      "skipped": 0,
-      "reviewed": false,
-      "notes": ""
-    },
-    {
       "id": 66,
       "kind": "scrape",
       "name": "El Caribe",
@@ -525,20 +438,6 @@
       "skipped": 0,
       "reviewed": false,
       "notes": ""
-    },
-    {
-      "id": 3,
-      "kind": "scrape",
-      "name": "El Imparcial",
-      "url": "https://www.elimparcial.com/tags/musica",
-      "status": "empty",
-      "category": "selectors",
-      "reason": "no items matched selectors",
-      "items": 0,
-      "created": 0,
-      "skipped": 0,
-      "reviewed": false,
-      "notes": "no se puede scrapear"
     },
     {
       "id": 71,
@@ -679,20 +578,6 @@
       "skipped": 0,
       "reviewed": false,
       "notes": ""
-    },
-    {
-      "id": 6,
-      "kind": "scrape",
-      "name": "L.A. Times",
-      "url": "https://www.latimes.com/espanol/etiqueta/musica",
-      "status": "empty",
-      "category": "selectors",
-      "reason": "no items matched selectors",
-      "items": 0,
-      "created": 0,
-      "skipped": 0,
-      "reviewed": false,
-      "notes": "no se puede scrapear"
     },
     {
       "id": 61,
@@ -1155,20 +1040,6 @@
       "skipped": null,
       "reviewed": false,
       "notes": ""
-    },
-    {
-      "id": 9,
-      "kind": "scrape",
-      "name": "L.A.K.W.",
-      "url": "https://lakw.us/category/musica",
-      "status": "fail",
-      "category": "tls",
-      "reason": "No data available --> EPROTO",
-      "items": null,
-      "created": null,
-      "skipped": null,
-      "reviewed": false,
-      "notes": "no se puede scrapear"
     },
     {
       "id": 172,

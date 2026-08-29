@@ -15,16 +15,16 @@
       ]
     },
     {
-      "id": 6,
+      "id": 20,
       "access": [
         {
-          "main": "div.promo",
-          "title": "",
-          "link": "",
+          "main": "article.v-a",
+          "title": "h2.v-a-t",
+          "link": "a.v-a-lnk",
           "ext": false,
           "extImg": false,
           "content": null,
-          "image": ""
+          "image": "img.v-a-img"
         }
       ]
     },
@@ -53,6 +53,20 @@
           "extImg": false,
           "content": "p.c_d",
           "image": "img.c_m_e"
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "access": [
+        {
+          "main": "div.wp-block-query",
+          "title": "h2.wp-block-post-title",
+          "link": "h2.wp-block-post-title > a",
+          "ext": false,
+          "extImg": false,
+          "content": null,
+          "image": "img.wp-post-image"
         }
       ]
     },

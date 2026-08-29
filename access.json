@@ -56,10 +56,10 @@
   "20": {
     "ext": false,
     "extImg": false,
-    "main": "div.wp-block-query",
-    "title": "h2.wp-block-post-title",
-    "link": "h2.wp-block-post-title > a",
-    "image": "img.wp-post-image",
+    "main": "article.v-a",
+    "title": "h2.v-a-t",
+    "link": "a.v-a-lnk",
+    "image": "img.v-a-img",
     "content": null
   },
   "23": {
@@ -326,10 +326,10 @@
   "70": {
     "ext": false,
     "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
+    "main": "div.wp-block-query",
+    "title": "h2.wp-block-post-title",
+    "link": "h2.wp-block-post-title > a",
+    "image": "img.wp-post-image",
     "content": null
   },
   "71": {

@@ -1,5 +1,5 @@
 {
-  "at": "2026-08-28T22:05:52.296Z",
+  "at": "2026-08-29T23:24:44.584Z",
   "checks": [
     {
       "id": 28,
@@ -26,6 +26,18 @@
       "result": "ya esta arreglado"
     },
     {
+      "id": 70,
+      "name": "Diario Social R.D.",
+      "url": "https://diariosocialrd.com/categoria/musica/",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 20,
+      "name": "Diario Sur",
+      "url": "https://www.diariosur.es/culturas/musica/",
+      "result": "ya esta arreglado"
+    },
+    {
       "id": 3,
       "name": "El Imparcial",
       "url": "https://www.elimparcial.com/tags/musica",
@@ -42,6 +54,48 @@
       "name": "L.A.K.W.",
       "url": "https://lakw.us/category/musica",
       "result": "no se puede scrapear"
+    },
+    {
+      "id": 172,
+      "name": "InfoCielo",
+      "url": "https://www.infocielo.com/rock-bonaerense",
+      "result": "noticia nueva"
+    },
+    {
+      "id": 173,
+      "name": "Portafolio",
+      "url": "https://www.portafolio.co/tendencias/entretenimiento",
+      "result": "noticia nueva"
+    },
+    {
+      "id": 174,
+      "name": "Diario de Sevilla",
+      "url": "https://www.diariodesevilla.es/ocio/",
+      "result": "noticia nueva"
+    },
+    {
+      "id": 175,
+      "name": "Diario de Sevilla",
+      "url": "https://www.diariodesevilla.es/bienal_de_flamenco/",
+      "result": "noticia nueva"
+    },
+    {
+      "id": 176,
+      "name": "AM",
+      "url": "https://www.am.com.mx/cultura",
+      "result": "noticia nueva"
+    },
+    {
+      "id": 177,
+      "name": "AM",
+      "url": "https://www.am.com.mx/espectaculos",
+      "result": "noticia nueva"
+    },
+    {
+      "id": 178,
+      "name": "Página 12",
+      "url": "https://www.pagina12.com.ar/cultura-y-espectaculos/",
+      "result": "noticia nueva"
     }
   ]
 }
