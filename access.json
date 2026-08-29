@@ -8,15 +8,6 @@
     "image": "img.c-image",
     "content": "p"
   },
-  "6": {
-    "ext": false,
-    "extImg": false,
-    "main": "div.promo",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
   "11": {
     "ext": false,
     "extImg": false,

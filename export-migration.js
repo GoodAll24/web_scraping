@@ -18,7 +18,7 @@ function toAccess(cfg) {
 }
 
 const news = Object.entries(accessMap)
-  .filter(([, cfg]) => cfg && String(cfg.main || "").trim())
+  .filter(([, cfg]) => cfg && String(cfg.title || "").trim())
   .map(([id, cfg]) => ({
     id: Number(id),
     access: [toAccess(cfg)],
