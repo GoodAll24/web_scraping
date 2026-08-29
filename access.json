@@ -56,10 +56,10 @@
   "20": {
     "ext": false,
     "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
+    "main": "div.wp-block-query",
+    "title": "h2.wp-block-post-title",
+    "link": "h2.wp-block-post-title > a",
+    "image": "img.wp-post-image",
     "content": null
   },
   "23": {

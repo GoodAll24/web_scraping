@@ -2,23 +2,23 @@
   "generatedFrom": "logs/news-aggregator.log",
   "reportAt": "2026-08-27T11:00:48.994Z",
   "summary": {
-    "totalBad": 91,
+    "totalBad": 98,
     "byKind": {
       "rss": 7,
-      "scrape": 84
+      "scrape": 91
     },
     "byCategory": {
       "duplicate": 1,
       "http_4xx": 11,
       "http_5xx": 1,
       "reset": 1,
-      "selectors": 67,
+      "selectors": 74,
       "timeout": 1,
       "tls": 1
     },
     "byStatus": {
       "fail": 24,
-      "empty": 67
+      "empty": 74
     }
   },
   "medios": [
@@ -384,7 +384,7 @@
       "created": 0,
       "skipped": 0,
       "reviewed": false,
-      "notes": ""
+      "notes": "no se puede scrapear"
     },
     {
       "id": 20,
@@ -1169,6 +1169,111 @@
       "skipped": null,
       "reviewed": false,
       "notes": "no se puede scrapear"
+    },
+    {
+      "id": 172,
+      "kind": "scrape",
+      "name": "InfoCielo",
+      "url": "https://www.infocielo.com/rock-bonaerense",
+      "logo": "https://www.infocielo.com/wp-content/uploads/2025/01/infocielo_fav_ico.png",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": 173,
+      "kind": "scrape",
+      "name": "Portafolio",
+      "url": "https://www.portafolio.co/tendencias/entretenimiento",
+      "logo": "https://www.portafolio.co/favicon.ico",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": 174,
+      "kind": "scrape",
+      "name": "Diario de Sevilla",
+      "url": "https://www.diariodesevilla.es/ocio/",
+      "logo": "https://static.grupojoly.com/joly/public/file/2024/0918/09/app-launcher-sevilla.png",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": 175,
+      "kind": "scrape",
+      "name": "Diario de Sevilla",
+      "url": "https://www.diariodesevilla.es/bienal_de_flamenco/",
+      "logo": "https://static.grupojoly.com/joly/public/file/2024/0918/09/app-launcher-sevilla.png",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": 176,
+      "kind": "scrape",
+      "name": "AM",
+      "url": "https://www.am.com.mx/cultura",
+      "logo": "https://s3-am-btat-server.s3.amazonaws.com/wp-content/uploads/2026/04/fav-am-1-150x150.png",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": 177,
+      "kind": "scrape",
+      "name": "AM",
+      "url": "https://www.am.com.mx/espectaculos",
+      "logo": "https://s3-am-btat-server.s3.amazonaws.com/wp-content/uploads/2026/04/fav-am-1-150x150.png",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": 178,
+      "kind": "scrape",
+      "name": "Página 12",
+      "url": "https://www.pagina12.com.ar/cultura-y-espectaculos/",
+      "logo": "https://www.pagina12.com.ar/pf/resources/favicon-v3.ico?d=130&mxId=00000000",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
     }
   ]
 }
