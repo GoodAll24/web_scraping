@@ -1,13 +1,4 @@
 {
-  "4": {
-    "ext": true,
-    "extImg": false,
-    "main": "div.col",
-    "title": "a.medium-title",
-    "link": "a.medium-title",
-    "image": "img.c-image",
-    "content": "p"
-  },
   "11": {
     "ext": false,
     "extImg": false,
@@ -53,15 +44,6 @@
     "image": "",
     "content": null
   },
-  "20": {
-    "ext": false,
-    "extImg": false,
-    "main": "article.v-a",
-    "title": "h2.v-a-t",
-    "link": "a.v-a-lnk",
-    "image": "img.v-a-img",
-    "content": null
-  },
   "23": {
     "ext": false,
     "extImg": false,
@@ -97,24 +79,6 @@
     "link": "",
     "image": "",
     "content": null
-  },
-  "28": {
-    "ext": false,
-    "link": "article figure a",
-    "main": "article",
-    "image": "img.s_m_e",
-    "title": "h2.s_t",
-    "extImg": false,
-    "content": null
-  },
-  "30": {
-    "ext": false,
-    "link": "h2.c_t > a",
-    "main": "article",
-    "image": "img.c_m_e",
-    "title": "h2.c_t",
-    "extImg": false,
-    "content": "p.c_d"
   },
   "31": {
     "ext": false,
@@ -323,15 +287,6 @@
     "image": "",
     "content": null
   },
-  "70": {
-    "ext": false,
-    "extImg": false,
-    "main": "div.wp-block-query",
-    "title": "h2.wp-block-post-title",
-    "link": "h2.wp-block-post-title > a",
-    "image": "img.wp-post-image",
-    "content": null
-  },
   "71": {
     "ext": false,
     "extImg": false,
@@ -458,15 +413,6 @@
     "image": "",
     "content": null
   },
-  "99": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
   "102": {
     "ext": false,
     "extImg": false,
@@ -486,13 +432,13 @@
     "content": null
   },
   "105": {
-    "ext": false,
+    "ext": true,
     "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
+    "main": "div.card-container",
+    "title": "h2.tnt-headline",
+    "link": "a.tnt-asset-link",
+    "image": "img.img-responsive",
+    "content": "p"
   },
   "107": {
     "ext": false,
@@ -558,15 +504,6 @@
     "content": null
   },
   "121": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
-  "123": {
     "ext": false,
     "extImg": false,
     "main": "",
@@ -663,15 +600,6 @@
     "title": "",
     "link": "",
     "image": "",
-    "content": null
-  },
-  "147": {
-    "ext": false,
-    "extImg": false,
-    "main": "div.p-wrap",
-    "title": "h2.entry-title",
-    "link": "a.p-url",
-    "image": "img.featured-img",
     "content": null
   },
   "157": {

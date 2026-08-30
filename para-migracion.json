@@ -1,86 +1,16 @@
 {
   "news": [
     {
-      "id": 4,
+      "id": 105,
       "access": [
         {
-          "main": "div.col",
-          "title": "a.medium-title",
-          "link": "a.medium-title",
+          "main": "div.card-container",
+          "title": "h2.tnt-headline",
+          "link": "a.tnt-asset-link",
           "ext": true,
           "extImg": false,
           "content": "p",
-          "image": "img.c-image"
-        }
-      ]
-    },
-    {
-      "id": 20,
-      "access": [
-        {
-          "main": "article.v-a",
-          "title": "h2.v-a-t",
-          "link": "a.v-a-lnk",
-          "ext": false,
-          "extImg": false,
-          "content": null,
-          "image": "img.v-a-img"
-        }
-      ]
-    },
-    {
-      "id": 28,
-      "access": [
-        {
-          "main": "article",
-          "title": "h2.s_t",
-          "link": "article figure a",
-          "ext": false,
-          "extImg": false,
-          "content": null,
-          "image": "img.s_m_e"
-        }
-      ]
-    },
-    {
-      "id": 30,
-      "access": [
-        {
-          "main": "article",
-          "title": "h2.c_t",
-          "link": "h2.c_t > a",
-          "ext": false,
-          "extImg": false,
-          "content": "p.c_d",
-          "image": "img.c_m_e"
-        }
-      ]
-    },
-    {
-      "id": 70,
-      "access": [
-        {
-          "main": "div.wp-block-query",
-          "title": "h2.wp-block-post-title",
-          "link": "h2.wp-block-post-title > a",
-          "ext": false,
-          "extImg": false,
-          "content": null,
-          "image": "img.wp-post-image"
-        }
-      ]
-    },
-    {
-      "id": 147,
-      "access": [
-        {
-          "main": "div.p-wrap",
-          "title": "h2.entry-title",
-          "link": "a.p-url",
-          "ext": false,
-          "extImg": false,
-          "content": null,
-          "image": "img.featured-img"
+          "image": "img.img-responsive"
         }
       ]
     }
