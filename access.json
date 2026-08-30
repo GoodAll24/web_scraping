@@ -35,24 +35,6 @@
     "image": "",
     "content": null
   },
-  "19": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
-  "23": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
   "24": {
     "ext": false,
     "extImg": false,
@@ -126,15 +108,6 @@
     "content": null
   },
   "42": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
-  "45": {
     "ext": false,
     "extImg": false,
     "main": "",
@@ -296,15 +269,6 @@
     "image": "",
     "content": null
   },
-  "72": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
   "73": {
     "ext": false,
     "extImg": false,
@@ -431,25 +395,7 @@
     "image": "",
     "content": null
   },
-  "105": {
-    "ext": true,
-    "extImg": false,
-    "main": "div.card-container",
-    "title": "h2.tnt-headline",
-    "link": "a.tnt-asset-link",
-    "image": "img.img-responsive",
-    "content": "p"
-  },
   "107": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
-  "110": {
     "ext": false,
     "extImg": false,
     "main": "",
@@ -557,15 +503,6 @@
     "image": "",
     "content": null
   },
-  "134": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
   "139": {
     "ext": false,
     "extImg": false,
@@ -585,24 +522,6 @@
     "content": null
   },
   "145": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
-  "146": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
-  "157": {
     "ext": false,
     "extImg": false,
     "main": "",

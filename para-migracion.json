@@ -1,18 +1,3 @@
 {
-  "news": [
-    {
-      "id": 105,
-      "access": [
-        {
-          "main": "div.card-container",
-          "title": "h2.tnt-headline",
-          "link": "a.tnt-asset-link",
-          "ext": true,
-          "extImg": false,
-          "content": "p",
-          "image": "img.img-responsive"
-        }
-      ]
-    }
-  ]
+  "news": []
 }
