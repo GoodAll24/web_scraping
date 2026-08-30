@@ -1,4 +1,65 @@
 {
-  "at": "2026-08-30T21:32:41.552Z",
-  "checks": []
+  "at": "2026-08-30T22:59:37.876Z",
+  "checks": [
+    {
+      "id": 35,
+      "name": "20 Minutos",
+      "url": "https://www.20minutos.es/minuteca/musica-trap/",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 73,
+      "name": "2001 Online",
+      "url": "https://2001online.com/seccion/farandula/",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 42,
+      "name": "As Colombia",
+      "url": "https://colombia.as.com/tikitakas/noticias/musica/",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 59,
+      "name": "BioBioChile",
+      "url": "https://www.biobiochile.cl/lista/categorias/musica",
+      "result": "no tiene arreglo"
+    },
+    {
+      "id": 104,
+      "name": "CMTV",
+      "url": "https://www.cmtv.com.ar/noticias/",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 94,
+      "name": "CNN Español",
+      "url": "https://cnnespanol.cnn.com/category/musica/",
+      "result": "no tiene arreglo"
+    },
+    {
+      "id": 26,
+      "name": "Cadena 100",
+      "url": "https://www.cadena100.es/musica",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 142,
+      "name": "ContraRéplica",
+      "url": "https://www.contrareplica.mx/tendencias",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 78,
+      "name": "Crhoy",
+      "url": "https://www.crhoy.com/noticias/musica",
+      "result": "no tiene arreglo"
+    },
+    {
+      "id": 98,
+      "name": "Crónica Argentina",
+      "url": "https://www.cronica.com.ar/elcanaldelamusica",
+      "result": "ya esta arreglado"
+    }
+  ]
 }

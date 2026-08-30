@@ -1,3 +1,102 @@
 {
-  "news": []
+  "news": [
+    {
+      "id": 26,
+      "access": [
+        {
+          "main": "article",
+          "title": "h2",
+          "link": "a",
+          "ext": true,
+          "extImg": false,
+          "content": null,
+          "image": "img"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "access": [
+        {
+          "main": "article.c-article",
+          "title": "h2.c-article__title",
+          "link": "a",
+          "ext": true,
+          "extImg": false,
+          "content": "div.c-article__epigraph",
+          "image": "img"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "access": [
+        {
+          "main": "article",
+          "title": "h2",
+          "link": "a",
+          "ext": false,
+          "extImg": false,
+          "content": null,
+          "image": "img"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "access": [
+        {
+          "main": "article",
+          "title": "h2",
+          "link": "a",
+          "ext": true,
+          "extImg": false,
+          "content": null,
+          "image": "amp-img"
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "access": [
+        {
+          "main": "article",
+          "title": "h2",
+          "link": "a",
+          "ext": true,
+          "extImg": true,
+          "content": null,
+          "image": "img"
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "access": [
+        {
+          "main": "a",
+          "title": "h2",
+          "link": "a",
+          "ext": false,
+          "extImg": false,
+          "content": "p",
+          "image": "img"
+        }
+      ]
+    },
+    {
+      "id": 142,
+      "access": [
+        {
+          "main": "div",
+          "title": "h2",
+          "link": "a",
+          "ext": false,
+          "extImg": false,
+          "content": null,
+          "image": "img"
+        }
+      ]
+    }
+  ]
 }

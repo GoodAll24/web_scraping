@@ -54,12 +54,12 @@
     "content": null
   },
   "26": {
-    "ext": false,
+    "ext": true,
     "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
+    "main": "article",
+    "title": "h2",
+    "link": "a",
+    "image": "img",
     "content": null
   },
   "31": {
@@ -81,13 +81,13 @@
     "content": null
   },
   "35": {
-    "ext": false,
+    "ext": true,
     "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
+    "main": "article.c-article",
+    "title": "h2.c-article__title",
+    "link": "a",
+    "image": "img",
+    "content": "div.c-article__epigraph"
   },
   "36": {
     "ext": false,
@@ -110,10 +110,10 @@
   "42": {
     "ext": false,
     "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
+    "main": "article",
+    "title": "h2",
+    "link": "a",
+    "image": "img",
     "content": null
   },
   "46": {
@@ -270,12 +270,12 @@
     "content": null
   },
   "73": {
-    "ext": false,
+    "ext": true,
     "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
+    "main": "article",
+    "title": "h2",
+    "link": "a",
+    "image": "amp-img",
     "content": null
   },
   "74": {
@@ -369,12 +369,12 @@
     "content": null
   },
   "98": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
+    "ext": true,
+    "extImg": true,
+    "main": "article",
+    "title": "h2",
+    "link": "a",
+    "image": "img",
     "content": null
   },
   "102": {
@@ -389,11 +389,11 @@
   "104": {
     "ext": false,
     "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
+    "main": "a",
+    "title": "h2",
+    "link": "a",
+    "image": "img",
+    "content": "p"
   },
   "107": {
     "ext": false,
@@ -515,10 +515,10 @@
   "142": {
     "ext": false,
     "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
+    "main": "div",
+    "title": "h2",
+    "link": "a",
+    "image": "img",
     "content": null
   },
   "145": {
