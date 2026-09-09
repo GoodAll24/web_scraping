@@ -1,64 +1,106 @@
 {
-  "at": "2026-08-30T22:59:37.876Z",
+  "at": "2026-09-09T23:13:43.650Z",
   "checks": [
     {
-      "id": 35,
-      "name": "20 Minutos",
-      "url": "https://www.20minutos.es/minuteca/musica-trap/",
+      "id": 66,
+      "name": "El Caribe",
+      "url": "https://www.elcaribe.com.do/seccion/gente/a-y-e/",
       "result": "ya esta arreglado"
     },
     {
-      "id": 73,
-      "name": "2001 Online",
-      "url": "https://2001online.com/seccion/farandula/",
+      "id": 46,
+      "name": "El Colombiano",
+      "url": "https://www.elcolombiano.com/cultura/musica",
       "result": "ya esta arreglado"
     },
     {
-      "id": 42,
-      "name": "As Colombia",
-      "url": "https://colombia.as.com/tikitakas/noticias/musica/",
+      "id": 115,
+      "name": "El Comercio Peru",
+      "url": "https://elcomercio.pe/noticias/musica/",
       "result": "ya esta arreglado"
     },
     {
-      "id": 59,
-      "name": "BioBioChile",
-      "url": "https://www.biobiochile.cl/lista/categorias/musica",
+      "id": 114,
+      "name": "El Comercio Peru",
+      "url": "https://elcomercio.pe/luces/musica/",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 13,
+      "name": "El Confidencial",
+      "url": "https://www.elconfidencial.com/tags/temas/musica-5272",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 120,
+      "name": "El Día",
+      "url": "https://www.eldia.es/tags/musica/",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 38,
+      "name": "El Espectador",
+      "url": "https://www.elespectador.com/entretenimiento/musica/",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 121,
+      "name": "El Generacional",
+      "url": "https://elgeneracionalpost.com/noticias/cultura/musica",
       "result": "no tiene arreglo"
     },
     {
-      "id": 104,
-      "name": "CMTV",
-      "url": "https://www.cmtv.com.ar/noticias/",
+      "id": 130,
+      "name": "El Heraldo Honduras",
+      "url": "https://www.elheraldo.hn/entretenimiento",
       "result": "ya esta arreglado"
     },
     {
-      "id": 94,
-      "name": "CNN Español",
-      "url": "https://cnnespanol.cnn.com/category/musica/",
-      "result": "no tiene arreglo"
-    },
-    {
-      "id": 26,
-      "name": "Cadena 100",
-      "url": "https://www.cadena100.es/musica",
+      "id": 71,
+      "name": "El Nacional",
+      "url": "https://www.elnacional.com/musica/",
       "result": "ya esta arreglado"
     },
     {
-      "id": 142,
-      "name": "ContraRéplica",
-      "url": "https://www.contrareplica.mx/tendencias",
+      "id": 24,
+      "name": "El Tiempo",
+      "url": "https://www.eltiempo.com/cultura/musica-y-libros",
       "result": "ya esta arreglado"
     },
     {
-      "id": 78,
-      "name": "Crhoy",
-      "url": "https://www.crhoy.com/noticias/musica",
-      "result": "no tiene arreglo"
+      "id": 132,
+      "name": "Escena- - El mundo",
+      "url": "https://diario.elmundo.sv/escena",
+      "result": "ya esta arreglado"
     },
     {
-      "id": 98,
-      "name": "Crónica Argentina",
-      "url": "https://www.cronica.com.ar/elcanaldelamusica",
+      "id": 47,
+      "name": "Estilo Play",
+      "url": "https://www.estiloplay.com.co/category/musica/",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 50,
+      "name": "Estilo Play",
+      "url": "https://www.estiloplay.com.co/category/warner-music/",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 51,
+      "name": "Estilo Play",
+      "url": "https://www.estiloplay.com.co/category/onerpm/",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 49,
+      "name": "Estilo Play",
+      "url": "https://www.estiloplay.com.co/category/universal-music/",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 48,
+      "name": "Estilo Play",
+      "url": "https://www.estiloplay.com.co/category/sony-music",
       "result": "ya esta arreglado"
     }
   ]

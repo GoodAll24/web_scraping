@@ -59,6 +59,15 @@ const checks = report.medios
     result: String(m.notes).trim(),
   }));
 
+// ponytail: news antes de borrar access, si no los revisados no llegan a para-migracion
+const news = Object.entries(accessMap)
+  .filter(([, cfg]) => cfg && String(cfg.title || "").trim())
+  .map(([id, cfg]) => ({
+    id: Number(id),
+    access: [toAccess(cfg)],
+  }))
+  .sort((a, b) => a.id - b.id);
+
 const removed = removeReviewedMedios(report);
 fs.writeFileSync(REPORT_PATH, JSON.stringify(report, null, 2) + "\n");
 
@@ -69,14 +78,6 @@ for (const m of removed) {
 if (accessRemoved) {
   fs.writeFileSync(ACCESS_PATH, JSON.stringify(accessMap, null, 2) + "\n");
 }
-
-const news = Object.entries(accessMap)
-  .filter(([, cfg]) => cfg && String(cfg.title || "").trim())
-  .map(([id, cfg]) => ({
-    id: Number(id),
-    access: [toAccess(cfg)],
-  }))
-  .sort((a, b) => a.id - b.id);
 
 const migrationPath = path.join(ROOT, "para-migracion.json");
 const checksPath = path.join(ROOT, "checks.json");
