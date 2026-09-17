@@ -1,106 +1,46 @@
 {
-  "at": "2026-09-09T23:13:43.650Z",
+  "at": "2026-09-17T20:27:44.234Z",
   "checks": [
     {
-      "id": 66,
-      "name": "El Caribe",
-      "url": "https://www.elcaribe.com.do/seccion/gente/a-y-e/",
+      "id": 88,
+      "name": "Excélsior",
+      "url": "https://www.excelsior.com.mx/musica",
       "result": "ya esta arreglado"
     },
     {
-      "id": 46,
-      "name": "El Colombiano",
-      "url": "https://www.elcolombiano.com/cultura/musica",
+      "id": 95,
+      "name": "Infobae",
+      "url": "https://www.infobae.com/tag/musica/",
       "result": "ya esta arreglado"
     },
     {
-      "id": 115,
-      "name": "El Comercio Peru",
-      "url": "https://elcomercio.pe/noticias/musica/",
+      "id": 61,
+      "name": "La Cuarta",
+      "url": "https://www.lacuarta.com/urbana/",
       "result": "ya esta arreglado"
     },
     {
-      "id": 114,
-      "name": "El Comercio Peru",
-      "url": "https://elcomercio.pe/luces/musica/",
+      "id": 60,
+      "name": "La Cuarta",
+      "url": "https://www.lacuarta.com/musica/",
       "result": "ya esta arreglado"
     },
     {
-      "id": 13,
-      "name": "El Confidencial",
-      "url": "https://www.elconfidencial.com/tags/temas/musica-5272",
-      "result": "ya esta arreglado"
-    },
-    {
-      "id": 120,
-      "name": "El Día",
-      "url": "https://www.eldia.es/tags/musica/",
-      "result": "ya esta arreglado"
-    },
-    {
-      "id": 38,
-      "name": "El Espectador",
-      "url": "https://www.elespectador.com/entretenimiento/musica/",
-      "result": "ya esta arreglado"
-    },
-    {
-      "id": 121,
-      "name": "El Generacional",
-      "url": "https://elgeneracionalpost.com/noticias/cultura/musica",
+      "id": 164,
+      "name": "La Mega",
+      "url": "https://www.lamega.com.co/tendencias/musica\"",
       "result": "no tiene arreglo"
     },
     {
-      "id": 130,
-      "name": "El Heraldo Honduras",
-      "url": "https://www.elheraldo.hn/entretenimiento",
+      "id": 131,
+      "name": "La Prensa",
+      "url": "https://www.laprensa.hn/espectaculos",
       "result": "ya esta arreglado"
     },
     {
-      "id": 71,
-      "name": "El Nacional",
-      "url": "https://www.elnacional.com/musica/",
-      "result": "ya esta arreglado"
-    },
-    {
-      "id": 24,
-      "name": "El Tiempo",
-      "url": "https://www.eltiempo.com/cultura/musica-y-libros",
-      "result": "ya esta arreglado"
-    },
-    {
-      "id": 132,
-      "name": "Escena- - El mundo",
-      "url": "https://diario.elmundo.sv/escena",
-      "result": "ya esta arreglado"
-    },
-    {
-      "id": 47,
-      "name": "Estilo Play",
-      "url": "https://www.estiloplay.com.co/category/musica/",
-      "result": "ya esta arreglado"
-    },
-    {
-      "id": 50,
-      "name": "Estilo Play",
-      "url": "https://www.estiloplay.com.co/category/warner-music/",
-      "result": "ya esta arreglado"
-    },
-    {
-      "id": 51,
-      "name": "Estilo Play",
-      "url": "https://www.estiloplay.com.co/category/onerpm/",
-      "result": "ya esta arreglado"
-    },
-    {
-      "id": 49,
-      "name": "Estilo Play",
-      "url": "https://www.estiloplay.com.co/category/universal-music/",
-      "result": "ya esta arreglado"
-    },
-    {
-      "id": 48,
-      "name": "Estilo Play",
-      "url": "https://www.estiloplay.com.co/category/sony-music",
+      "id": 92,
+      "name": "La Prensa de Houston",
+      "url": "https://prensadehouston.com/category/entretenimiento/",
       "result": "ya esta arreglado"
     }
   ]

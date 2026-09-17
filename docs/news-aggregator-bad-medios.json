@@ -2,118 +2,20 @@
   "generatedFrom": "logs/news-aggregator.log",
   "reportAt": "2026-08-27T11:00:48.994Z",
   "summary": {
-    "totalBad": 42,
+    "totalBad": 35,
     "byKind": {
-      "scrape": 42
+      "scrape": 35
     },
     "byCategory": {
-      "selectors": 41,
+      "selectors": 34,
       "timeout": 1
     },
     "byStatus": {
-      "empty": 41,
+      "empty": 34,
       "fail": 1
     }
   },
   "medios": [
-    {
-      "id": 88,
-      "kind": "scrape",
-      "name": "Excélsior",
-      "url": "https://www.excelsior.com.mx/musica",
-      "status": "empty",
-      "category": "selectors",
-      "reason": "no items matched selectors",
-      "items": 0,
-      "created": 0,
-      "skipped": 0,
-      "reviewed": false,
-      "notes": "ya esta arreglado"
-    },
-    {
-      "id": 95,
-      "kind": "scrape",
-      "name": "Infobae",
-      "url": "https://www.infobae.com/tag/musica/",
-      "status": "empty",
-      "category": "selectors",
-      "reason": "no items matched selectors",
-      "items": 0,
-      "created": 0,
-      "skipped": 0,
-      "reviewed": false,
-      "notes": "ya esta arreglado"
-    },
-    {
-      "id": 61,
-      "kind": "scrape",
-      "name": "La Cuarta",
-      "url": "https://www.lacuarta.com/urbana/",
-      "status": "empty",
-      "category": "selectors",
-      "reason": "no items matched selectors",
-      "items": 0,
-      "created": 0,
-      "skipped": 0,
-      "reviewed": false,
-      "notes": "ya esta arreglado"
-    },
-    {
-      "id": 60,
-      "kind": "scrape",
-      "name": "La Cuarta",
-      "url": "https://www.lacuarta.com/musica/",
-      "status": "empty",
-      "category": "selectors",
-      "reason": "no items matched selectors",
-      "items": 0,
-      "created": 0,
-      "skipped": 0,
-      "reviewed": false,
-      "notes": "ya esta arreglado"
-    },
-    {
-      "id": 164,
-      "kind": "scrape",
-      "name": "La Mega",
-      "url": "https://www.lamega.com.co/tendencias/musica\"",
-      "status": "empty",
-      "category": "selectors",
-      "reason": "no items matched selectors",
-      "items": 0,
-      "created": 0,
-      "skipped": 0,
-      "reviewed": false,
-      "notes": "no tiene arreglo"
-    },
-    {
-      "id": 131,
-      "kind": "scrape",
-      "name": "La Prensa",
-      "url": "https://www.laprensa.hn/espectaculos",
-      "status": "empty",
-      "category": "selectors",
-      "reason": "no items matched selectors",
-      "items": 0,
-      "created": 0,
-      "skipped": 0,
-      "reviewed": false,
-      "notes": "ya esta arreglado"
-    },
-    {
-      "id": 92,
-      "kind": "scrape",
-      "name": "La Prensa de Houston",
-      "url": "https://prensadehouston.com/category/entretenimiento/",
-      "status": "empty",
-      "category": "selectors",
-      "reason": "no items matched selectors",
-      "items": 0,
-      "created": 0,
-      "skipped": 0,
-      "reviewed": false,
-      "notes": ""
-    },
     {
       "id": 31,
       "kind": "scrape",
