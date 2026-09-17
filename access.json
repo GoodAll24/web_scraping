@@ -146,20 +146,20 @@
   "60": {
     "ext": false,
     "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
+    "main": "article",
+    "title": "h2",
+    "link": "a",
+    "image": "img",
+    "content": "p"
   },
   "61": {
     "ext": false,
     "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
+    "main": "article",
+    "title": "h2",
+    "link": "a",
+    "image": "img",
+    "content": "p"
   },
   "67": {
     "ext": false,
@@ -207,13 +207,13 @@
     "content": null
   },
   "88": {
-    "ext": false,
+    "ext": true,
     "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
+    "main": "article",
+    "title": "h2",
+    "link": "a",
+    "image": "img",
+    "content": "p"
   },
   "91": {
     "ext": false,
@@ -227,11 +227,11 @@
   "92": {
     "ext": false,
     "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
+    "main": "article",
+    "title": "h2",
+    "link": "a",
+    "image": "a.penci-image-holder",
+    "content": "div.item-content > p"
   },
   "93": {
     "ext": false,
@@ -252,13 +252,13 @@
     "content": null
   },
   "95": {
-    "ext": false,
+    "ext": true,
     "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
+    "main": "a.feed-list-card",
+    "title": "h2",
+    "link": "a",
+    "image": "img",
+    "content": "h3"
   },
   "96": {
     "ext": false,
@@ -342,12 +342,12 @@
     "content": null
   },
   "131": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
+    "ext": true,
+    "extImg": true,
+    "main": "article",
+    "title": "h2",
+    "link": "a",
+    "image": "img.lazyloaded",
     "content": null
   },
   "139": {
