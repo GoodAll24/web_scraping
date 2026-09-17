@@ -15,6 +15,51 @@ function abs(base, href, join) {
   }
 }
 
+/** Prefer URL with largest `Nw`; if none, first token. */
+function pickWidestUrl(value) {
+  if (!value) return null;
+  let best = null;
+  let bestW = -1;
+  for (const part of value.split(",")) {
+    const m = part.trim().match(/^(\S+)(?:\s+(\d+)w)?/i);
+    if (!m) continue;
+    const w = m[2] ? Number(m[2]) : 0;
+    if (best === null || w > bestW) {
+      best = m[1];
+      bestW = w;
+    }
+  }
+  return best;
+}
+
+function pickFromStyle(style) {
+  if (!style) return null;
+  const m = style.match(/url\(\s*['"]?([^'")]+)['"]?\s*\)/i);
+  return m ? m[1].trim() : null;
+}
+
+function imgAttrUrl($el) {
+  return (
+    $el.attr("src") ||
+    $el.attr("data-src") ||
+    $el.attr("data-lazy-src") ||
+    pickWidestUrl($el.attr("srcset")) ||
+    pickWidestUrl($el.attr("data-srcset")) ||
+    null
+  );
+}
+
+function rawImageUrl($el) {
+  if (!$el || !$el.length) return null;
+  if ($el.is("img")) return imgAttrUrl($el);
+  // ponytail: non-img thumbs are usually bg/data-bgset; fall through to src/*
+  return (
+    pickWidestUrl($el.attr("data-bgset")) ||
+    pickFromStyle($el.attr("style")) ||
+    imgAttrUrl($el)
+  );
+}
+
 function resolveChrome() {
   try {
     const { executablePath } = require("puppeteer");
@@ -81,10 +126,7 @@ async function scrape(url, access) {
       ? $el.find(access.content).first().text().trim() || null
       : null;
     const $img = access.image ? $el.find(access.image).first() : null;
-    const rawImg = $img
-      ? $img.attr("src") || $img.attr("data-src") || $img.attr("data-lazy-src")
-      : null;
-    const image = abs(origin, rawImg, access.extImg);
+    const image = abs(origin, rawImageUrl($img), access.extImg);
     if (title || link) items.push({ title, content, link, image });
   });
 

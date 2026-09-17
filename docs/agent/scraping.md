@@ -12,7 +12,7 @@ Campos de access:
 | `main` | Contenedor de cada noticia (requerido) |
 | `title` | Texto del título |
 | `link` | `href` del enlace (fallback: `a` del propio `main`) |
-| `image` | `src` / `data-src` / `data-lazy-src` |
+| `image` | Selector del nodo imagen. Si es `img`: `src` → `data-src` → `data-lazy-src` → `srcset`. Si no: `data-bgset` → `style` (`url(...)`) → mismos attrs. En srcset/`data-bgset` con anchos, la de mayor `Nw`. Vacío = sin imagen (`null`) |
 | `content` | Resumen opcional; `null` si no aplica |
 | `ext` | Absolutizar links relativos |
 | `extImg` | Absolutizar URLs de imagen |
