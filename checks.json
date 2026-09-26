@@ -1,47 +1,143 @@
 {
-  "at": "2026-09-17T20:27:44.234Z",
+  "at": "2026-09-26T21:49:42.597Z",
   "checks": [
     {
-      "id": 88,
-      "name": "Excélsior",
-      "url": "https://www.excelsior.com.mx/musica",
+      "id": 31,
+      "name": "La Sexta",
+      "url": "https://www.lasexta.com/temas/musica-1",
       "result": "ya esta arreglado"
     },
     {
-      "id": 95,
-      "name": "Infobae",
-      "url": "https://www.infobae.com/tag/musica/",
+      "id": 58,
+      "name": "La Tercera",
+      "url": "https://www.latercera.com/etiqueta/musica-culto/",
       "result": "ya esta arreglado"
     },
     {
-      "id": 61,
-      "name": "La Cuarta",
-      "url": "https://www.lacuarta.com/urbana/",
+      "id": 36,
+      "name": "La Verdad",
+      "url": "https://www.laverdad.es/culturas/musica/",
       "result": "ya esta arreglado"
     },
     {
-      "id": 60,
-      "name": "La Cuarta",
-      "url": "https://www.lacuarta.com/musica/",
+      "id": 18,
+      "name": "La Voz de Almería",
+      "url": "https://www.lavozdealmeria.com/temas/conciertos/1",
       "result": "ya esta arreglado"
     },
     {
-      "id": 164,
-      "name": "La Mega",
-      "url": "https://www.lamega.com.co/tendencias/musica\"",
+      "id": 96,
+      "name": "Los Andes",
+      "url": "https://www.losandes.com.ar/temas/musica/",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 165,
+      "name": "Movida Musical",
+      "url": "https://movidamusical.com/",
       "result": "no tiene arreglo"
     },
     {
-      "id": 131,
-      "name": "La Prensa",
-      "url": "https://www.laprensa.hn/espectaculos",
+      "id": 11,
+      "name": "Mundo Deportivo",
+      "url": "https://www.mundodeportivo.com/us/estrellas-latinas",
       "result": "ya esta arreglado"
     },
     {
-      "id": 92,
-      "name": "La Prensa de Houston",
-      "url": "https://prensadehouston.com/category/entretenimiento/",
+      "id": 145,
+      "name": "Music",
+      "url": "https://remezcla.com/music/",
       "result": "ya esta arreglado"
+    },
+    {
+      "id": 91,
+      "name": "Musica is Life",
+      "url": "https://musicaislife.com/musica-news/",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": 67,
+      "name": "Noti Digital",
+      "url": "https://notidigitalrd.com.do/category/entretenimiento/",
+      "result": "no tiene arreglo"
+    },
+    {
+      "id": 111,
+      "name": "Noticel",
+      "url": "https://www.noticel.com/pop/musica",
+      "result": "ya esta arreglado"
+    },
+    {
+      "id": -1,
+      "name": "Dod Magazine",
+      "url": "https://www.dodmagazine.es/industria-musical/",
+      "result": "noticia nueva"
+    },
+    {
+      "id": -2,
+      "name": "Decibeles",
+      "url": "https://www.decibeles.net/noticias",
+      "result": "noticia nueva"
+    },
+    {
+      "id": -3,
+      "name": "Prensario Música (discograficas)",
+      "url": "https://www.prensariomusica.com/discograficas.aspx",
+      "result": "noticia nueva"
+    },
+    {
+      "id": -4,
+      "name": "Prensario Música (actualidad)",
+      "url": "https://www.prensariomusica.com/actualidad.aspx",
+      "result": "noticia nueva"
+    },
+    {
+      "id": -5,
+      "name": "Prensario Música (internacional)",
+      "url": "https://www.prensariomusica.com/internacional.aspx",
+      "result": "noticia nueva"
+    },
+    {
+      "id": -6,
+      "name": "Prensario Música (en-vivo)",
+      "url": "https://www.prensariomusica.com/en-vivo.aspx",
+      "result": "noticia nueva"
+    },
+    {
+      "id": -7,
+      "name": "Lo Que Suena En La Calle",
+      "url": "https://loquesuenaenlacalle.com/category/noticias-lqsc/",
+      "result": "noticia nueva"
+    },
+    {
+      "id": -8,
+      "name": "Cooltivarte",
+      "url": "https://cooltivarte.com/portal/category/musicos/",
+      "result": "noticia nueva"
+    },
+    {
+      "id": -9,
+      "name": "El Universo",
+      "url": "https://www.eluniverso.com/entretenimiento/musica",
+      "result": "noticia nueva"
+    },
+    {
+      "id": -10,
+      "name": "La Diaria",
+      "url": "https://ladiaria.com.uy/seccion/musica/",
+      "result": "noticia nueva"
+    },
+    {
+      "id": -11,
+      "name": "Mundo Now",
+      "url": "https://www.mundonow.com/categoria/entretenimiento/",
+      "result": "noticia nueva"
+    },
+    {
+      "id": -12,
+      "name": "Teletica",
+      "url": "http://teletica.com/entretenimiento",
+      "result": "noticia nueva"
     }
   ]
 }

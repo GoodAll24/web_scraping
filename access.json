@@ -1,23 +1,5 @@
 {
-  "11": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
   "12": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
-  "18": {
     "ext": false,
     "extImg": false,
     "main": "",
@@ -44,15 +26,6 @@
     "image": "img",
     "content": null
   },
-  "31": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
   "32": {
     "ext": false,
     "extImg": false,
@@ -70,15 +43,6 @@
     "link": "a",
     "image": "img",
     "content": "div.c-article__epigraph"
-  },
-  "36": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
   },
   "42": {
     "ext": false,
@@ -125,25 +89,7 @@
     "image": "",
     "content": null
   },
-  "58": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
   "59": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
-  "67": {
     "ext": false,
     "extImg": false,
     "main": "",
@@ -188,15 +134,6 @@
     "image": "",
     "content": null
   },
-  "91": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
   "93": {
     "ext": false,
     "extImg": false,
@@ -207,15 +144,6 @@
     "content": null
   },
   "94": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
-  "96": {
     "ext": false,
     "extImg": false,
     "main": "",
@@ -252,15 +180,6 @@
     "content": "p"
   },
   "107": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
-  "111": {
     "ext": false,
     "extImg": false,
     "main": "",
@@ -312,24 +231,6 @@
     "title": "h2",
     "link": "a",
     "image": "img",
-    "content": null
-  },
-  "145": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
-    "content": null
-  },
-  "165": {
-    "ext": false,
-    "extImg": false,
-    "main": "",
-    "title": "",
-    "link": "",
-    "image": "",
     "content": null
   },
   "171": {
