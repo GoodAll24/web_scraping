@@ -2,16 +2,16 @@
   "generatedFrom": "logs/news-aggregator.log",
   "reportAt": "2026-08-27T11:00:48.994Z",
   "summary": {
-    "totalBad": 35,
+    "totalBad": 47,
     "byKind": {
-      "scrape": 35
+      "scrape": 47
     },
     "byCategory": {
-      "selectors": 34,
+      "selectors": 46,
       "timeout": 1
     },
     "byStatus": {
-      "empty": 34,
+      "empty": 46,
       "fail": 1
     }
   },
@@ -512,6 +512,174 @@
       "skipped": 0,
       "reviewed": false,
       "notes": ""
+    },
+    {
+      "id": -1,
+      "kind": "scrape",
+      "name": "Dod Magazine",
+      "url": "https://www.dodmagazine.es/industria-musical/",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": -2,
+      "kind": "scrape",
+      "name": "Decibeles",
+      "url": "https://www.decibeles.net/noticias",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": -3,
+      "kind": "scrape",
+      "name": "Prensario Música (discograficas)",
+      "url": "https://www.prensariomusica.com/discograficas.aspx",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": -4,
+      "kind": "scrape",
+      "name": "Prensario Música (actualidad)",
+      "url": "https://www.prensariomusica.com/actualidad.aspx",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": -5,
+      "kind": "scrape",
+      "name": "Prensario Música (internacional)",
+      "url": "https://www.prensariomusica.com/internacional.aspx",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": -6,
+      "kind": "scrape",
+      "name": "Prensario Música (en-vivo)",
+      "url": "https://www.prensariomusica.com/en-vivo.aspx",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": -7,
+      "kind": "scrape",
+      "name": "Lo Que Suena En La Calle",
+      "url": "https://loquesuenaenlacalle.com/category/noticias-lqsc/",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": -8,
+      "kind": "scrape",
+      "name": "Cooltivarte",
+      "url": "https://cooltivarte.com/portal/category/musicos/",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": -9,
+      "kind": "scrape",
+      "name": "El Universo",
+      "url": "https://www.eluniverso.com/entretenimiento/musica",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": -10,
+      "kind": "scrape",
+      "name": "La Diaria",
+      "url": "https://ladiaria.com.uy/seccion/musica/",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": -11,
+      "kind": "scrape",
+      "name": "Mundo Now",
+      "url": "https://www.mundonow.com/categoria/entretenimiento/",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": -12,
+      "kind": "scrape",
+      "name": "Teletica",
+      "url": "http://teletica.com/entretenimiento",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
     }
   ]
 }
