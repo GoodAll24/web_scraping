@@ -2,16 +2,16 @@
   "generatedFrom": "logs/news-aggregator.log",
   "reportAt": "2026-08-27T11:00:48.994Z",
   "summary": {
-    "totalBad": 36,
+    "totalBad": 42,
     "byKind": {
-      "scrape": 36
+      "scrape": 42
     },
     "byCategory": {
-      "selectors": 35,
+      "selectors": 41,
       "timeout": 1
     },
     "byStatus": {
-      "empty": 35,
+      "empty": 41,
       "fail": 1
     }
   },
@@ -518,6 +518,90 @@
       "kind": "scrape",
       "name": "Teletica",
       "url": "http://teletica.com/entretenimiento",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": -13,
+      "kind": "scrape",
+      "name": "Ser Colombiano",
+      "url": "https://www.sercolombiano.com/categoria/musica/",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": -14,
+      "kind": "scrape",
+      "name": "Los Mocanos",
+      "url": "https://www.losmocanos.com/espectaculos/",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": -15,
+      "kind": "scrape",
+      "name": "Noticel (entretenimiento)",
+      "url": "https://noticel.com/category/entretenimiento/",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": -16,
+      "kind": "scrape",
+      "name": "Revista Soon",
+      "url": "https://revistasoon.com/category/entretenimiento/musica/",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": -17,
+      "kind": "scrape",
+      "name": "Vida Latina",
+      "url": "https://vidalatina.com/category/musica/",
+      "status": "empty",
+      "category": "selectors",
+      "reason": "medio nuevo — pendiente revisión",
+      "items": 0,
+      "created": 0,
+      "skipped": 0,
+      "reviewed": false,
+      "notes": "noticia nueva"
+    },
+    {
+      "id": -18,
+      "kind": "scrape",
+      "name": "Noticias Breves JAZB",
+      "url": "https://noticiasbrevesjazb.com/category/revista/musica/",
       "status": "empty",
       "category": "selectors",
       "reason": "medio nuevo — pendiente revisión",
